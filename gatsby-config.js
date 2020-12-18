@@ -18,5 +18,6 @@ module.exports = {
                 name: `blog`,
             },
         },
+        `gatsby-plugin-postcss`
     ],
 };

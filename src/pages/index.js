@@ -9,8 +9,10 @@ export default function Home({ data }) {
             <h2>Welcome</h2>
             <h1>{title}</h1>
             <p>{description}</p>
-            {data.allMdx.nodes.map(({ frontmatter }) => (
-                  <div>
+
+            <h3 className="uppercase text-2xl">Latest Posts</h3>
+            {data.allMdx.nodes.map(({ id, frontmatter }) => (
+                  <div key={id}>
                     <h1>{frontmatter.title}</h1>
                     <h1>{frontmatter.description}</h1>
                     <p>{frontmatter.date}</p>

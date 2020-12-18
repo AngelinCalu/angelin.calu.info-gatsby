@@ -3,9 +3,9 @@ import Header from './header';
 import Footer from './footer';
 
 const Layout = ({ children }) => {
-    return <div>
+    return <div className="max-w-6xl mx-auto h-screen bg-white text-black">
         <Header />
-        {children}
+        <main className="">{children}</main>
         <Footer />
     </div>;
 }
