@@ -11,11 +11,11 @@ const Footer = () => {
         <div className="w-full flex flex-col-reverse md:flex-row items-center md:items-end justify-between pb-8 pt-8 text-sm">
             <span className="py-4 md:py-0">© 2020-present Angelin Calu. All Rights Reserved.</span>
             <div className="space-x-4 divide-x divide-gray-300">
-                <Link to="/" title="Home" className="inline-block pl-4 hover:underline">Home</Link>
-                <Link to="/about" title="About" className="inline-block pl-4 hover:underline">About</Link>
-                <Link to="/blog" title="Blog" className="inline-block pl-4 hover:underline">Blog</Link>
-                <Link to="/shipbuilding" title="Shipbuilding" className="inline-block pl-4 hover:underline">Shipbuilding</Link>
-                <Link to="/contact" title="Contact" className="inline-block pl-4 hover:underline">Contact</Link>
+                <Link to="/" title="Home" activeClassName="text-blue-700" className="inline-block pl-4 hover:underline">Home</Link>
+                <Link to="/about" title="About" activeClassName="text-blue-700" className="inline-block pl-4 hover:underline">About</Link>
+                <Link to="/blog" title="Blog" activeClassName="text-blue-700" className="inline-block pl-4 hover:underline">Blog</Link>
+                <Link to="/shipbuilding" title="Shipbuilding" activeClassName="text-blue-700" className="inline-block pl-4 hover:underline">Shipbuilding</Link>
+                <Link to="/contact" title="Contact" activeClassName="text-blue-700" className="inline-block pl-4 hover:underline">Contact</Link>
             </div>
         </div>
     </div>;
