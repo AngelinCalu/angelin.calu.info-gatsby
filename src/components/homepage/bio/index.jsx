@@ -1,13 +1,11 @@
 import React from 'react';
-import useSiteMetadata from '../../../hooks/useSiteMetadata';
 
 const Bio = () => {
-    const { title, description } = useSiteMetadata();
-
     return (
-        <section>
-            <h1>{title}</h1>
-            <p>{description}</p>
+        <section className="space-y-2">
+            <h3 className="text-lg">Hi! I’m <em className="font-bold">Angelin Calu</em></h3>
+            <p>Born in Braila, Romania, currently living in Turku, Finland, father of two, entreprenour, passionate about technology in general, started coding years before Stackoverflow launched.</p>
+            <p>Experienced in building extensive SaaS applications from designing (lately preferring Figma as a main tool) to writing both front and backend end logic (<b>Full-Stack</b>), testing, deployment, including basic server management tasks.</p>
         </section>
     );
 };
