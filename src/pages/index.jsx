@@ -3,11 +3,15 @@ import { graphql } from 'gatsby';
 import Layout from '../layout';
 import BlogPosts from '../components/homepage/blog-posts';
 import Bio from '../components/homepage/bio';
+import Projects from '../components/homepage/projects';
+import References from '../components/homepage/references';
 
 export default function Home({ data }) {
   return (<Layout>
             <Bio />
             <BlogPosts posts={data.allMdx.nodes} />
+            <Projects />
+            <References />
         </Layout>);
 };
 
