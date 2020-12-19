@@ -1,18 +1,13 @@
 import React from "react";
 import { graphql } from 'gatsby';
-import useSiteMetadata from '../hooks/useSiteMetadata';
 import Layout from '../layout';
 import BlogPosts from '../components/homepage/blog-posts';
+import Bio from '../components/homepage/bio';
 
 export default function Home({ data }) {
-  const { title, description } = useSiteMetadata();
   return (<Layout>
-            <h2>Welcome</h2>
-            <h1>{title}</h1>
-            <p>{description}</p>
-
+            <Bio />
             <BlogPosts posts={data.allMdx.nodes} />
-    
         </Layout>);
 };
 
