@@ -2,23 +2,18 @@ import React from "react";
 import { graphql } from 'gatsby';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 import Layout from '../layout';
+import BlogPosts from '../components/homepage/blog-posts';
 
 export default function Home({ data }) {
   const { title, description } = useSiteMetadata();
-  return <Layout>
+  return (<Layout>
             <h2>Welcome</h2>
             <h1>{title}</h1>
             <p>{description}</p>
 
-            <h3 className="uppercase text-2xl">Latest Posts</h3>
-            {data.allMdx.nodes.map(({ id, frontmatter }) => (
-                  <div key={id}>
-                    <h1>{frontmatter.title}</h1>
-                    <h1>{frontmatter.description}</h1>
-                    <p>{frontmatter.date}</p>
-                  </div>
-                ))}
-        </Layout>;
+            <BlogPosts posts={data.allMdx.nodes} />
+    
+        </Layout>);
 };
 
 export const query = graphql`
