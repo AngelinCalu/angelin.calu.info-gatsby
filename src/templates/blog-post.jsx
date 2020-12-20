@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../layout';
-import RightMenu from '../layout/header/right-menu';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const { frontmatter, body } = data.mdx;

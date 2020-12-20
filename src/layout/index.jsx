@@ -5,11 +5,11 @@ import Footer from './footer';
 const Layout = ({ children }) => {
     return (
         <div className="h-screen bg-white text-black">
-            <header className="w-full top-0 h-56">
+            <header className="w-full bg-blue-100 md:bg-white md:h-56">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
-                    className="absolute overflow-hidden"
+                    className="absolute overflow-hidden top-80 md:top-0"
                 >
 
                     <defs>

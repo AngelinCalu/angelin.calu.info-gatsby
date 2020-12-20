@@ -1,7 +1,8 @@
 module.exports = {
     siteMetadata: {
         title: `Angelin Calu`,
-        description: `Angelin Calu is a Full-Stack developer and Shipbuilding Design Engineer. Sometimes he also writes about stuff.`,
+        description: `Angelin Calu is a Full-Stack developer and Shipbuilding Design Engineer based in Turku, Finland. Sometimes he also writes about stuff.`,
+        keywords: ['Angelin Calu', 'Full-Stack developer Turku', 'Shipbuilding Engineer Turku'],
         author: `Angelin Calu`,
         image: `/default.png`,
         siteUrl: `https://angelin.calu.info`,
@@ -24,6 +25,6 @@ module.exports = {
             },
         },
         `gatsby-plugin-postcss`,
-        `gatsby-plugin-react-helmet`
+        `gatsby-plugin-react-helmet`,
     ],
 };

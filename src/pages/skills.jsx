@@ -2,13 +2,13 @@ import React from 'react';
 import Layout from '../layout';
 import SEO from '../components/seo';
 
-const Contact = () => {
+const Skills = () => {
     return (
         <Layout>
-            <SEO title="Contact" />
-            Contact Page
+            <SEO title="Skills" />
+            Skills
         </Layout>
     );
 };
 
-export default Contact;
+export default Skills;
