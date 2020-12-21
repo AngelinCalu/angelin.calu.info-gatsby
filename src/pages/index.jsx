@@ -10,7 +10,7 @@ import SEO from '../components/seo';
 export default function Home({ data }) {
     return (
         <Layout>
-            <SEO title="Homepage"/>
+            <SEO title="Homepage" />
             <Bio />
             <BlogPosts posts={data.allMdx.nodes} />
             <Projects />

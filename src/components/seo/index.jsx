@@ -13,13 +13,12 @@ function SEO({ description, lang, image: metaImage, title, pathname, isBlogPost 
     return (
         <Helmet
             htmlAttributes={{
-                lang: lang || site.siteMetadata.siteLanguage
+                lang: lang || site.siteMetadata.siteLanguage,
             }}
             titleTemplate={`%s | ${site.siteMetadata.title}`}
         >
             <title>{title || site.siteMetadata.title}</title>
-            <link rel="canonical" href={ canonical } />
-
+            <link rel="canonical" href={canonical} />
 
             {/* Basic Meta Tags */}
             <meta name="description" content={metaDescription} />
@@ -29,7 +28,7 @@ function SEO({ description, lang, image: metaImage, title, pathname, isBlogPost 
             {/* Open Graph Meta Tags */}
             <meta property="og:url" content={canonical} />
             {/* og:type set to 'website' may be redundant as it's the default choice anyways */}
-            <meta property="og:type" content={ isBlogPost ? "article" : "website" } /> 
+            <meta property="og:type" content={isBlogPost ? 'article' : 'website'} />
             <meta property="og:title" content={title} />
             <meta property="og:locale" content={site.siteMetadata.siteLocale} />
             <meta property="og:description" content={metaDescription} />

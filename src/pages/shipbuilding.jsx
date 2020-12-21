@@ -96,16 +96,23 @@ const Shipbuilding = () => {
             <section>
                 <h3 className="uppercase text-2xl py-2">Shipbuilding projects</h3>
                 <p>Below a list of ships I've worked on:</p>
-                <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+                <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {shipsData.map((ship) => (
-                        <div key={ ship.yardNo } className="relative shadow-md">
-                            <img className="w-full h-full" src={ship.image} alt={ ship.name }/>
-                            <span className="absolute top-0 left-0 bg-red-500 bg-opacity-75 text-white p-1 px-4 text-sm">{ship.yardNo}</span>
-                            <span className="bg-white bg-opacity-75 w-full absolute bottom-0 left-0 py-1 text-center">{ship.name}</span>
+                        <div key={ship.yardNo} className="group relative shadow-md hover:shadow-xl">
+                            <img className="w-full h-full" src={ship.image} alt={ship.name} />
+                            <span className="absolute top-0 left-0 bg-red-500 bg-opacity-75 text-white p-1 px-4 text-sm group-hover:bg-opacity-100">
+                                {ship.yardNo}
+                            </span>
+                            <span className="group-hover:bg-blue-800 group-hover:text-white bg-white bg-opacity-75 w-full absolute bottom-0 left-0 py-1 text-center">
+                                {ship.name}
+                            </span>
                         </div>
                     ))}
                 </div>
-                <p className="py-6 text-gray-700 italic text-sm">Credits for the ship images shown here are to be given to the respective owners. No copyright infringement is intended.</p>
+                <p className="py-6 text-gray-700 italic text-sm">
+                    Credits for the ship images shown here are to be given to the respective owners. No copyright
+                    infringement is intended.
+                </p>
             </section>
         </Layout>
     );

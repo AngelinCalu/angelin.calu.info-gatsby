@@ -37,8 +37,8 @@ const Footer = () => {
                         href="https://linkedin.com/in/angelincalu"
                     >
                         LinkedIn
-                    </a>
-                    {' '}or{' '}
+                    </a>{' '}
+                    or{' '}
                     <a
                         className="font-bold hover:underline hover:text-red-700"
                         target="_blank"
@@ -52,28 +52,44 @@ const Footer = () => {
             </div>
             <div className="w-full flex flex-col-reverse md:flex-row items-center md:items-end justify-between pb-8 pt-8 text-sm">
                 <span className="py-4 md:py-0">© 2020-present Angelin Calu. All Rights Reserved.</span>
-                <div className="space-x-4 divide-x divide-gray-300">
+                <div className="space-x-2 divide-x divide-gray-300">
                     <Link
                         to="/"
                         title="Home"
                         activeClassName="text-blue-700"
-                        className="inline-block pl-4 hover:underline"
+                        className="inline-block pl-2 hover:underline"
                     >
                         Home
                     </Link>
                     <Link
-                        to="/about"
-                        title="About"
+                        to="/skills"
+                        title="Skills"
                         activeClassName="text-blue-700"
-                        className="inline-block pl-4 hover:underline"
+                        className="inline-block pl-2 hover:underline"
                     >
-                        About
+                        Skills
+                    </Link>
+                    <Link
+                        to="/experience"
+                        title="Experience"
+                        activeClassName="text-blue-700"
+                        className="inline-block pl-2 hover:underline"
+                    >
+                        Experience
+                    </Link>
+                    <Link
+                        to="/education"
+                        title="Education"
+                        activeClassName="text-blue-700"
+                        className="inline-block pl-2 hover:underline"
+                    >
+                        Education
                     </Link>
                     <Link
                         to="/blog"
                         title="Blog"
                         activeClassName="text-blue-700"
-                        className="inline-block pl-4 hover:underline"
+                        className="inline-block pl-2 hover:underline"
                     >
                         Blog
                     </Link>
@@ -81,7 +97,7 @@ const Footer = () => {
                         to="/shipbuilding"
                         title="Shipbuilding"
                         activeClassName="text-blue-700"
-                        className="inline-block pl-4 hover:underline"
+                        className="inline-block pl-2 hover:underline"
                     >
                         Shipbuilding
                     </Link>
@@ -89,7 +105,7 @@ const Footer = () => {
                         to="/contact"
                         title="Contact"
                         activeClassName="text-blue-700"
-                        className="inline-block pl-4 hover:underline"
+                        className="inline-block pl-2 hover:underline"
                     >
                         Contact
                     </Link>

@@ -7,9 +7,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     return graphql(`
         {
-            allMdx (
-                sort: { fields: [frontmatter___date], order: DESC }
-            ) {
+            allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
                 nodes {
                     fields {
                         slug
