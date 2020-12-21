@@ -21,7 +21,7 @@ const ships = [
         name: "Mardi Gras",
         owner: "Carnival Cruise Lines",
         type: "Cruise ship",
-        image: "images/ships/ship.png"
+        image: "images/ships/mardi-gras.jpg"
     },
     {
         employer: "Allstars",
@@ -29,7 +29,7 @@ const ships = [
         name: "Costa Smeralda",
         owner: "Costa Crociere",
         type: "Cruise ship",
-        image: "images/ships/ship.png"
+        image: "images/ships/costa-smeralda.jpg"
     },
     {
         employer: "Allstars",
