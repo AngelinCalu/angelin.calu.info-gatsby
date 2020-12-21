@@ -103,7 +103,7 @@ const Shipbuilding = () => {
                             <span className="absolute top-0 left-0 bg-red-500 bg-opacity-75 text-white p-1 px-4 text-sm group-hover:bg-opacity-100">
                                 {ship.yardNo}
                             </span>
-                            <span className="group-hover:bg-blue-800 group-hover:text-white bg-white bg-opacity-75 w-full absolute bottom-0 left-0 py-1 text-center">
+                            <span className="bg-gradient-to-r group-hover:from-blue-800 group-hover:via-blue-600 group-hover:to-green-800 group-hover:text-white bg-white bg-opacity-75 w-full absolute bottom-0 left-0 py-1 text-center">
                                 {ship.name}
                             </span>
                         </div>
