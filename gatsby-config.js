@@ -33,6 +33,14 @@ module.exports = {
                             backgroundColor: `transparent`,
                         },
                     },
+                    {
+                        resolve: "gatsby-remark-autolink-headers",
+                        options: {
+                            offsetY: `100`,
+                            elements: [`h2`, `h3`],
+                            className: 'inline-block'
+                        },
+                    },
                 ],
             },
         },

@@ -5,14 +5,20 @@ import Layout from '../layout';
 import SEO from '../components/seo';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
-    const { frontmatter, body } = data.mdx;
+    const { frontmatter, body, excerpt, timeToRead } = data.mdx;
     const { previous, next } = pageContext;
     return (
         <Layout>
-            <SEO title={frontmatter.title} />
-            <h1 className="text-4xl py-2">{frontmatter.title}</h1>
-            <p className="text-gray-500 mb-8">{frontmatter.date}</p>
-            <MDXRenderer>{body}</MDXRenderer>
+            <SEO title={frontmatter.title} description={excerpt} />
+
+            <article className="prose prose-sm sm:prose lg:prose-lg">
+                <div className="flex flex-col pb-2 text-sm">
+                    <span className="text-gray-500">Published on <b>{frontmatter.date}</b></span>
+                    <span className="text-gray-500">Estimated time to Read: <b>{timeToRead} minute(s)</b></span>
+                </div>
+                <h1 className="py-1">{frontmatter.title}</h1>
+                <MDXRenderer>{body}</MDXRenderer>
+            </article>
             <div className="flex justify-between">
                 {previous === false ? (
                     <div>&nbsp;</div>
@@ -61,6 +67,8 @@ export const query = graphql`
                 title
                 date(formatString: "YYYY-MM-DD")
             }
+            excerpt(pruneLength: 150)
+            timeToRead
         }
     }
 `;

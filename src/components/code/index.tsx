@@ -6,7 +6,7 @@ const Code = ({ codeString, language }) => {
     return (
         <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre className={className} style={style}>
+                <pre className={`p-2 rounded text-sm ${className}`} style={style}>
                     {tokens.map((line, i) => (
                         <div {...getLineProps({ line, key: i })}>
                             {line.map((token, key) => (

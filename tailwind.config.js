@@ -714,6 +714,45 @@ module.exports = {
             40: '40',
             50: '50',
         },
+        extend: {
+            typography: (theme) => ({
+                DEFAULT: {
+                    css: {
+                        a: {
+                            color: theme('colors.gray.800'),
+                            '&:hover': {
+                                color: theme('colors.blue.700'),
+                            },
+                        },
+                        code: {
+                            color: theme('colors.red.700'),
+                            backgroundColor: theme('colors.gray.100'),
+                            padding: theme('spacing.1'),
+                            fontWeight: '500',
+                            borderRadius: theme('borderRadius.DEFAULT'),
+                        },
+                        'code::before': {
+                            content: '',
+                        },
+                        'code::after': {
+                            content: '',
+                        },
+                        li: {
+                            marginTop: 0,
+                            marginBottom: 0,
+                        },
+                    },
+                },
+                lg: {
+                    css: {
+                        li: {
+                            marginTop: 0,
+                            marginBottom: 0,
+                        },
+                    }
+                }
+            }),
+        },
     },
     variantOrder: [
         'first',
@@ -851,5 +890,5 @@ module.exports = {
         wordBreak: ['responsive'],
         zIndex: ['responsive', 'focus-within', 'focus'],
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/typography')],
 };
