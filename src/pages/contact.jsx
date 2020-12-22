@@ -6,6 +6,7 @@ const Contact = () => {
     return (
         <Layout>
             <SEO title="Contact" />
+            <p>Feel free to reach out if you're looking for a developer, a shipbuilding engineer, have a question, or just want to connect.</p>
             <p>
                 You can reach me on the phone at either{' '}
                 <a className="font-bold hover:underline hover:text-blue-700" href="tel:+40747455422">
