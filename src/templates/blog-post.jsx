@@ -10,8 +10,8 @@ const BlogPostTemplate = ({ data, pageContext }) => {
     return (
         <Layout>
             <SEO title={frontmatter.title} />
-            <h1 className="text-2xl py-2">{frontmatter.title}</h1>
-            <p className="text-gray-500 text-sm mb-8">{frontmatter.date}</p>
+            <h1 className="text-4xl py-2">{frontmatter.title}</h1>
+            <p className="text-gray-500 mb-8">{frontmatter.date}</p>
             <MDXRenderer>{body}</MDXRenderer>
             <div className="flex justify-between">
                 {previous === false ? (
@@ -59,7 +59,7 @@ export const query = graphql`
             body
             frontmatter {
                 title
-                date(formatString: "YYYY MM DD")
+                date(formatString: "YYYY-MM-DD")
             }
         }
     }

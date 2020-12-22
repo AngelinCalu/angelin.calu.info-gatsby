@@ -6,11 +6,56 @@ const Skills = () => {
     return (
         <Layout>
             <SEO title="Skills" />
-            <p>
-                My passion for writing beautiful code made me aquire skills in a wide range of programming languages as
-                well as various development tools.
-            </p>
-            <p>Below some of those:</p>
+            <section className="py-4">
+                <h3 className="uppercase text-2xl py-2">Soft skills</h3>
+                <ul className="space-y-4 list-disc">
+                    <li>
+                        <div>Creativity</div>
+                        <span className="text-gray-500 text-sm">
+                            I'm deliberately putting this at the top of the list as I think this might be one of my most
+                            important assets. And, just to be perfectly clear I'm not referring to the artistic side but
+                            the ability to think, design and implement (sometimes innovative) solutions to a wide variety of problems and
+                            tasks.
+                        </span>
+                    </li>
+                    <li>
+                        <div>Adaptability</div>
+                        <span className="text-gray-500 text-sm">
+                            I'm very confortable working in the most diverse environments, and I'm adapting very easy
+                            when a change occurs.
+                        </span>
+                    </li>
+                    <li>
+                        <div>Communication</div>
+                        <span className="text-gray-500 text-sm">
+                            Good communication skills and very confortable communicating in general. I've been using
+                            English language as the main way of communicating in the workplace for more than 6 years.
+                        </span>
+                    </li>
+                    <li>
+                        <div>Organization</div>
+                        <span className="text-gray-500 text-sm">
+                            Good skills in planning and effectively implementing projects and general work tasks for
+                            myself and others.
+                        </span>
+                    </li>
+                    <li>
+                        <div>Critical Thinking</div>
+                        <span className="text-gray-500 text-sm">
+                            Maybe this is a trait commonly found in programmers in general, or perhaps it's just how
+                            coding for over 20 years changed the way I think about things.
+                        </span>
+                    </li>
+                </ul>
+            </section>
+            <section className="py-4">
+                <h3 className="uppercase text-2xl py-2">Hard skills</h3>
+                <p>
+                    My passion for writing beautiful code made me aquire skills in a wide range of programming languages
+                    as well as various development tools.
+                </p>
+                <p>Below some of those:</p>
+            </section>
         </Layout>
     );
 };
