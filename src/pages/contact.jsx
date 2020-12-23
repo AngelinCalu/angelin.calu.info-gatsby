@@ -6,6 +6,7 @@ const Contact = () => {
     return (
         <Layout>
             <SEO title="Contact" />
+            <h1 className="text-4xl py-4">Contact</h1>
             <p>Feel free to reach out if you're looking for a developer, a shipbuilding engineer, have a question, or just want to connect.</p>
             <p>
                 You can reach me on the phone at either{' '}

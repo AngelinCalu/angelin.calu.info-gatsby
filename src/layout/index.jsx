@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
                 </svg>
                 <Header />
             </header>
-            <main className="max-w-6xl z-10 my-24 mx-auto px-10 md:px-4 xl:px-0">{children}</main>
+            <main className="max-w-6xl z-10 my-24 mx-auto px-10 lg:px-8 2xl:px-0">{children}</main>
             <footer className="bg-blue-100">
                 <Footer />
             </footer>

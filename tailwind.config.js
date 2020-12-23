@@ -741,6 +741,9 @@ module.exports = {
                             marginTop: 0,
                             marginBottom: 0,
                         },
+                        pre: {
+                            fontSize: '0.8rem',
+                        },
                     },
                 },
                 lg: {
@@ -749,7 +752,10 @@ module.exports = {
                             marginTop: 0,
                             marginBottom: 0,
                         },
-                    }
+                        pre: {
+                            fontSize: '0.8rem',
+                        },
+                    },
                 }
             }),
         },

@@ -6,6 +6,7 @@ const Skills = () => {
     return (
         <Layout>
             <SEO title="Skills" />
+            <h1 className="text-4xl py-4">Skills</h1>
             <section className="py-4">
                 <h3 className="uppercase text-2xl py-2">Soft skills</h3>
                 <ul className="space-y-4 list-disc">

@@ -11,7 +11,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Layout>
             <SEO title={frontmatter.title} description={excerpt} />
 
-            <article className="prose prose-sm sm:prose lg:prose-lg">
+            <article className="prose prose-sm sm:prose lg:prose-lg min-w-0 max-w-none">
                 <div className="flex flex-col pb-2 text-sm">
                     <span className="text-gray-500">Published on <b>{frontmatter.date}</b></span>
                     <span className="text-gray-500">Estimated time to Read: <b>{timeToRead} minute(s)</b></span>

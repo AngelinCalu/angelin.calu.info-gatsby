@@ -21,6 +21,7 @@ const Shipbuilding = () => {
     return (
         <Layout>
             <SEO title="Shipbuilding" />
+            <h1 className="text-4xl py-4">Shipbuilding</h1>
             <section className="py-2">
                 <h3 className="uppercase text-2xl py-2">Brief</h3>
                 <p>

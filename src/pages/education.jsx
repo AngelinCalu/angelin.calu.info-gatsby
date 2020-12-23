@@ -6,7 +6,7 @@ const Education = () => {
     return (
         <Layout>
             <SEO title="Education" />
-            Education Page
+            <h1 className="text-4xl py-4">Education</h1>
         </Layout>
     );
 };

@@ -4,15 +4,16 @@ module.exports = {
         description: `Angelin Calu is a Full-Stack Developer and Shipbuilding Design Engineer based in Turku, Finland. Sometimes he also writes about stuff.`,
         keywords: ['Angelin Calu', 'Full-Stack developer Turku', 'Shipbuilding Engineer Turku'],
         author: `Angelin Calu`,
-        image: `/default.png`,
+        image: `./default.png`,
         siteUrl: `https://angelin.calu.info`,
         siteLanguage: `en-GB`,
         siteLocale: `en_gb`,
         twitterUsername: `@AngelinCalu`,
     },
     plugins: [
-        `gatsby-plugin-sharp`,
+        `gatsby-image`,
         `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
         `gatsby-remark-images`,
         {
             resolve: `gatsby-transformer-remark`,
@@ -36,9 +37,7 @@ module.exports = {
                     {
                         resolve: "gatsby-remark-autolink-headers",
                         options: {
-                            offsetY: `100`,
                             elements: [`h2`, `h3`],
-                            className: 'inline-block'
                         },
                     },
                 ],
@@ -53,5 +52,6 @@ module.exports = {
         },
         `gatsby-plugin-postcss`,
         `gatsby-plugin-react-helmet`,
+        `gatsby-remark-autolink-headers`,
     ],
 };
