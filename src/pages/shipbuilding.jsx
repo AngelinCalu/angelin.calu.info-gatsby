@@ -1,11 +1,46 @@
 import React from 'react';
 import Layout from '../layout';
 import SEO from '../components/seo';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import experienceData from '../../content/data/experience';
 import shipsData from '../../content/data/ships';
 
 const Shipbuilding = () => {
+    const data = useStaticQuery(graphql`
+        query SHIP_IMAGES {
+            ships: allFile(filter: { relativeDirectory: { eq: "ships" } }) {
+                edges {
+                    node {
+                        id
+                        childImageSharp {
+                            fluid(maxWidth: 590) {
+                                ...GatsbyImageSharpFluid_withWebp
+                                originalName
+                            }
+                        }
+                    }
+                }
+            }
+            logos: allFile(filter: { relativeDirectory: { eq: "logos" } }) {
+                edges {
+                    node {
+                        id
+                        childImageSharp {
+                            fixed(width: 128) {
+                                ...GatsbyImageSharpFixed_withWebp
+                                originalName
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    `);
+
+    console.dir(data);
+
     const accumulatedExpMonths = experienceData.reduce(
         (acc, pos) =>
             acc +
@@ -83,7 +118,7 @@ const Shipbuilding = () => {
                             <h3 className="text-xl pt-2">{experience.position}</h3>
                             <div className="p-4 inline-flex items-center">
                                 <div className="pr-4">
-                                    <img className="w-auto h-14" src={experience.image} alt={experience.title} />
+                                    <Img className="h-auto w-32" fixed={data.logos.edges.filter(edge => edge.node.childImageSharp.fixed.originalName === experience.image)[0].node.childImageSharp.fixed} src={experience.title} />
                                 </div>
                                 <div>
                                     <h4 className="text-lg pt-2">{experience.title}</h4>
@@ -100,7 +135,7 @@ const Shipbuilding = () => {
                 <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {shipsData.map((ship) => (
                         <div key={ship.yardNo} className="group relative shadow-md hover:shadow-xl">
-                            <img className="w-full h-full" src={ship.image} alt={ship.name} />
+                            <Img className="w-full h-full" fluid={data.ships.edges.filter(edge => edge.node.childImageSharp.fluid.originalName === ship.image)[0].node.childImageSharp.fluid} src={ship.name} />
                             <span className="absolute top-0 left-0 bg-red-500 bg-opacity-75 text-white p-1 px-4 text-sm group-hover:bg-opacity-100">
                                 {ship.yardNo}
                             </span>

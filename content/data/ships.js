@@ -5,7 +5,7 @@ module.exports = [
         name: 'Unnamed',
         owner: 'Royal Caribbean International',
         type: 'Cruise ship',
-        image: 'images/ships/ship.png',
+        image: 'ship.png',
     },
     {
         employer: 'Allstars',
@@ -13,7 +13,7 @@ module.exports = [
         name: 'Costa Toscana',
         owner: 'Costa Crociere',
         type: 'Cruise ship',
-        image: 'images/ships/ship.png',
+        image: 'ship.png',
     },
     {
         employer: 'Allstars',
@@ -21,7 +21,7 @@ module.exports = [
         name: 'Mardi Gras',
         owner: 'Carnival Cruise Lines',
         type: 'Cruise ship',
-        image: 'images/ships/mardi-gras.jpg',
+        image: 'mardi-gras.jpg',
     },
     {
         employer: 'Allstars',
@@ -29,7 +29,7 @@ module.exports = [
         name: 'Costa Smeralda',
         owner: 'Costa Crociere',
         type: 'Cruise ship',
-        image: 'images/ships/costa-smeralda.jpg',
+        image: 'costa-smeralda.jpg',
     },
     {
         employer: 'Allstars',
@@ -37,7 +37,7 @@ module.exports = [
         name: 'Mein Schiff 2',
         owner: 'TUI Cruises',
         type: 'Cruise ship',
-        image: 'images/ships/mein-schiff-2.jpg',
+        image: 'mein-schiff-2.jpg',
     },
     {
         employer: 'Allstars',
@@ -45,7 +45,7 @@ module.exports = [
         name: 'Mein Schiff 1',
         owner: 'TUI Cruises',
         type: 'Cruise ship',
-        image: 'images/ships/mein-schiff-1.jpg',
+        image: 'mein-schiff-1.jpg',
     },
     {
         employer: 'Allstars',
@@ -53,7 +53,7 @@ module.exports = [
         name: 'Yevgeny Primakov',
         owner: 'Sovcomflot',
         type: 'Icebreaking supply vessel',
-        image: 'images/ships/yevgeny-primakov.jpg',
+        image: 'yevgeny-primakov.jpg',
     },
     {
         employer: 'Allstars',
@@ -61,7 +61,7 @@ module.exports = [
         name: 'Fedor Ushakov',
         owner: 'Sovcomflot',
         type: 'Icebreaking supply vessel',
-        image: 'images/ships/fedor-ushakov.jpg',
+        image: 'fedor-ushakov.jpg',
     },
     {
         employer: 'Allstars',
@@ -69,7 +69,7 @@ module.exports = [
         name: 'Stepan Makarov',
         owner: 'Sovcomflot',
         type: 'Icebreaking supply vessel',
-        image: 'images/ships/stepan-makarov.jpg',
+        image: 'stepan-makarov.jpg',
     },
     {
         employer: 'Allstars',
@@ -77,7 +77,7 @@ module.exports = [
         name: 'Gennadiy Nevelskoy',
         owner: 'Sovcomflot',
         type: 'Icebreaking supply vessel',
-        image: 'images/ships/gennadiy-nevelskoy.jpg',
+        image: 'gennadiy-nevelskoy.jpg',
     },
     {
         employer: 'Icepronav',
@@ -85,7 +85,7 @@ module.exports = [
         name: 'Ondina',
         owner: 'Sete Brasil S.A',
         type: "Drillship - 'PRD 12000 Qdrill'",
-        image: 'images/ships/ondina.jpg',
+        image: 'ondina.jpg',
     },
     {
         employer: 'Vard',
@@ -93,7 +93,7 @@ module.exports = [
         name: 'Island Crown',
         owner: 'Island Offshore',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/island-crown.jpg',
+        image: 'island-crown.jpg',
     },
     {
         employer: 'Vard',
@@ -101,7 +101,7 @@ module.exports = [
         name: 'Reimerswaal',
         owner: 'Sheepswerft Gebroeders Kooiman BV',
         type: 'Suction Hopper Dredger',
-        image: 'images/ships/reimerswaal.jpg',
+        image: 'reimerswaal.jpg',
     },
     {
         employer: 'Vard',
@@ -109,7 +109,7 @@ module.exports = [
         name: 'Troms Lyra',
         owner: 'Troms Offshore',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/troms-lyra.jpg',
+        image: 'troms-lyra.jpg',
     },
     {
         employer: 'Vard',
@@ -117,7 +117,7 @@ module.exports = [
         name: 'Viking Fighter',
         owner: 'NorSea Group',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/viking-fighter.jpg',
+        image: 'viking-fighter.jpg',
     },
     {
         employer: 'Vard',
@@ -125,7 +125,7 @@ module.exports = [
         name: 'Gadus Poseidon',
         owner: 'Havfisk',
         type: 'Fishing Vessel',
-        image: 'images/ships/gadus-poseidon.jpg',
+        image: 'gadus-poseidon.jpg',
     },
     {
         employer: 'Vard',
@@ -133,7 +133,7 @@ module.exports = [
         name: 'Gadus Njord',
         owner: 'Havfisk',
         type: 'Fishing Vessel',
-        image: 'images/ships/gadus-njord.jpg',
+        image: 'gadus-njord.jpg',
     },
     {
         employer: 'Vard',
@@ -141,7 +141,7 @@ module.exports = [
         name: 'Gadus Neptun',
         owner: 'Havfisk',
         type: 'Fishing Vessel',
-        image: 'images/ships/gadus-neptun.jpg',
+        image: 'gadus-neptun.jpg',
     },
     {
         employer: 'Vard',
@@ -149,7 +149,7 @@ module.exports = [
         name: 'Island Pride',
         owner: 'Island Offshore',
         type: 'Multi-purpose Support Vessel',
-        image: 'images/ships/island-pride.jpg',
+        image: 'island-pride.jpg',
     },
     {
         employer: 'Vard',
@@ -157,7 +157,7 @@ module.exports = [
         name: 'Island Duke',
         owner: 'Island Offshore',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/island-duke.jpg',
+        image: 'island-duke.jpg',
     },
     {
         employer: 'Vard',
@@ -165,7 +165,7 @@ module.exports = [
         name: 'Island Duchess',
         owner: 'Island Offshore',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/island-duchess.jpg',
+        image: 'island-duchess.jpg',
     },
     {
         employer: 'Vard',
@@ -173,7 +173,7 @@ module.exports = [
         name: 'Island Dawn',
         owner: 'Island Offshore',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/island-dawn.jpg',
+        image: 'island-dawn.jpg',
     },
     {
         employer: 'Vard',
@@ -181,7 +181,7 @@ module.exports = [
         name: 'Island Dragon',
         owner: 'Island Offshore',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/island-dragon.jpg',
+        image: 'island-dragon.jpg',
     },
     {
         employer: 'Vard',
@@ -189,7 +189,7 @@ module.exports = [
         name: 'Far Sun',
         owner: 'Farstad Shipping',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/far-sun.jpg',
+        image: 'far-sun.jpg',
     },
     {
         employer: 'Vard',
@@ -197,7 +197,7 @@ module.exports = [
         name: 'Troms Arcturus',
         owner: 'Troms Offshore',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/troms-arcturus.jpg',
+        image: 'troms-arcturus.jpg',
     },
     {
         employer: 'Vard',
@@ -205,7 +205,7 @@ module.exports = [
         name: 'Skandi Urca',
         owner: 'DOF',
         type: 'Anchor Handling Tug Supply Vessel',
-        image: 'images/ships/skandi-urca.jpg',
+        image: 'skandi-urca.jpg',
     },
     {
         employer: 'Vard',
@@ -213,7 +213,7 @@ module.exports = [
         name: 'Skandi Paraty',
         owner: 'DOF',
         type: 'Anchor Handling Tug Supply Vessel',
-        image: 'images/ships/skandi-paraty.jpg',
+        image: 'skandi-paraty.jpg',
     },
     {
         employer: 'Vard',
@@ -221,7 +221,7 @@ module.exports = [
         name: 'Internal Project',
         owner: 'Vard',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/ship.png',
+        image: 'ship.png',
     },
     {
         employer: 'Vard',
@@ -229,7 +229,7 @@ module.exports = [
         name: 'Internal Project',
         owner: 'Vard',
         type: 'Platform Supply Vessel',
-        image: 'images/ships/ship.png',
+        image: 'ship.png',
     },
     {
         employer: 'Vard',
@@ -237,7 +237,7 @@ module.exports = [
         name: 'Island Condor',
         owner: 'Island Offshore',
         type: 'Offshore Service Vessel',
-        image: 'images/ships/island-condor.jpg',
+        image: 'island-condor.jpg',
     },
     {
         employer: 'Vard',
@@ -245,6 +245,6 @@ module.exports = [
         name: 'Pierre De Fermat',
         owner: 'Orange Marine',
         type: 'Cable Laying & Repair Vessel',
-        image: 'images/ships/pierre-de-fermat.jpg',
+        image: 'pierre-de-fermat.jpg',
     },
 ];

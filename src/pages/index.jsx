@@ -11,7 +11,7 @@ export default function Home({ data }) {
     return (
         <Layout>
             <SEO title="Homepage" />
-            <Bio />
+            <Bio profilePic={ data.profilePic }/>
             <BlogPosts posts={data.allMdx.nodes} />
             <Projects />
             <References />
@@ -31,6 +31,13 @@ export const query = graphql`
                 }
                 fields {
                     slug
+                }
+            }
+        }
+        profilePic: file(relativePath: {eq: "default.png"}) {
+            childImageSharp {
+                fluid(maxWidth: 400, quality: 100) {
+                        ...GatsbyImageSharpFluid
                 }
             }
         }

@@ -50,6 +50,13 @@ module.exports = {
                 name: `blog`,
             },
         },
+                {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/static/images`,
+                name: `images`,
+            },
+        },
         `gatsby-plugin-postcss`,
         `gatsby-plugin-react-helmet`,
         `gatsby-remark-autolink-headers`,
