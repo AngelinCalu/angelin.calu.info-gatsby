@@ -4,7 +4,7 @@ import { Menu, Transition } from '@headlessui/react';
 
 const TopMenu = () => {
     return (
-        <nav className="font-bold">
+        <nav className="">
             <ul className="flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-3">
                 <li className="w-full">
                     <Link

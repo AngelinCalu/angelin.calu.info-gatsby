@@ -189,6 +189,7 @@ module.exports = {
                 '"Courier New"',
                 'monospace',
             ],
+            heading: ['Livvic'],
         },
         fontSize: {
             xs: ['0.75rem', { lineHeight: '1rem' }],
@@ -743,6 +744,22 @@ module.exports = {
                         },
                         pre: {
                             fontSize: '0.8rem',
+                        },
+                        h1: {
+                            fontFamily: theme('fontFamily.heading'),
+                            fontWeight: theme('fontWeight.semibold')
+                        },
+                        h2: {
+                            fontFamily: theme('fontFamily.heading'),
+                            fontWeight: theme('fontWeight.semibold')
+                        },
+                        h3: {
+                            fontFamily: theme('fontFamily.heading'),
+                            fontWeight: theme('fontWeight.semibold')
+                        },
+                        h4: {
+                            fontFamily: theme('fontFamily.heading'),
+                            fontWeight: theme('fontWeight.semibold')
                         },
                     },
                 },
