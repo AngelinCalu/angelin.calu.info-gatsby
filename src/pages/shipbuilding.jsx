@@ -76,7 +76,7 @@ const Shipbuilding = () => {
                 </ul>
             </section>
             <section className="py-2">
-                <h3 className="uppercase text-2xl py-2">Experience in Shipbuilding</h3>
+                <h3 id="experience-in-shipbuilding" className="uppercase text-2xl py-2">Experience in Shipbuilding</h3>
                 <p>Everyone would probably agree that great skills are built in time.</p>
                 <p>
                     Here's where I've polished my shipbuilding skills for{' '}
@@ -115,7 +115,7 @@ const Shipbuilding = () => {
                                     })}
                                 </span>
                             </div>
-                            <h3 className="text-xl pt-2">{experience.position}</h3>
+                            <h4 className="text-xl pt-2">{experience.position}</h4>
                             <div className="p-4 inline-flex items-center">
                                 <div className="pr-4">
                                     <Img className="h-auto w-32" fixed={data.logos.edges.filter(edge => edge.node.childImageSharp.fixed.originalName === experience.image)[0].node.childImageSharp.fixed} src={experience.title} />
@@ -130,7 +130,7 @@ const Shipbuilding = () => {
                 </ul>
             </section>
             <section>
-                <h3 className="uppercase text-2xl py-2">Shipbuilding projects</h3>
+                <h3 id="shipbuilding-projects" className="uppercase text-2xl py-2">Shipbuilding projects</h3>
                 <p>Below a list of ships I've worked on:</p>
                 <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {shipsData.map((ship) => (

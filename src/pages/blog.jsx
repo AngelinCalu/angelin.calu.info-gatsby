@@ -9,7 +9,7 @@ export default function Blog({ data }) {
         <Layout>
             <SEO title="Blog" />
             <h1 className="text-4xl py-4">Blog</h1>
-            <p>I will post here about my journey back to software development, side project or notable "How to's". </p>
+            <p>I will post here about my journey back to software development, experience with various technologies, side projects or notable "How to's". </p>
             <BlogPosts posts={data.allMdx.nodes} />
         </Layout>
     );
