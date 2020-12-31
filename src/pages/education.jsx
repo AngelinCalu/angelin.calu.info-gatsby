@@ -53,9 +53,9 @@ const Education = () => {
 
             <ul className="py-3 list-disc space-y-2">
                 <li>
-                    <b>Laracasts.com (by Jeffrey Way)</b>
+                    <b>Laracasts.com</b>
                     <p><span className="text-gray-500">Period: </span><span className="text-sm">25.08.2016 - Present time</span></p>
-                    <p><span className="text-gray-500">Topics: </span><span className="text-sm">A wide variety of topics like PHP, Laravel, MySQL, JavaScript, Clean Code, etc.</span></p>
+                    <p><span className="text-gray-500">Topics: </span><span className="text-sm">A wide variety of topics like PHP, Laravel, Vue, MySQL, JavaScript, Clean Code, etc.</span></p>
                     <p>
                         <span className="text-gray-500">Organizer: </span>
                         <span className="text-sm">
@@ -103,6 +103,25 @@ const Education = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://www.udemy.com/certificate/UC-ae82c1a4-57e9-4a69-9286-2ecacf61a671/"
+                            >
+                                Udemy
+                            </a>
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <b>JavaScript ES6 Course: ECMA Script 6 (Step by Step)</b>
+                    <p><span className="text-gray-500">Period: </span><span className="text-sm">August 2020</span></p>
+                    <p><span className="text-gray-500">Topics: </span><span className="text-sm">JavaScript.</span></p>
+                    <p>
+                        <span className="text-gray-500">Organizer: </span>
+                        <span className="text-sm">
+                            <a
+                                title="Udemy"
+                                className="font-bold hover:underline hover:text-red-700"
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.udemy.com/certificate/UC-09c07f07-3b9f-4917-a25f-52041cc5e0fd/"
                             >
                                 Udemy
                             </a>
