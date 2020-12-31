@@ -21,7 +21,10 @@ export default function Home({ data }) {
 
 export const query = graphql`
     query SITE_INDEX_QUERY {
-        allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+        allMdx(
+            sort: { fields: [frontmatter___date], order: DESC }
+            limit: 5
+            ) {
             nodes {
                 id
                 frontmatter {

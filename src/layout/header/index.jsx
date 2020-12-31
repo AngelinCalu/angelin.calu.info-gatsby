@@ -8,7 +8,7 @@ const Header = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-10 pb-10 md:px-4 lg:px-0">
             <div className="w-full pt-8 flex flex-col-reverse md:flex-row items-center justify-between">
                 <div className="flex flex-col md:flex-row items-center">
-                    <div className="text-3xl mr-4 font-heading font-semibold text-gray-500 py-4 md:py-0">
+                    <div className="text-2xl mr-4 font-heading font-semibold text-blue-500 py-4 md:py-0">
                         <Link to="/" title="Angelin Calu" className="inline-flex items-center">
                             <svg className="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 513">
                                 <circle cx="256.166" cy="256.002" r="256" fill="none" />
