@@ -35,7 +35,7 @@ module.exports = {
                         },
                     },
                     {
-                        resolve: "gatsby-remark-autolink-headers",
+                        resolve: 'gatsby-remark-autolink-headers',
                         options: {
                             elements: [`h2`, `h3`],
                         },
@@ -50,15 +50,45 @@ module.exports = {
                 name: `blog`,
             },
         },
-                {
+        {
             resolve: `gatsby-source-filesystem`,
             options: {
                 path: `${__dirname}/static/images`,
                 name: `images`,
             },
         },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Angelin Calu`,
+                short_name: `Angelin Calu`,
+                start_url: `/`,
+                background_color: `#fff`,
+                theme_color: `#172A4D`,
+                display: `standalone`,
+                icon: `src/assets/logo.svg`,
+                cache_busting_mode: 'none',
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-offline',
+            options: {
+                workboxConfig: {
+                    globPatterns: ['**/icons*'],
+                },
+            },
+        },
         `gatsby-plugin-postcss`,
         `gatsby-plugin-react-helmet`,
         `gatsby-remark-autolink-headers`,
+        `gatsby-plugin-sitemap`,
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                host: 'https://angelin.calu.info',
+                sitemap: 'https://angelin.calu.info/sitemap.xml',
+                policy: [{ userAgent: '*', allow: '/' }]
+            }
+        }
     ],
 };
