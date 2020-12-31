@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
-                    className="absolute overflow-hidden top-80 md:top-0"
+                    className="absolute overflow-hidden hidden md:block md:top-0"
                 >
                     <defs>
                         <linearGradient id="myGradient" gradientTransform="rotate(90)">
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
                 </svg>
                 <Header />
             </header>
-            <main className="max-w-6xl z-10 my-24 mx-auto px-10 lg:px-8 2xl:px-0">{children}</main>
+            <main className="relative max-w-6xl z-10 my-24 mx-auto px-10 lg:px-8 2xl:px-0">{children}</main>
             <footer className="bg-blue-100">
                 <Footer />
             </footer>
