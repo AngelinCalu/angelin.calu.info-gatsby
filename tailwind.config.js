@@ -798,7 +798,7 @@ module.exports = {
         alignContent: ['responsive'],
         alignItems: ['responsive'],
         alignSelf: ['responsive'],
-        animation: ['responsive', 'hover'],
+        animation: ['responsive', 'hover', 'group-hover'],
         appearance: ['responsive'],
         backgroundAttachment: ['responsive'],
         backgroundClip: ['responsive'],

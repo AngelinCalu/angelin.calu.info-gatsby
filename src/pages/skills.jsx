@@ -50,12 +50,13 @@ const Skills = () => {
                 </ul>
             </section>
             <section className="py-4">
-                <h3 className="uppercase text-2xl py-2">Hard skills</h3>
+                <h3 className="uppercase text-2xl py-2">Tech skills</h3>
                 <p>
                     My passion for writing beautiful code made me aquire skills in a wide range of programming languages
                     as well as various development tools.
                 </p>
                 <p>Below some of those:</p>
+                
             </section>
         </Layout>
     );
