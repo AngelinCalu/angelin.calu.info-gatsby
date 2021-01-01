@@ -2,6 +2,8 @@ import React from 'react';
 import Layout from '../layout';
 import SEO from '../components/seo';
 
+import skillsData from '../../content/data/skills';
+
 const Skills = () => {
     return (
         <Layout>
@@ -52,10 +54,26 @@ const Skills = () => {
             <section className="py-4">
                 <h3 className="uppercase text-2xl py-2">Tech skills</h3>
                 <p>
-                    My passion for writing beautiful code made me aquire skills in a wide range of programming languages
-                    as well as various development tools.
+                    My passion for writing beautiful code, or sometimes the constraints of the tasks, made me aquire
+                    skills in a wide range of programming languages as well as various development tools.
                 </p>
-                <p>Below some of those:</p>
+                <p className="py-2">Below some of those:</p>
+                <div className="pt-4">
+                    {skillsData.map((row, i) => (
+                        <div key={`row-${i+1}`} className="w-full justify-center inline-flex py-2 space-x-2 md:space-x-4">
+                            {row.map((skill) => (
+                                <div key={skill.name} className="h-14 md:h-24 px-2 hover:bg-gray-100 rounded-lg flex items-center">
+                                    <img
+                                        className={skill.iconSize || 'h-10 md:h-20 w-auto'}
+                                        src={`../images/tech-svg/${skill.icon}`}
+                                        alt={skill.name}
+                                        title={skill.name}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
             </section>
         </Layout>
     );

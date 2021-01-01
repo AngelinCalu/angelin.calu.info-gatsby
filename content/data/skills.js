@@ -1,122 +1,114 @@
 module.exports = [
-    {
-        name: 'JavaScript',
-        icon: 'javascript.svg',
-        row: 1,
-    },
-    {
-        name: 'TypeScript',
-        icon: 'typescript.svg',
-        row: 1,
-    },
-    {
-        name: 'React',
-        icon: 'react.svg',
-        row: 1,
-    },
-    {
-        name: 'Vue',
-        icon: 'vue.svg',
-        row: 1,
-    },
-    {
-        name: 'Gatsby',
-        icon: 'gatsby.svg',
-        row: 1,
-    },
-    {
-        name: 'PHP',
-        icon: 'php.svg',
-        row: 2,
-    },
-    {
-        name: 'Laravel',
-        icon: 'laravel.svg',
-        row: 2,
-    },
-    {
-        name: 'NodeJS',
-        icon: 'nodejs.svg',
-        row: 2,
-    },
-    {
-        name: 'ExpressJS',
-        icon: 'expressjs.svg',
-        row: 2,
-    },
-    {
-        name: 'C#',
-        icon: 'csharp.svg',
-        row: 3,
-    },
-    {
-        name: 'dotNet',
-        icon: 'dotnet.svg',
-        row: 3,
-    },
-    {
-        name: 'Python',
-        icon: 'python.svg',
-        row: 3,
-    },
-    {
-        name: 'C++',
-        icon: 'cplusplus.svg',
-        row: 3,
-    },
-    {
-        name: 'MySQL',
-        icon: 'mysql.svg',
-        row: 4,
-    },
-    {
-        name: 'PostgreSQL',
-        icon: 'postgresql.svg',
-        row: 4,
-    },
-    {
-        name: 'MongoDB',
-        icon: 'mongodb.svg',
-        row: 4,
-    },
-    {
-        name: 'HTML',
-        icon: 'html.svg',
-        row: 5,
-    },
-    {
-        name: 'CSS',
-        icon: 'css.svg',
-        row: 5,
-    },
-    {
-        name: 'SASS',
-        icon: 'sass.svg',
-        row: 5,
-    },
-    {
-        name: 'TailwindCSS',
-        icon: 'tailwindcss.svg',
-        row: 5,
-    },
-    {
-        name: 'Git',
-        icon: 'git.svg',
-        row: 6,
-    },
-    {
-        name: 'Docker',
-        icon: 'docker.svg',
-        row: 6,
-    },
-    {
-        name: 'Visual Studio Code',
-        icon: 'vscode.svg',
-        row: 6,
-    },
-    {
-        name: 'Figma',
-        icon: 'figma.svg',
-        row: 6,
-    },
+    [
+        {
+            name: 'JavaScript',
+            icon: 'javascript.svg',
+        },
+        {
+            name: 'TypeScript',
+            icon: 'typescript.svg',
+        },
+        {
+            name: 'React',
+            icon: 'react.svg',
+        },
+        {
+            name: 'Vue',
+            icon: 'vue.svg',
+        },
+        {
+            name: 'Gatsby',
+            icon: 'gatsby.svg',
+        },
+    ],
+    [
+        {
+            name: 'PHP',
+            icon: 'php.svg',
+        },
+        {
+            name: 'Laravel',
+            icon: 'laravel.svg',
+        },
+        {
+            name: 'NodeJS',
+            icon: 'nodejs.svg',
+        },
+        {
+            name: 'ExpressJS',
+            icon: 'expressjs.svg',
+            iconSize: 'h-6 md:h-11 w-auto'
+        },
+    ],
+    [
+        {
+            name: 'C#',
+            icon: 'csharp.svg',
+        },
+        {
+            name: 'dotNet',
+            icon: 'dotnet.svg',
+        },
+        {
+            name: 'Python',
+            icon: 'python.svg',
+        },
+        {
+            name: 'C++',
+            icon: 'cplusplus.svg',
+        },
+    ],
+    [
+        {
+            name: 'MySQL',
+            icon: 'mysql.svg',
+        },
+        {
+            name: 'PostgreSQL',
+            icon: 'postgresql.svg',
+        },
+        {
+            name: 'MongoDB',
+            icon: 'mongodb.svg',
+            iconSize: 'h-7 md:h-14 w-auto'
+        },
+    ],
+    [
+        {
+            name: 'HTML',
+            icon: 'html.svg',
+        },
+        {
+            name: 'CSS',
+            icon: 'css.svg',
+        },
+        {
+            name: 'SASS',
+            icon: 'sass.svg',
+        },
+        {
+            name: 'TailwindCSS',
+            icon: 'tailwindcss.svg',
+            iconSize: 'w-10 md:w-20 h-auto'
+        },
+    ],
+    [
+        {
+            name: 'Git',
+            icon: 'git.svg',
+        },
+        {
+            name: 'Docker',
+            icon: 'docker.svg',
+            iconSize: 'h-8 md:h-16 w-auto'
+        },
+        {
+            name: 'Visual Studio Code',
+            icon: 'vscode.svg',
+        },
+        {
+            name: 'Figma',
+            icon: 'figma.svg',
+        },
+    ],
 ];
