@@ -15,8 +15,8 @@ const Skills = () => {
                         <span className="text-gray-500 text-sm">
                             I'm deliberately putting this at the top of the list as I think this might be one of my most
                             important assets. And, just to be perfectly clear I'm not referring to the artistic side but
-                            the ability to think, design and implement (sometimes innovative) solutions to a wide variety of problems and
-                            tasks.
+                            the ability to think, design and implement (sometimes innovative) solutions to a wide
+                            variety of problems and tasks.
                         </span>
                     </li>
                     <li>
@@ -56,7 +56,6 @@ const Skills = () => {
                     as well as various development tools.
                 </p>
                 <p>Below some of those:</p>
-                
             </section>
         </Layout>
     );

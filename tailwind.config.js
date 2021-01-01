@@ -19,12 +19,8 @@ module.exports = {
             white: colors.white,
             gray: colors.blueGray,
             red: colors.red,
-            yellow: colors.amber,
             green: colors.emerald,
             blue: colors.blue,
-            indigo: colors.indigo,
-            purple: colors.violet,
-            pink: colors.pink,
         },
         spacing: {
             px: '1px',
@@ -747,19 +743,19 @@ module.exports = {
                         },
                         h1: {
                             fontFamily: theme('fontFamily.heading'),
-                            fontWeight: theme('fontWeight.semibold')
+                            fontWeight: theme('fontWeight.semibold'),
                         },
                         h2: {
                             fontFamily: theme('fontFamily.heading'),
-                            fontWeight: theme('fontWeight.semibold')
+                            fontWeight: theme('fontWeight.semibold'),
                         },
                         h3: {
                             fontFamily: theme('fontFamily.heading'),
-                            fontWeight: theme('fontWeight.semibold')
+                            fontWeight: theme('fontWeight.semibold'),
                         },
                         h4: {
                             fontFamily: theme('fontFamily.heading'),
-                            fontWeight: theme('fontWeight.semibold')
+                            fontWeight: theme('fontWeight.semibold'),
                         },
                     },
                 },
@@ -773,7 +769,7 @@ module.exports = {
                             fontSize: '0.8rem',
                         },
                     },
-                }
+                },
             }),
         },
     },
