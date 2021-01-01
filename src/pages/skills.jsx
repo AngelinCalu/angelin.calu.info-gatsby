@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '../layout';
 import SEO from '../components/seo';
 
 import skillsData from '../../content/data/skills';
 
 const Skills = () => {
+    const [techList, setTechList] = useState(false);
+
     return (
         <Layout>
             <SEO title="Skills" />
@@ -32,7 +34,8 @@ const Skills = () => {
                         <div>Communication</div>
                         <span className="text-gray-500 text-sm">
                             Good communication skills and very confortable communicating in general. I've been using
-                            English language as the main way of communicating in the workplace for more than 6 years.
+                            English language as the main way of communicating on the workplace and outside of working
+                            hours for more than 6 years.
                         </span>
                     </li>
                     <li>
@@ -58,11 +61,24 @@ const Skills = () => {
                     skills in a wide range of programming languages as well as various development tools.
                 </p>
                 <p className="py-2">Below some of those:</p>
+                <button
+                    type="button"
+                    className="p-2 hover:underline hover:text-blue-500"
+                    onClick={() => setTechList(!techList)}
+                >
+                    {techList ? 'View as Table' : 'View as List'}
+                </button>
                 <div className="pt-4">
                     {skillsData.map((row, i) => (
-                        <div key={`row-${i+1}`} className="w-full justify-center inline-flex py-2 space-x-2 md:space-x-4">
+                        <div
+                            key={`row-${i + 1}`}
+                            className="w-full justify-center inline-flex py-2 space-x-2 md:space-x-4"
+                        >
                             {row.map((skill) => (
-                                <div key={skill.name} className="h-14 md:h-24 px-2 hover:bg-gray-100 rounded-lg flex items-center">
+                                <div
+                                    key={skill.name}
+                                    className="h-14 md:h-24 px-2 hover:bg-gray-100 rounded-lg flex items-center"
+                                >
                                     <img
                                         className={skill.iconSize || 'h-10 md:h-20 w-auto'}
                                         src={`../images/tech-svg/${skill.icon}`}

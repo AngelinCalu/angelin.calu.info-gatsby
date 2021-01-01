@@ -49,7 +49,7 @@ const Education = () => {
                 able to find good resources to learn on my own, expecially in the field of software and web development.
                 And, to be perfectly honest, keeping up with the latest technologies and practices became a part of who I am.
             </p>
-            <p>Some of those trainings (the ones that would provide some certificate of completion, 😊 below):</p>
+            <p className="py-2">Because people are saying that having these on your profile is important, some of those trainings (the ones that would provide some certificate of completion 😊 and Laracasts, the one I consider the most relevant, below):</p>
 
             <ul className="py-3 list-disc space-y-2">
                 <li>
