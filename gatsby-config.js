@@ -11,10 +11,23 @@ module.exports = {
         twitterUsername: `@AngelinCalu`,
     },
     plugins: [
+        {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+          trackingId: process.env.GA_TRACKING_ID,
+          head: true,
+      },
+    },
         `gatsby-image`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-remark-images`,
+        {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ["GA_TRACKING_ID"]
+      },
+    },
         {
             resolve: `gatsby-transformer-remark`,
             options: {
