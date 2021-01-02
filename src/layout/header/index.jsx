@@ -10,7 +10,12 @@ const Header = () => {
                 <div className="flex flex-col md:flex-row items-center">
                     <div className="text-2xl mr-4 font-heading font-semibold text-blue-500 py-4 md:py-0">
                         <Link to="/" title="Angelin Calu" className="inline-flex items-center group">
-                            <svg className="w-16 h-16" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513 513">
+                            <svg
+                                className="w-16 h-16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 513 513"
+                            >
                                 <circle cx="256.166" cy="256.002" r="256" fill="none" />
                                 <circle
                                     cx="256.166"
@@ -40,7 +45,7 @@ const Header = () => {
                                     className="group-hover:animate-pulse"
                                     d="M446.692 187.357a202.513 202.513 0 00-340.879-67.025 202.516 202.516 0 10333.615 221.853l-36.32-17.08a162.38 162.38 0 115.825-124.143l37.759-13.605z"
                                     fill="url(#paint1_linear)"
-                                    />
+                                />
                                 <path
                                     d="M446.692 187.357a202.513 202.513 0 00-340.879-67.025 202.516 202.516 0 10333.615 221.853l-36.32-17.08a162.38 162.38 0 115.825-124.143l37.759-13.605z"
                                     stroke="#fff"

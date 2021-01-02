@@ -12,22 +12,22 @@ module.exports = {
     },
     plugins: [
         {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-          trackingId: process.env.GA_TRACKING_ID,
-          head: true,
-      },
-    },
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: process.env.GA_TRACKING_ID,
+                head: true,
+            },
+        },
         `gatsby-image`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-remark-images`,
         {
-      resolve: `gatsby-plugin-env-variables`,
-      options: {
-        allowList: ["GA_TRACKING_ID"]
-      },
-    },
+            resolve: `gatsby-plugin-env-variables`,
+            options: {
+                allowList: ['GA_TRACKING_ID'],
+            },
+        },
         {
             resolve: `gatsby-transformer-remark`,
             options: {
@@ -100,8 +100,8 @@ module.exports = {
             options: {
                 host: 'https://angelin.calu.info',
                 sitemap: 'https://angelin.calu.info/sitemap.xml',
-                policy: [{ userAgent: '*', allow: '/' }]
-            }
-        }
+                policy: [{ userAgent: '*', allow: '/' }],
+            },
+        },
     ],
 };

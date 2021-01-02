@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "gatsby develop --port 9000 --open",
+    "build": "gatsby build",
+    "serve": "gatsby serve --port 9001 --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

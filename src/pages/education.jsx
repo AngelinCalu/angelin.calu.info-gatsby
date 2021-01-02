@@ -5,7 +5,11 @@ import SEO from '../components/seo';
 const Education = () => {
     return (
         <Layout>
-            <SEO title="Education" description="Education information for Angelin Calu, Marine Engineer, Naval Architect, Hull Design specialist, and full stack developer, based in Turku, Finland."/>
+            <SEO
+                pathname="/education"
+                title="Education"
+                description="Education information for Angelin Calu, Marine Engineer, Naval Architect, Hull Design specialist, and full stack developer, based in Turku, Finland."
+            />
             <h1 className="text-4xl py-4">Education</h1>
             <h2 className="text-lg font-bold pt-4 pb-2">2001 - 2005</h2>
             <p>
@@ -47,15 +51,28 @@ const Education = () => {
             <p>
                 The study period has definitely continued even after the institutionalized education. I've always been
                 able to find good resources to learn on my own, expecially in the field of software and web development.
-                And, to be perfectly honest, keeping up with the latest technologies and practices became a part of who I am.
+                And, to be perfectly honest, keeping up with the latest technologies and practices became a part of who
+                I am.
             </p>
-            <p className="py-2">Because people are saying that having these on your profile is important, some of those trainings (the ones that would provide some certificate of completion 😊 and Laracasts, the one I consider the most relevant, below):</p>
+            <p className="py-2">
+                Because people are saying that having these on your profile is important, some of those trainings (the
+                ones that would provide some certificate of completion 😊 and Laracasts, the one I consider the most
+                relevant, below):
+            </p>
 
             <ul className="py-3 list-disc space-y-2">
                 <li>
                     <b>Laracasts.com</b>
-                    <p><span className="text-gray-500">Period: </span><span className="text-sm">25.08.2016 - Present time</span></p>
-                    <p><span className="text-gray-500">Topics: </span><span className="text-sm">A wide variety of topics like PHP, Laravel, Vue, MySQL, JavaScript, Clean Code, etc.</span></p>
+                    <p>
+                        <span className="text-gray-500">Period: </span>
+                        <span className="text-sm">25.08.2016 - Present time</span>
+                    </p>
+                    <p>
+                        <span className="text-gray-500">Topics: </span>
+                        <span className="text-sm">
+                            A wide variety of topics like PHP, Laravel, Vue, MySQL, JavaScript, Clean Code, etc.
+                        </span>
+                    </p>
                     <p>
                         <span className="text-gray-500">Organizer: </span>
                         <span className="text-sm">
@@ -73,8 +90,16 @@ const Education = () => {
                 </li>
                 <li>
                     <b>Buutcamp Sprint: TypeScript</b>
-                    <p><span className="text-gray-500">Period: </span><span className="text-sm">27.08.2020 - 17.12.2020</span></p>
-                    <p><span className="text-gray-500">Topics: </span><span className="text-sm">TypeScript, React, ExpressJs, MongoDB, PostgreSQL, Agile / SCRUM methodology.</span></p>
+                    <p>
+                        <span className="text-gray-500">Period: </span>
+                        <span className="text-sm">27.08.2020 - 17.12.2020</span>
+                    </p>
+                    <p>
+                        <span className="text-gray-500">Topics: </span>
+                        <span className="text-sm">
+                            TypeScript, React, ExpressJs, MongoDB, PostgreSQL, Agile / SCRUM methodology.
+                        </span>
+                    </p>
                     <p>
                         <span className="text-gray-500">Organizer: </span>
                         <span className="text-sm">
@@ -92,8 +117,14 @@ const Education = () => {
                 </li>
                 <li>
                     <b>Modern JavaScript for React JS - ES6.</b>
-                    <p><span className="text-gray-500">Period: </span><span className="text-sm">August 2020</span></p>
-                    <p><span className="text-gray-500">Topics: </span><span className="text-sm">JavaScript.</span></p>
+                    <p>
+                        <span className="text-gray-500">Period: </span>
+                        <span className="text-sm">August 2020</span>
+                    </p>
+                    <p>
+                        <span className="text-gray-500">Topics: </span>
+                        <span className="text-sm">JavaScript.</span>
+                    </p>
                     <p>
                         <span className="text-gray-500">Organizer: </span>
                         <span className="text-sm">
@@ -111,8 +142,14 @@ const Education = () => {
                 </li>
                 <li>
                     <b>JavaScript ES6 Course: ECMA Script 6 (Step by Step)</b>
-                    <p><span className="text-gray-500">Period: </span><span className="text-sm">August 2020</span></p>
-                    <p><span className="text-gray-500">Topics: </span><span className="text-sm">JavaScript.</span></p>
+                    <p>
+                        <span className="text-gray-500">Period: </span>
+                        <span className="text-sm">August 2020</span>
+                    </p>
+                    <p>
+                        <span className="text-gray-500">Topics: </span>
+                        <span className="text-sm">JavaScript.</span>
+                    </p>
                     <p>
                         <span className="text-gray-500">Organizer: </span>
                         <span className="text-sm">
@@ -130,8 +167,14 @@ const Education = () => {
                 </li>
                 <li>
                     <b>Interactive Web Animation 2020 [JavaScript, SVG, CSS & HTML]</b>
-                    <p><span className="text-gray-500">Period: </span><span className="text-sm">December 2020</span></p>
-                    <p><span className="text-gray-500">Topics: </span><span className="text-sm">CSS, SVG and JavaScript animations.</span></p>
+                    <p>
+                        <span className="text-gray-500">Period: </span>
+                        <span className="text-sm">December 2020</span>
+                    </p>
+                    <p>
+                        <span className="text-gray-500">Topics: </span>
+                        <span className="text-sm">CSS, SVG and JavaScript animations.</span>
+                    </p>
                     <p>
                         <span className="text-gray-500">Organizer: </span>
                         <span className="text-sm">

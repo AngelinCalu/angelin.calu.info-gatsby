@@ -8,6 +8,7 @@ export default function Blog({ data }) {
     return (
         <Layout>
             <SEO
+                pathname="/blog"
                 title="Blog"
                 description="Articles about the personal journey back to the IT industry, interesting find-outs related to technology or development."
             />

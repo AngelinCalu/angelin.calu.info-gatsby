@@ -9,10 +9,16 @@ const Skills = () => {
 
     return (
         <Layout>
-            <SEO title="Skills" description="A list of the soft and technical skills of Angelin Calu, full-stack developer based in Turku, Finland, can be read here."/>
+            <SEO
+                pathname="/skills"
+                title="Skills"
+                description="A list of the soft and technical skills of Angelin Calu, full-stack developer based in Turku, Finland, can be read here."
+            />
             <h1 className="text-4xl py-4">Skills</h1>
             <section className="py-4">
-                <h3 id="soft-skills" className="uppercase text-2xl py-2">Soft skills</h3>
+                <h3 id="soft-skills" className="uppercase text-2xl py-2">
+                    Soft skills
+                </h3>
                 <ul className="space-y-4 list-disc">
                     <li>
                         <div>Creativity</div>
@@ -26,7 +32,8 @@ const Skills = () => {
                     <li>
                         <div>Achiever</div>
                         <span className="text-gray-500 text-sm">
-                            I like to be productive and stay busy. Because of this I am always focused, consistent about getting things done in a timely manner and look to take on additional responsibilities.
+                            I like to be productive and stay busy. Because of this I am always focused, consistent about
+                            getting things done in a timely manner and look to take on additional responsibilities.
                         </span>
                     </li>
                     <li>
@@ -61,7 +68,9 @@ const Skills = () => {
                 </ul>
             </section>
             <section className="py-4">
-                <h3 id="tech-skills" className="uppercase text-2xl py-2">Tech skills</h3>
+                <h3 id="tech-skills" className="uppercase text-2xl py-2">
+                    Tech skills
+                </h3>
                 <p>
                     My passion for writing beautiful code, or sometimes the constraints of the tasks, made me aquire
                     skills in a wide range of programming languages as well as various development tools.
@@ -78,12 +87,16 @@ const Skills = () => {
                     {skillsData.map((row, i) => (
                         <div
                             key={`row-${i + 1}`}
-                            className={`w-full justify-center py-2 ${techList ? null : 'inline-flex space-x-2 md:space-x-4'} `}
+                            className={`w-full justify-center py-2 ${
+                                techList ? null : 'inline-flex space-x-2 md:space-x-4'
+                            } `}
                         >
                             {row.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className={`h-14 md:h-24 px-2 hover:bg-gray-100 rounded-lg flex items-center focus:outline-none ${techList ? 'my-2 border-b': null}`}
+                                    className={`h-14 md:h-24 px-2 hover:bg-gray-100 rounded-lg flex items-center focus:outline-none ${
+                                        techList ? 'my-2 border-b' : null
+                                    }`}
                                 >
                                     <img
                                         className={skill.iconSize || 'h-10 md:h-20 w-auto'}

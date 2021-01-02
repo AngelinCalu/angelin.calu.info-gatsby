@@ -53,7 +53,11 @@ const Shipbuilding = () => {
 
     return (
         <Layout>
-            <SEO title="Shipbuilding" description="Experience of Angelin Calu in shipbuilding, skills and projects done during the years." />
+            <SEO
+                pathname="/shipbuilding"
+                title="Shipbuilding"
+                description="Experience of Angelin Calu in shipbuilding, skills and projects done during the years."
+            />
             <h1 className="text-4xl py-4">Shipbuilding</h1>
             <section className="py-2">
                 <h3 className="uppercase text-2xl py-2">Brief</h3>

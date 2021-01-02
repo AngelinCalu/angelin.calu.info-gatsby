@@ -11,7 +11,7 @@ export default function Home({ data }) {
     return (
         <Layout>
             <SEO title="Homepage" />
-            <Bio profilePic={ data.profilePic }/>
+            <Bio profilePic={data.profilePic} />
             <BlogPosts posts={data.allMdx.nodes} />
             <Projects />
             <References />
@@ -21,10 +21,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
     query SITE_INDEX_QUERY {
-        allMdx(
-            sort: { fields: [frontmatter___date], order: DESC }
-            limit: 5
-            ) {
+        allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 5) {
             nodes {
                 id
                 frontmatter {
@@ -38,10 +35,10 @@ export const query = graphql`
                 timeToRead
             }
         }
-        profilePic: file(relativePath: {eq: "default.png"}) {
+        profilePic: file(relativePath: { eq: "default.png" }) {
             childImageSharp {
                 fluid(maxWidth: 400, quality: 100) {
-                        ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid
                 }
             }
         }

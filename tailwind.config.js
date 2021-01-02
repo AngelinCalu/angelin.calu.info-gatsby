@@ -759,7 +759,7 @@ module.exports = {
                         },
                         p: {
                             textIndent: '1.5rem',
-                        }
+                        },
                     },
                 },
                 lg: {

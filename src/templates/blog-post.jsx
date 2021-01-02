@@ -6,12 +6,12 @@ import SEO from '../components/seo';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
     const { frontmatter, body, excerpt, timeToRead } = data.mdx;
-    const { previous, next } = pageContext;
+    const { slug, previous, next } = pageContext;
     const ogImagePath = frontmatter.ogimage && frontmatter.ogimage.childImageSharp.fixed.src;
 
     return (
         <Layout>
-            <SEO title={frontmatter.title} description={excerpt} image={ogImagePath} />
+            <SEO pathname={slug} title={frontmatter.title} description={excerpt} image={ogImagePath} />
 
             <article className="prose prose-sm sm:prose lg:prose-lg min-w-0 max-w-none">
                 <div className="flex flex-col pb-2 text-sm">

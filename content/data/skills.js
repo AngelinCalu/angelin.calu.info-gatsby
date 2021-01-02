@@ -37,7 +37,7 @@ module.exports = [
         {
             name: 'ExpressJS',
             icon: 'expressjs.svg',
-            iconSize: 'h-6 md:h-11 w-auto'
+            iconSize: 'h-6 md:h-11 w-auto',
         },
     ],
     [
@@ -70,7 +70,7 @@ module.exports = [
         {
             name: 'MongoDB',
             icon: 'mongodb.svg',
-            iconSize: 'h-7 md:h-14 w-auto'
+            iconSize: 'h-7 md:h-14 w-auto',
         },
     ],
     [
@@ -89,7 +89,7 @@ module.exports = [
         {
             name: 'TailwindCSS',
             icon: 'tailwindcss.svg',
-            iconSize: 'w-10 md:w-20 h-auto'
+            iconSize: 'w-10 md:w-20 h-auto',
         },
     ],
     [
@@ -100,7 +100,7 @@ module.exports = [
         {
             name: 'Docker',
             icon: 'docker.svg',
-            iconSize: 'h-8 md:h-16 w-auto'
+            iconSize: 'h-8 md:h-16 w-auto',
         },
         {
             name: 'Visual Studio Code',
