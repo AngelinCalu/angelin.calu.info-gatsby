@@ -72,13 +72,13 @@ const Skills = () => {
                     className="p-2 hover:underline hover:text-blue-500"
                     onClick={() => setTechList(!techList)}
                 >
-                    {techList ? 'View as Table' : 'View as List'}
+                    {techList ? 'View as Group' : 'View as List'}
                 </button>
                 <div className="pt-4">
                     {skillsData.map((row, i) => (
                         <div
                             key={`row-${i + 1}`}
-                            className="w-full justify-center inline-flex py-2 space-x-2 md:space-x-4"
+                            className={`w-full justify-center py-2 ${techList ? null : 'inline-flex space-x-2 md:space-x-4'} `}
                         >
                             {row.map((skill) => (
                                 <div
