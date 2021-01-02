@@ -7,14 +7,20 @@ import SEO from '../components/seo';
 const BlogPostTemplate = ({ data, pageContext }) => {
     const { frontmatter, body, excerpt, timeToRead } = data.mdx;
     const { previous, next } = pageContext;
+    const ogImagePath = frontmatter.ogimage && frontmatter.ogimage.childImageSharp.fixed.src;
+
     return (
         <Layout>
-            <SEO title={frontmatter.title} description={excerpt} />
+            <SEO title={frontmatter.title} description={excerpt} image={ogImagePath} />
 
             <article className="prose prose-sm sm:prose lg:prose-lg min-w-0 max-w-none">
                 <div className="flex flex-col pb-2 text-sm">
-                    <span className="text-gray-500">Published on <b>{frontmatter.date}</b></span>
-                    <span className="text-gray-500">Estimated time to Read: <b>{timeToRead} minute(s)</b></span>
+                    <span className="text-gray-500">
+                        Published on <b>{frontmatter.date}</b>
+                    </span>
+                    <span className="text-gray-500">
+                        Estimated time to Read: <b>{timeToRead} minute(s)</b>
+                    </span>
                 </div>
                 <h1 className="py-1">{frontmatter.title}</h1>
                 <MDXRenderer>{body}</MDXRenderer>
@@ -66,6 +72,13 @@ export const query = graphql`
             frontmatter {
                 title
                 date(formatString: "MMMM Do YYYY")
+                ogimage {
+                    childImageSharp {
+                        fixed {
+                            src
+                        }
+                    }
+                }
             }
             excerpt(pruneLength: 150)
             timeToRead

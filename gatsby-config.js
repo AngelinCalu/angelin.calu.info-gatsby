@@ -4,7 +4,7 @@ module.exports = {
         description: `Angelin Calu is a Full-Stack Developer and Shipbuilding Design Engineer based in Turku, Finland. Sometimes he also writes about stuff.`,
         keywords: ['Angelin Calu', 'Full-Stack developer Turku', 'Shipbuilding Engineer Turku'],
         author: `Angelin Calu`,
-        image: `./default.png`,
+        image: `/default.png`,
         siteUrl: `https://angelin.calu.info`,
         siteLanguage: `en-GB`,
         siteLocale: `en_gb`,

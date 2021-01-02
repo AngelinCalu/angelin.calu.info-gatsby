@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import useSiteMetadata from '../../hooks/useSiteMetadata';
-
-function SEO({ description, lang, image: metaImage, title, pathname, isBlogPost }) {
+function SEO({ description, lang, image, title, pathname, isBlogPost }) {
     const { site } = useSiteMetadata();
 
     const metaDescription = description || site.siteMetadata.description;
-    const image = metaImage && metaImage.src ? `${site.siteMetadata.siteUrl}${metaImage.src}` : null;
+    const metaImage = `${site.siteMetadata.siteUrl}${image || site.siteMetadata.image}`;
     const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : site.siteMetadata.siteUrl;
 
     return (
@@ -22,7 +21,7 @@ function SEO({ description, lang, image: metaImage, title, pathname, isBlogPost 
 
             {/* Basic Meta Tags */}
             <meta name="description" content={metaDescription} />
-            <meta name="image" content={image} />
+            <meta name="image" content={metaImage} />
             <meta name="keywords" content={site.siteMetadata.keywords.join(', ')} />
 
             {/* Open Graph Meta Tags */}
@@ -32,14 +31,14 @@ function SEO({ description, lang, image: metaImage, title, pathname, isBlogPost 
             <meta property="og:title" content={title} />
             <meta property="og:locale" content={site.siteMetadata.siteLocale} />
             <meta property="og:description" content={metaDescription} />
-            <meta property="og:image" content={image} />
+            <meta property="og:image" content={metaImage} />
 
             {/* Twitter Meta Tags */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:creator" content={site.siteMetadata.twitterUsername} />
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={metaDescription} />
-            <meta name="twitter:image" content={image} />
+            <meta name="twitter:image" content={metaImage} />
         </Helmet>
     );
 }
@@ -49,11 +48,7 @@ SEO.propTypes = {
     lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
     title: PropTypes.string.isRequired,
-    image: PropTypes.shape({
-        src: PropTypes.string.isRequired,
-        height: PropTypes.number.isRequired,
-        width: PropTypes.number.isRequired,
-    }),
+    image: PropTypes.string,
     pathname: PropTypes.string,
     isBlogPost: PropTypes.bool,
 };
