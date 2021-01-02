@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="text-center py-12">
                 <h3 className="text-3xl font-bold py-4">Get in touch</h3>
                 <p className="text-md">
-                    Wether is for saying hello, or maybe you would like to discuss work related stuff, please feel free
+                    Whether is for saying hello, or maybe you would like to discuss work related stuff, please feel free
                     to send me an email.
                 </p>
                 <p>

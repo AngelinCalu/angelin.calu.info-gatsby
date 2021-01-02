@@ -19,7 +19,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <h1 className="py-1">{frontmatter.title}</h1>
                 <MDXRenderer>{body}</MDXRenderer>
             </article>
-            <div className="flex justify-between">
+            <div className="flex justify-between border-t mt-5">
                 {previous === false ? (
                     <div>&nbsp;</div>
                 ) : (
@@ -65,7 +65,7 @@ export const query = graphql`
             body
             frontmatter {
                 title
-                date(formatString: "YYYY-MM-DD")
+                date(formatString: "MMMM Do YYYY")
             }
             excerpt(pruneLength: 150)
             timeToRead

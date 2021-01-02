@@ -83,7 +83,7 @@ const Skills = () => {
                             {row.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className="h-14 md:h-24 px-2 hover:bg-gray-100 rounded-lg flex items-center"
+                                    className={`h-14 md:h-24 px-2 hover:bg-gray-100 rounded-lg flex items-center focus:outline-none ${techList ? 'my-2 border-b': null}`}
                                 >
                                     <img
                                         className={skill.iconSize || 'h-10 md:h-20 w-auto'}
