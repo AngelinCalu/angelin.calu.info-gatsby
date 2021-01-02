@@ -12,7 +12,7 @@ const Skills = () => {
             <SEO title="Skills" />
             <h1 className="text-4xl py-4">Skills</h1>
             <section className="py-4">
-                <h3 className="uppercase text-2xl py-2">Soft skills</h3>
+                <h3 id="soft-skills" className="uppercase text-2xl py-2">Soft skills</h3>
                 <ul className="space-y-4 list-disc">
                     <li>
                         <div>Creativity</div>
@@ -21,6 +21,12 @@ const Skills = () => {
                             important assets. And, just to be perfectly clear I'm not referring to the artistic side but
                             the ability to think, design and implement (sometimes innovative) solutions to a wide
                             variety of problems and tasks.
+                        </span>
+                    </li>
+                    <li>
+                        <div>Achiever</div>
+                        <span className="text-gray-500 text-sm">
+                            I like to be productive and stay busy. Because of this I am always focused, consistent about getting things done in a timely manner and look to take on additional responsibilities.
                         </span>
                     </li>
                     <li>
@@ -55,7 +61,7 @@ const Skills = () => {
                 </ul>
             </section>
             <section className="py-4">
-                <h3 className="uppercase text-2xl py-2">Tech skills</h3>
+                <h3 id="tech-skills" className="uppercase text-2xl py-2">Tech skills</h3>
                 <p>
                     My passion for writing beautiful code, or sometimes the constraints of the tasks, made me aquire
                     skills in a wide range of programming languages as well as various development tools.

@@ -757,6 +757,9 @@ module.exports = {
                             fontFamily: theme('fontFamily.heading'),
                             fontWeight: theme('fontWeight.semibold'),
                         },
+                        p: {
+                            textIndent: '1.5rem',
+                        }
                     },
                 },
                 lg: {
