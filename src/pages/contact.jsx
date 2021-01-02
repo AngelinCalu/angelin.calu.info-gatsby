@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 const Contact = () => {
     return (
         <Layout>
-            <SEO title="Contact" />
+            <SEO title="Contact" description="Contact information for Angelin Calu, shipbuilding engineer and Full-Stack developer based in Turku, Finland."/>
             <h1 className="text-4xl py-4">Contact</h1>
             <p>Feel free to reach out if you're looking for a developer, a shipbuilding engineer, have a question, or just want to connect.</p>
             <p>

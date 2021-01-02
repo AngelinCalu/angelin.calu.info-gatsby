@@ -7,9 +7,15 @@ import BlogPosts from '../components/homepage/blog-posts';
 export default function Blog({ data }) {
     return (
         <Layout>
-            <SEO title="Blog" description="Articles about the personal journey back to the IT industry, interesting find-outs related to technology or development."/>
+            <SEO
+                title="Blog"
+                description="Articles about the personal journey back to the IT industry, interesting find-outs related to technology or development."
+            />
             <h1 className="text-4xl py-4">Blog</h1>
-            <p>I will post here about my journey back to software development, experience with various technologies, side projects or notable "How to's". </p>
+            <p>
+                I will post here about my journey back to software development, experience with various technologies,
+                side projects or notable "How to's".
+            </p>
             <BlogPosts posts={data.allMdx.nodes} />
         </Layout>
     );

@@ -9,7 +9,7 @@ const Skills = () => {
 
     return (
         <Layout>
-            <SEO title="Skills" />
+            <SEO title="Skills" description="A list of the soft and technical skills of Angelin Calu, full-stack developer based in Turku, Finland, can be read here."/>
             <h1 className="text-4xl py-4">Skills</h1>
             <section className="py-4">
                 <h3 id="soft-skills" className="uppercase text-2xl py-2">Soft skills</h3>
