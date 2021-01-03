@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="w-full max-w-6xl mx-auto px-10 md:px-4 xl:px-0">
             <div className="text-center py-12">
-                <h3 className="text-3xl font-bold py-4">Get in touch</h3>
+                <h3 className="text-3xl font-bold font-heading py-4">Get in touch</h3>
                 <p className="text-md">
                     Whether is for saying hello, or maybe you would like to discuss work related stuff, please feel free
                     to send me an email.
