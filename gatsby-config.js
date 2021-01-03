@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: `Angelin Calu | Full-Stack Developer`,
+        title: `Angelin Calu | Shipbuilding Engineer and Full-Stack Developer`,
         description: `Angelin Calu is a Full-Stack Developer and Shipbuilding Design Engineer based in Turku, Finland. Sometimes he also writes about stuff.`,
         keywords: ['Angelin Calu', 'Full-Stack developer Turku', 'Shipbuilding Engineer Turku'],
         author: `Angelin Calu`,

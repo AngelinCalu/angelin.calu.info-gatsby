@@ -39,6 +39,9 @@ function SEO({ description, lang, image, title, pathname, isBlogPost }) {
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={metaDescription} />
             <meta name="twitter:image" content={metaImage} />
+
+            {/* Only for the landing page */}
+            {!pathname ? <meta name="msvalidate.01" content="2903125B9F2CB5739B4FBD5F4802B7D4" /> : null}
         </Helmet>
     );
 }
