@@ -9,7 +9,7 @@ const BlogPosts = ({ posts }) => {
                 <Link key={id} to={fields.slug}>
                     <article className="w-full p-4 flex flex-col md:flex-row justify-between rounded-md group hover:bg-gray-100">
                         <div>
-                            <h2 className="text-lg group-hover:text-blue-700">{frontmatter.title}</h2>
+                            <h4 className="text-lg group-hover:text-blue-700">{frontmatter.title}</h4>
                             <p className="text-sm text-gray-700">{frontmatter.description}</p>
                         </div>
                         <div className="flex justify-between md:flex-col md:items-end group-hover:text-gray-500">

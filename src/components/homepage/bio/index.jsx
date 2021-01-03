@@ -5,9 +5,9 @@ const Bio = ({ profilePic }) => {
     return (
         <section className="space-y-2 flex flex-col-reverse md:flex-row">
             <div className="px-6 space-y-3">
-                <h3 className="text-xl mt-10 md:mt-0 mb-2 indent">
-                    Hi! I’m <em className="font-bold">Angelin Calu</em>.
-                </h3>
+                <h1 className="text-xl mt-10 md:mt-0 mb-2 indent">
+                    Hi! I am <em className="font-bold">Angelin Calu</em>.
+                </h1>
                 <p className="indent">
                     Born in Braila, Romania, currently living in Turku, Finland, father of two, engineer, entreprenour,
                     passionate about technology in general, started coding years before Stackoverflow launched (
