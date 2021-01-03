@@ -158,6 +158,7 @@ const Shipbuilding = () => {
                                     )[0].node.childImageSharp.fluid
                                 }
                                 src={ship.name}
+                                alt={ship.name}
                             />
                             <span className="absolute top-0 left-0 bg-red-500 bg-opacity-75 text-white p-1 px-4 text-sm group-hover:bg-opacity-100">
                                 {ship.yardNo}
