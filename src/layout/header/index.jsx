@@ -11,7 +11,7 @@ const Header = () => {
                     <div className="text-2xl mr-4 font-heading font-semibold text-blue-500 py-4 md:py-0">
                         <Link to="/" title="Angelin Calu" className="inline-flex items-center group">
                             <svg
-                                className="w-16 h-16"
+                                style={{ width: '4rem', height: '4rem' }}
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 513 513"
