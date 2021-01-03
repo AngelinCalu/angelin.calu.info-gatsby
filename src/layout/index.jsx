@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
-                    className="absolute overflow-hidden hidden md:block md:top-0"
+                    className="absolute overflow-hidden hidden md:block md:top-0 2xl:-top-48"
                 >
                     <defs>
                         <linearGradient id="myGradient" gradientTransform="rotate(90)">
