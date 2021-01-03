@@ -14,9 +14,9 @@ function SEO({ description, lang, image, title, pathname, isBlogPost }) {
             htmlAttributes={{
                 lang: lang || site.siteMetadata.siteLanguage,
             }}
-            titleTemplate={`%s | ${site.siteMetadata.title}`}
+            titleTemplate={`%s ${site.siteMetadata.title}`}
         >
-            <title>{title || site.siteMetadata.title}</title>
+            <title>{title === 'Homepage' ? ' ' : `${title} |`}</title>
             <link rel="canonical" href={canonical} />
 
             {/* Basic Meta Tags */}
