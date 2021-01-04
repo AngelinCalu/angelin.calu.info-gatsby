@@ -5,7 +5,8 @@ import Footer from './footer';
 const Layout = ({ children }) => {
     return (
         <div className="h-screen bg-white text-black">
-            <header className="w-full bg-blue-100 md:bg-white md:h-56">
+            <header className="w-full bg-blue-100 md:bg-white md:h-56" aria-labelledby="headerHeading">
+                <h2 id="headerHeading" className="sr-only">Header</h2>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
@@ -28,7 +29,8 @@ const Layout = ({ children }) => {
             <main className="relative max-w-6xl z-10 2xl:mt-32 3xl:mt-48 my-12 lg:my-24 mx-auto px-10 lg:px-8 2xl:px-0">
                 {children}
             </main>
-            <footer className="bg-blue-100">
+            <footer className="bg-blue-100" aria-labelledby="footerHeading">
+                <h2 id="footerHeading" className="sr-only">Footer</h2>
                 <Footer />
             </footer>
         </div>

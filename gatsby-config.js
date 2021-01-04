@@ -1,3 +1,7 @@
+require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
     siteMetadata: {
         title: `Angelin Calu | Shipbuilding Engineer and Full-Stack Developer`,
@@ -26,7 +30,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-env-variables`,
             options: {
-                allowList: ['GA_TRACKING_ID'],
+                allowList: ['GA_TRACKING_ID', 'MAILCHIMP_ENDPOINT'],
             },
         },
         {
@@ -102,6 +106,12 @@ module.exports = {
                 host: 'https://angelin.calu.info',
                 sitemap: 'https://angelin.calu.info/sitemap.xml',
                 policy: [{ userAgent: '*', allow: '/' }],
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-mailchimp',
+            options: {
+                endpoint: process.env.MAILCHIMP_ENDPOINT,
             },
         },
     ],
