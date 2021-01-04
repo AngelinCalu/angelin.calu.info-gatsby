@@ -21,6 +21,7 @@ module.exports = {
             red: colors.red,
             green: colors.emerald,
             blue: colors.blue,
+            yellow: colors.yellow,
         },
         spacing: {
             px: '1px',

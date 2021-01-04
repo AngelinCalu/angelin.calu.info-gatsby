@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
 import Header from './header';
 import Footer from './footer';
 
 const Layout = ({ children }) => {
+
+    const getStoredState = () => {
+    const storedState = localStorage.getItem('cookieBar');
+    if (!storedState) return 'visible';
+    return storedState;
+};
+    const [cookieBar, setCookieBar] = useState(getStoredState());
+
+    const hideCookieBar = () => {
+        setCookieBar('hidden');
+        localStorage.setItem('cookieBar', 'hidden');
+    }
+
     return (
         <div className="h-screen bg-white text-black">
             <header className="w-full bg-blue-100 md:bg-white md:h-56" aria-labelledby="headerHeading">
-                <h2 id="headerHeading" className="sr-only">Header</h2>
+                <h2 id="headerHeading" className="sr-only">
+                    Header
+                </h2>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
@@ -30,8 +46,24 @@ const Layout = ({ children }) => {
                 {children}
             </main>
             <footer className="bg-blue-100" aria-labelledby="footerHeading">
-                <h2 id="footerHeading" className="sr-only">Footer</h2>
+                <h2 id="footerHeading" className="sr-only">
+                    Footer
+                </h2>
                 <Footer />
+                {cookieBar === 'visible' ? (
+                    <div className="bg-yellow-200 text-sm border-t border-gray-100 z-50 px-4 py-1 fixed bottom-0 w-full inline-flex items-center justify-between">
+                        <p>
+                            This website uses third-party cookies to analyze the traffic. More information on our{' '}
+                            <Link className="text-gray-500 hover:underline" to="/cookie-policy" title="Cookie Policy">
+                                Cookie Policy
+                            </Link>{' '}
+                            page.
+                        </p>
+                        <button onClick={() => hideCookieBar()} className=" focus:outline-none text-lg" type="button">
+                            &times;
+                        </button>
+                    </div>
+                ) : null}
             </footer>
         </div>
     );
