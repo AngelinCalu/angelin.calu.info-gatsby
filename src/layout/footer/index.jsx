@@ -13,7 +13,7 @@ const Footer = () => {
 
         if (result === 'error') {
             setError(msg);
-            setSuccess('')
+            setSuccess('');
         }
 
         if (result === 'success') {
@@ -21,7 +21,6 @@ const Footer = () => {
             setSuccess(msg);
             setEmail('');
         }
-        
     };
 
     return (
@@ -119,8 +118,8 @@ const Footer = () => {
                         <p className="mt-4 text-base text-gray-500">
                             Get a notification, in your inbox, every time I post. No spam, unsubscribe at any time.
                         </p>
-                        <p className="pt-2 text-red-500" dangerouslySetInnerHTML={{ __html: error}} />
-                        <p className="pt-2 text-green-500" dangerouslySetInnerHTML={{ __html: success}} />
+                        <p className="pt-2 text-red-500" dangerouslySetInnerHTML={{ __html: error }} />
+                        <p className="pt-2 text-green-500" dangerouslySetInnerHTML={{ __html: success }} />
 
                         <form onSubmit={handleSubscription} className="mt-4 sm:flex sm:max-w-md">
                             <label htmlFor="emailAddress" className="sr-only">

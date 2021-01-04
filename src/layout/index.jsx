@@ -4,18 +4,19 @@ import Header from './header';
 import Footer from './footer';
 
 const Layout = ({ children }) => {
+    const windowGlobal = typeof window !== 'undefined' && window;
 
     const getStoredState = () => {
-    const storedState = localStorage.getItem('cookieBar');
-    if (!storedState) return 'visible';
-    return storedState;
-};
+        const storedState = windowGlobal.localStorage.getItem('cookieBar');
+        if (!storedState) return 'visible';
+        return storedState;
+    };
     const [cookieBar, setCookieBar] = useState(getStoredState());
 
     const hideCookieBar = () => {
         setCookieBar('hidden');
-        localStorage.setItem('cookieBar', 'hidden');
-    }
+        windowGlobal.localStorage.setItem('cookieBar', 'hidden');
+    };
 
     return (
         <div className="h-screen bg-white text-black">

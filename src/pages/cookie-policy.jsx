@@ -55,11 +55,11 @@ const CookiePolicy = () => {
 
                 <p>
                     When you visit our website, information on your computer is stored in the form of cookies. This does
-                    not, however, mean that as a result, someone could receive any direct knowledge of your identity. Unfortunately
-                    in most cases there are no industry standard options for disabling cookies without completely
-                    disabling the functionality and features they add to this site. It is recommended that you leave on
-                    all cookies if you are not sure whether you need them or not in case they are used to provide a
-                    service that you use.
+                    not, however, mean that as a result, someone could receive any direct knowledge of your identity.
+                    Unfortunately in most cases there are no industry standard options for disabling cookies without
+                    completely disabling the functionality and features they add to this site. It is recommended that
+                    you leave on all cookies if you are not sure whether you need them or not in case they are used to
+                    provide a service that you use.
                 </p>
 
                 <p>
@@ -79,8 +79,8 @@ const CookiePolicy = () => {
                 </p>
 
                 <p>
-                    This website only uses cookies provided by trusted third parties. The following section details which third party
-                    cookies you might encounter through this site.
+                    This website only uses cookies provided by trusted third parties. The following section details
+                    which third party cookies you might encounter through this site.
                 </p>
                 <ul>
                     <li>

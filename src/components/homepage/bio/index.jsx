@@ -13,8 +13,9 @@ const Bio = ({ profilePic }) => {
                     passionate about technology in general, started coding years before Stackoverflow launched (
                     <i>
                         I'm referring to a certain period when developers used <span>&lt;table&gt;</span> elements to
-                        define the layout for a web page and combining <abbr title="Hypertext Preprocessor">PHP</abbr> and <abbr title="HyperText Markup Language">HTML</abbr> in same file was the standard.
-                        Grose, I know!
+                        define the layout for a web page and combining <abbr title="Hypertext Preprocessor">PHP</abbr>{' '}
+                        and <abbr title="HyperText Markup Language">HTML</abbr> in same file was the standard. Grose, I
+                        know!
                     </i>
                     ).
                 </p>
