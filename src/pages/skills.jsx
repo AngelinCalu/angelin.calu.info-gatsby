@@ -94,7 +94,7 @@ const Skills = () => {
                             {row.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className={`h-14 md:h-24 px-2 hover:bg-gray-100 rounded-lg flex items-center focus:outline-none ${
+                                    className={`h-14 md:h-24 px-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex items-center focus:outline-none ${
                                         techList ? 'my-2 border-b' : null
                                     }`}
                                 >

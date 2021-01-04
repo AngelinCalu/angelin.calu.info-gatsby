@@ -30,14 +30,14 @@ const Footer = () => {
                     <div className="grid grid-cols-2 gap-8 xl:col-span-2">
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold text-gray-700 tracking-wider uppercase">About</h3>
+                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">About</h3>
                                 <ul className="mt-4 space-y-4">
                                     <li>
                                         <Link
                                             to="/skills"
                                             title="Skills"
                                             activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                                         >
                                             Skills
                                         </Link>
@@ -48,7 +48,7 @@ const Footer = () => {
                                             to="/experience"
                                             title="Experience"
                                             activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                                         >
                                             Experience
                                         </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
                                             to="/education"
                                             title="Education"
                                             activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                                         >
                                             Education
                                         </Link>
@@ -70,7 +70,7 @@ const Footer = () => {
                                             to="/shipbuilding"
                                             title="Shipbuilding"
                                             activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                                         >
                                             Shipbuilding
                                         </Link>
@@ -78,14 +78,14 @@ const Footer = () => {
                                 </ul>
                             </div>
                             <div className="mt-12 md:mt-0">
-                                <h3 className="text-sm font-semibold text-gray-700 tracking-wider uppercase">Blog</h3>
+                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">Blog</h3>
                                 <ul className="mt-4 space-y-4">
                                     <li>
                                         <Link
                                             to="/blog"
                                             title="Blog"
                                             activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                                         >
                                             Latest Posts
                                         </Link>
@@ -95,14 +95,14 @@ const Footer = () => {
                         </div>
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold text-gray-700 tracking-wider uppercase">Legal</h3>
+                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">Legal</h3>
                                 <ul className="mt-4 space-y-4">
                                     <li>
                                         <Link
                                             to="/cookie-policy"
                                             title="Cookie Policy"
                                             activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 hover:text-gray-900"
+                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
                                         >
                                             Cookie Policy
                                         </Link>
@@ -112,10 +112,10 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="mt-8 xl:mt-0">
-                        <h3 className="text-sm font-semibold text-gray-700 tracking-wider uppercase">
+                        <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
                             Subscribe to my newsletter
                         </h3>
-                        <p className="mt-4 text-base text-gray-500">
+                        <p className="mt-4 text-base text-gray-500 dark:text-gray-400">
                             Get a notification, in your inbox, every time I post. No spam, unsubscribe at any time.
                         </p>
                         <p className="pt-2 text-red-500" dangerouslySetInnerHTML={{ __html: error }} />
@@ -133,7 +133,7 @@ const Footer = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
-                                className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:placeholder-gray-400"
+                                className="appearance-none min-w-0 w-full bg-white dark:bg-gray-900 border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:placeholder-gray-400"
                                 placeholder="Enter your email"
                             />
                             <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
@@ -149,7 +149,7 @@ const Footer = () => {
                 </div>
                 <div className="mt-8 border-t border-gray-400 pt-8 md:flex md:items-center md:justify-between">
                     <div className="flex justify-center space-x-6 md:order-2">
-                        <a className="text-gray-400 hover:text-gray-500" href="mailto:angelin.calu@gmail.com">
+                        <a className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-200" href="mailto:angelin.calu@gmail.com" title="Email Angelin Calu">
                             <span className="sr-only">Email me</span>
                             <svg
                                 className="h-6 w-6"
@@ -167,8 +167,9 @@ const Footer = () => {
                             </svg>
                         </a>
                         <a
-                            className="text-gray-400 hover:text-gray-500"
+                            className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-200"
                             target="_blank"
+                            title="Angelin Calu on Twitter"
                             rel="noopener nofollow noreferrer"
                             href="https://twitter.com/@AngelinCalu"
                         >
@@ -179,8 +180,9 @@ const Footer = () => {
                         </a>
 
                         <a
-                            className="text-gray-400 hover:text-gray-500"
+                            className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-200"
                             target="_blank"
+                            title="Angelin Calu on Facebook"
                             rel="noopener nofollow noreferrer"
                             href="https://facebook.com/angelin.calu"
                         >
@@ -195,8 +197,9 @@ const Footer = () => {
                         </a>
 
                         <a
-                            className="text-gray-400 hover:text-gray-500"
+                            className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-200"
                             target="_blank"
+                            title="Angelin Calu on Instagram"
                             rel="noopener nofollow noreferrer"
                             href="https://www.instagram.com/angelin.calu"
                         >
@@ -211,8 +214,9 @@ const Footer = () => {
                         </a>
 
                         <a
-                            className="text-gray-400 hover:text-gray-500"
+                            className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-200"
                             target="_blank"
+                            title="Angelin Calu on Github"
                             rel="noopener nofollow noreferrer"
                             href="https://github.com/AngelinCalu"
                         >
@@ -226,8 +230,9 @@ const Footer = () => {
                             </svg>
                         </a>
                         <a
-                            className="text-gray-400 hover:text-gray-500"
+                            className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-200"
                             target="_blank"
+                            title="Angelin Calu on LinkedIn"
                             rel="noopener nofollow noreferrer"
                             href="https://linkedin.com/in/angelincalu"
                         >
@@ -244,7 +249,7 @@ const Footer = () => {
                             </svg>
                         </a>
                     </div>
-                    <p className="mt-8 text-sm text-gray-500 md:mt-0 md:order-1 text-center">
+                    <p className="mt-8 text-sm text-gray-500 dark:text-gray-400 md:mt-0 md:order-1 text-center">
                         &copy; 2020-present Angelin Calu. All rights reserved.
                     </p>
                 </div>

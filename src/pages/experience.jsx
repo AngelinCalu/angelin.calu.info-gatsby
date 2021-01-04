@@ -22,7 +22,7 @@ const Experience = () => {
             <p className="py-2">
                 If you want to see a list of ships I've worked on, please check the list under{' '}
                 <Link
-                    className="hover:underline hover:text-blue-700"
+                    className="hover:underline hover:text-blue-500"
                     title="Shipbuilding Projects"
                     to="/shipbuilding#shipbuilding-projects"
                 >

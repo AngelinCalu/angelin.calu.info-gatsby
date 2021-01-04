@@ -8,7 +8,7 @@ const Header = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-10 pb-10 px-10 lg:px-8 2xl:px-0">
             <div className="w-full pt-8 flex flex-col-reverse md:flex-row items-center justify-between">
                 <div className="flex flex-col md:flex-row items-center">
-                    <div className="text-2xl mr-4 font-heading font-semibold text-blue-500 py-4 md:py-0">
+                    <div className="text-2xl mr-4 font-heading font-semibold text-blue-500 dark:text-blue-300 py-4 md:py-0">
                         <Link to="/" title="Angelin Calu" className="inline-flex items-center group">
                             <svg
                                 style={{ width: '4rem', height: '4rem' }}

@@ -35,7 +35,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                 <span className="text-lg">Before this I wrote:</span>
                                 <Link
                                     to={previous.fields.slug}
-                                    className="hover:underline hover:text-blue-700 p-4 text-gray-500"
+                                    className="hover:underline hover:text-blue-500 p-4 text-gray-500"
                                 >
                                     <p>{previous.frontmatter.title}</p>
                                 </Link>
@@ -52,7 +52,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                 <span className="text-lg">Here's what I wrote after this article:</span>
                                 <Link
                                     to={next.fields.slug}
-                                    className="hover:underline hover:text-blue-700 p-4 text-gray-500"
+                                    className="hover:underline hover:text-blue-500 p-4 text-gray-500"
                                 >
                                     <p>{next.frontmatter.title}</p>
                                 </Link>

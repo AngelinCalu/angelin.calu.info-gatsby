@@ -10,8 +10,8 @@ const TopMenu = () => {
                     <Link
                         to="/"
                         title="Home"
-                        activeClassName="bg-blue-200"
-                        className="block py-2 px-4 rounded-md hover:bg-white hover:text-blue-700"
+                        activeClassName="bg-blue-200 dark:bg-gray-600"
+                        className="block md:hidden lg:block py-2 px-4 rounded-md hover:bg-white dark:hover:bg-gray-700 hover:text-blue-700 dark:hover:text-blue-200"
                     >
                         Home
                     </Link>
@@ -20,7 +20,7 @@ const TopMenu = () => {
                     <Menu>
                         {({ open }) => (
                             <>
-                                <Menu.Button className="inline-flex items-center space-x-1 py-2 px-4 rounded-md hover:bg-white hover:text-blue-700">
+                                <Menu.Button className="inline-flex items-center space-x-1 py-2 px-4 rounded-md hover:bg-white dark:hover:bg-gray-700 hover:text-blue-700 dark:hover:text-blue-200">
                                     <span>About</span>
                                     <svg
                                         className="h-4 w-4"
@@ -47,13 +47,13 @@ const TopMenu = () => {
                                 >
                                     <Menu.Items
                                         static
-                                        className="md:absolute md:left-0 w-full md:w-48 mt-2 origin-top-left bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none py-1"
+                                        className="md:absolute md:left-0 w-full md:w-48 mt-2 origin-top-left bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-900 divide-y divide-gray-100 dark:divide-gray-900 rounded-md shadow-lg outline-none py-1"
                                     >
                                         <Menu.Item>
                                             {({ active }) => (
                                                 <Link
-                                                    className={`text-gray-700 flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 ${
-                                                        active ? 'bg-blue-100' : 'bg-white'
+                                                    className={`text-gray-700 dark:text-white flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 ${
+                                                        active ? 'bg-blue-100 dark:bg-gray-500' : 'bg-white dark:bg-gray-700'
                                                     }`}
                                                     activeClassName="bg-gray-100"
                                                     to="/skills"
@@ -66,8 +66,8 @@ const TopMenu = () => {
                                         <Menu.Item>
                                             {({ active }) => (
                                                 <Link
-                                                    className={`text-gray-700 flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 ${
-                                                        active ? 'bg-blue-100' : 'bg-white'
+                                                    className={`text-gray-700 dark:text-white flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 ${
+                                                        active ? 'bg-blue-100 dark:bg-gray-500' : 'bg-white dark:bg-gray-700'
                                                     }`}
                                                     activeClassName="bg-gray-100"
                                                     to="/experience"
@@ -80,8 +80,8 @@ const TopMenu = () => {
                                         <Menu.Item>
                                             {({ active }) => (
                                                 <Link
-                                                    className={`text-gray-700 flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 ${
-                                                        active ? 'bg-blue-100' : 'bg-white'
+                                                    className={`text-gray-700 dark:text-white flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 ${
+                                                        active ? 'bg-blue-100 dark:bg-gray-500' : 'bg-white dark:bg-gray-700'
                                                     }`}
                                                     activeClassName="bg-gray-100"
                                                     to="/education"
@@ -101,8 +101,8 @@ const TopMenu = () => {
                     <Link
                         to="/blog"
                         title="Blog"
-                        activeClassName="bg-blue-200"
-                        className="block py-2 px-4 rounded-md hover:bg-white hover:text-blue-700"
+                        activeClassName="bg-blue-200 dark:bg-gray-600"
+                        className="block py-2 px-4 rounded-md hover:bg-white dark:hover:bg-gray-700 hover:text-blue-700 dark:hover:text-blue-200"
                     >
                         Blog
                     </Link>
@@ -111,8 +111,8 @@ const TopMenu = () => {
                     <Link
                         to="/shipbuilding"
                         title="Shipbuilding"
-                        activeClassName="bg-blue-200"
-                        className="block py-2 px-4 rounded-md hover:bg-white hover:text-blue-700"
+                        activeClassName="bg-blue-200 dark:bg-gray-600"
+                        className="block py-2 px-4 rounded-md hover:bg-white dark:hover:bg-gray-700 hover:text-blue-700 dark:hover:text-blue-200"
                     >
                         Shipbuilding
                     </Link>
@@ -121,8 +121,8 @@ const TopMenu = () => {
                     <Link
                         to="/contact"
                         title="Contact"
-                        activeClassName="bg-blue-200"
-                        className="block py-2 px-4 rounded-md hover:bg-white hover:text-blue-700"
+                        activeClassName="bg-blue-200 dark:bg-gray-600"
+                        className="block py-2 px-4 rounded-md hover:bg-white dark:hover:bg-gray-700 hover:text-blue-700 dark:hover:text-blue-200"
                     >
                         Contact
                     </Link>
