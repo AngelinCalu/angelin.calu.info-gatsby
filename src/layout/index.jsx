@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
     const windowGlobal = typeof window !== 'undefined' && window;
 
     const getStoredState = () => {
+        if (!windowGlobal) return 'visible';
         const storedState = windowGlobal.localStorage.getItem('cookieBar');
         if (!storedState) return 'visible';
         return storedState;
@@ -15,7 +16,7 @@ const Layout = ({ children }) => {
 
     const hideCookieBar = () => {
         setCookieBar('hidden');
-        windowGlobal.localStorage.setItem('cookieBar', 'hidden');
+        if (windowGlobal) windowGlobal.localStorage.setItem('cookieBar', 'hidden');
     };
 
     return (
