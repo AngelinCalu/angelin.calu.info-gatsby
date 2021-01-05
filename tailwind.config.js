@@ -806,7 +806,8 @@ module.exports = {
                             color: theme("colors.white"),
                         },
                         "::selection": {
-                            backgroundColor: "#6f7bb635",
+                            color: theme("colors.white"),
+                            backgroundColor: theme("colors.blue.500"),
                         },
                     },
                 },

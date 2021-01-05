@@ -4,12 +4,22 @@ import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 const Footer = () => {
     const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
     const handleSubscription = async (e) => {
         e.preventDefault();
-        const { msg, result } = await addToMailchimp(email);
+
+        setError('');
+
+        if (!name)  return setError('Please write your first name!');
+        if (!email) return setError('The email is a required field!');
+
+
+        const { msg, result } = await addToMailchimp(email, {
+            fname: name
+        });
 
         if (result === 'error') {
             setError(msg);
@@ -26,90 +36,87 @@ const Footer = () => {
     return (
         <div className="w-full max-w-6xl mx-auto px-10 md:px-4 xl:px-0">
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-                <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-                    <div className="grid grid-cols-2 gap-8 xl:col-span-2">
-                        <div className="md:grid md:grid-cols-2 md:gap-8">
-                            <div>
-                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
-                                    About
-                                </h3>
-                                <ul className="mt-4 space-y-4">
-                                    <li>
-                                        <Link
-                                            to="/skills"
-                                            title="Skills"
-                                            activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
-                                        >
-                                            Skills
-                                        </Link>
-                                    </li>
+                <div className="xl:grid xl:grid-cols-2 xl:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div>
+                            <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
+                                About
+                            </h3>
+                            <ul className="mt-4 space-y-4">
+                                <li>
+                                    <Link
+                                        to="/skills"
+                                        title="Skills"
+                                        activeClassName="text-blue-700"
+                                        className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                                    >
+                                        Skills
+                                    </Link>
+                                </li>
 
-                                    <li>
-                                        <Link
-                                            to="/experience"
-                                            title="Experience"
-                                            activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
-                                        >
-                                            Experience
-                                        </Link>
-                                    </li>
+                                <li>
+                                    <Link
+                                        to="/experience"
+                                        title="Experience"
+                                        activeClassName="text-blue-700"
+                                        className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                                    >
+                                        Experience
+                                    </Link>
+                                </li>
 
-                                    <li>
-                                        <Link
-                                            to="/education"
-                                            title="Education"
-                                            activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
-                                        >
-                                            Education
-                                        </Link>
-                                    </li>
+                                <li>
+                                    <Link
+                                        to="/education"
+                                        title="Education"
+                                        activeClassName="text-blue-700"
+                                        className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                                    >
+                                        Education
+                                    </Link>
+                                </li>
 
-                                    <li>
-                                        <Link
-                                            to="/shipbuilding"
-                                            title="Shipbuilding"
-                                            activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
-                                        >
-                                            Shipbuilding
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="mt-12 md:mt-0">
-                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
-                                    Blog
-                                </h3>
-                                <ul className="mt-4 space-y-4">
-                                    <li>
-                                        <Link
-                                            to="/blog"
-                                            title="Blog"
-                                            activeClassName="text-blue-700"
-                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
-                                        >
-                                            Latest Posts
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/rss.xml"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            title="RSS Feed"
-                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
-                                        >
-                                            RSS Feed
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                                <li>
+                                    <Link
+                                        to="/shipbuilding"
+                                        title="Shipbuilding"
+                                        activeClassName="text-blue-700"
+                                        className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                                    >
+                                        Shipbuilding
+                                    </Link>
+                                </li>
+                            </ul>
                         </div>
-                        <div className="md:grid md:grid-cols-2 md:gap-8">
-                            <div>
+                        <div>
+                            <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
+                                Blog
+                            </h3>
+                            <ul className="mt-4 space-y-4">
+                                <li>
+                                    <Link
+                                        to="/blog"
+                                        title="Blog"
+                                        activeClassName="text-blue-700"
+                                        className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                                    >
+                                        Latest Posts
+                                    </Link>
+                                </li>
+                                <li>
+                                    <a
+                                        href="/rss.xml"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        title="RSS Feed"
+                                        className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                                    >
+                                        RSS Feed
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
                                 <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
                                     Legal
                                 </h3>
@@ -126,7 +133,6 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
                     </div>
                     <div className="mt-8 xl:mt-0">
                         <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
@@ -138,7 +144,21 @@ const Footer = () => {
                         <p className="pt-2 text-red-500" dangerouslySetInnerHTML={{ __html: error }} />
                         <p className="pt-2 text-green-500" dangerouslySetInnerHTML={{ __html: success }} />
 
-                        <form onSubmit={handleSubscription} className="mt-4 sm:flex sm:max-w-md">
+                        <form onSubmit={handleSubscription} className="mt-4 sm:flex md:max-w-xl">
+                            <label htmlFor="firstName" className="sr-only">
+                                First Name
+                            </label>
+                            <input
+                                type="text"
+                                name="firstName"
+                                id="firstName"
+                                autoComplete="given-name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                className="appearance-none min-w-0 w-full md:w-3/4 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:placeholder-gray-400"
+                                placeholder="First Name"
+                            />
+
                             <label htmlFor="emailAddress" className="sr-only">
                                 Email address
                             </label>
@@ -150,8 +170,8 @@ const Footer = () => {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
-                                className="appearance-none min-w-0 w-full bg-white dark:bg-gray-900 border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:placeholder-gray-400"
-                                placeholder="Enter your email"
+                                className="appearance-none min-w-0 w-full mt-1 sm:mt-0 sm:ml-1 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:placeholder-gray-400"
+                                placeholder="E-mail address"
                             />
                             <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                                 <button
