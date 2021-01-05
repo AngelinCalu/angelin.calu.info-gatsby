@@ -30,7 +30,9 @@ const Footer = () => {
                     <div className="grid grid-cols-2 gap-8 xl:col-span-2">
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">About</h3>
+                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
+                                    About
+                                </h3>
                                 <ul className="mt-4 space-y-4">
                                     <li>
                                         <Link
@@ -78,7 +80,9 @@ const Footer = () => {
                                 </ul>
                             </div>
                             <div className="mt-12 md:mt-0">
-                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">Blog</h3>
+                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
+                                    Blog
+                                </h3>
                                 <ul className="mt-4 space-y-4">
                                     <li>
                                         <Link
@@ -90,12 +94,25 @@ const Footer = () => {
                                             Latest Posts
                                         </Link>
                                     </li>
+                                    <li>
+                                        <a
+                                            href="/rss.xml"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            title="RSS Feed"
+                                            className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200"
+                                        >
+                                            RSS Feed
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">Legal</h3>
+                                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
+                                    Legal
+                                </h3>
                                 <ul className="mt-4 space-y-4">
                                     <li>
                                         <Link
@@ -149,7 +166,11 @@ const Footer = () => {
                 </div>
                 <div className="mt-8 border-t border-gray-400 pt-8 md:flex md:items-center md:justify-between">
                     <div className="flex justify-center space-x-6 md:order-2">
-                        <a className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-200" href="mailto:angelin.calu@gmail.com" title="Email Angelin Calu">
+                        <a
+                            className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-200"
+                            href="mailto:angelin.calu@gmail.com"
+                            title="Email Angelin Calu"
+                        >
                             <span className="sr-only">Email me</span>
                             <svg
                                 className="h-6 w-6"

@@ -7,7 +7,7 @@ const BlogPosts = ({ posts }) => {
             <h3 className="uppercase text-2xl py-2">Latest Posts</h3>
             {posts.map(({ id, frontmatter, fields, timeToRead }) => (
                 <Link key={id} to={fields.slug}>
-                    <article className="w-full p-4 flex flex-col md:flex-row justify-between rounded-md group hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <article className="w-full p-4 flex flex-col md:flex-row justify-between rounded-md group bg-gray-50 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 mb-4">
                         <div>
                             <h4 className="text-lg group-hover:text-blue-700 dark:group-hover:text-blue-200">{frontmatter.title}</h4>
                             <p className="text-sm text-gray-700 dark:text-gray-300">{frontmatter.description}</p>

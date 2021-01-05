@@ -114,5 +114,64 @@ module.exports = {
                 endpoint: process.env.MAILCHIMP_ENDPOINT,
             },
         },
+        {
+            resolve: `gatsby-plugin-feed`,
+            options: {
+                query: `
+                {
+                    site {
+                        siteMetadata {
+                            title
+                            description
+                            siteUrl
+                            author
+                            site_url: siteUrl
+                        }
+                    }
+                }
+                `,
+                feeds: [
+                    {
+                        serialize: ({ query: { site, allMdx } }) => {
+                            return allMdx.nodes.map((node) => {
+                                return Object.assign({}, node.frontmatter, {
+                                    description: node.excerpt,
+                                    date: node.frontmatter.date,
+                                    url: site.siteMetadata.siteUrl + node.fields.slug,
+                                    guid: site.siteMetadata.siteUrl + node.fields.slug,
+                                    // author: site.siteMetadata.author,
+                                    custom_elements: [{
+                                        'content:encoded': node.html,
+                                        'dc:creator': site.siteMetadata.author,
+                                    }],
+                                });
+                            });
+                        },
+                        query: `
+                        {
+                            allMdx(
+                                limit: 100,
+                                sort: { order: DESC, fields: [frontmatter___date] },
+                            ) {
+                                nodes {
+                                    excerpt
+                                    html
+                                    fields { 
+                                        slug 
+                                    }
+                                    frontmatter {
+                                        title
+                                        date
+                                    }
+                                }
+                            }
+                        }
+                        `,
+                        output: `/rss.xml`,
+                        title: `Angelin Calu's blog`,
+                    },
+                ],
+            },
+        },
     ],
 };
