@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors');
 module.exports = {
     purge: ['./src/**/*.js', './src/**/*.jsx', './content/data/*.js'],
     presets: [],
-    darkMode: 'class', // or 'media' or 'class'
+    darkMode: 'media', // or 'media' or 'class'
     theme: {
         screens: {
             sm: '640px',
@@ -716,6 +716,7 @@ module.exports = {
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
+                        color: theme("colors.gray.900"),
                         a: {
                             color: theme('colors.gray.800'),
                             '&:hover': {
@@ -774,6 +775,41 @@ module.exports = {
                         },
                     },
                 },
+                dark: {
+                    css: {
+                        color: theme("colors.gray.300"),
+                        a: {
+                            color: theme('colors.white'),
+                            '&:hover': {
+                                color: theme('colors.blue.400'),
+                            },
+                        },
+                        code: {
+                            backgroundColor: theme('colors.gray.600'),
+                            padding: theme('spacing.1'),
+                            fontWeight: '500',
+                            borderRadius: theme('borderRadius.DEFAULT'),
+                        },
+                        h1: {
+                            color: theme("colors.gray.100"),
+                        },
+                        h2: {
+                            color: theme("colors.gray.100"),
+                        },
+                        h3: {
+                            color: theme("colors.gray.100"),
+                        },
+                        h4: {
+                            color: theme("colors.gray.100"),
+                        },
+                        strong: {
+                            color: theme("colors.white"),
+                        },
+                        "::selection": {
+                            backgroundColor: "#6f7bb635",
+                        },
+                    },
+                },
             }),
         },
     },
@@ -804,7 +840,7 @@ module.exports = {
         backgroundClip: ['responsive'],
         backgroundColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
         backgroundImage: ['responsive'],
-        backgroundOpacity: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus'],
+        backgroundOpacity: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
         backgroundPosition: ['responsive'],
         backgroundRepeat: ['responsive'],
         backgroundSize: ['responsive'],
@@ -905,6 +941,7 @@ module.exports = {
         transitionProperty: ['responsive'],
         transitionTimingFunction: ['responsive'],
         translate: ['responsive', 'hover', 'focus'],
+        typography: ['dark'],
         userSelect: ['responsive'],
         verticalAlign: ['responsive'],
         visibility: ['responsive'],

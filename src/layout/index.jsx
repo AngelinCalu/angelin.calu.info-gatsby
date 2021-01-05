@@ -20,11 +20,8 @@ const Layout = ({ children }) => {
     };
 
     return (
-        <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-100">
-            <header className="w-full bg-blue-100 dark:bg-gray-900 md:bg-white md:dark:bg-gray-900 md:h-56" aria-labelledby="headerHeading">
-                <h2 id="headerHeading" className="sr-only">
-                    Header
-                </h2>
+        <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-300">
+            <header className="w-full bg-blue-100 dark:bg-gray-900 md:bg-white md:dark:bg-gray-900 md:h-56">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"

@@ -58,9 +58,9 @@ const Shipbuilding = () => {
                 title="Shipbuilding"
                 description="Experience of Angelin Calu in shipbuilding, skills and projects done during the years."
             />
-            <h1 className="text-4xl py-4">Shipbuilding</h1>
+            <h1 className="text-4xl py-4 dark:text-gray-100">Shipbuilding</h1>
             <section className="py-2">
-                <h3 className="uppercase text-2xl py-2">Brief</h3>
+                <h3 className="uppercase text-2xl py-2 dark:text-gray-100">Brief</h3>
                 <p>
                     Working as a Hull Design Engineer in the past years for different customers, doing design work and
                     technical assistance, got me familiar with the design technologies, hull production strategies and
@@ -78,13 +78,13 @@ const Shipbuilding = () => {
                 </ul>
             </section>
             <section className="py-2">
-                <h3 id="experience-in-shipbuilding" className="uppercase text-2xl py-2">
+                <h3 id="experience-in-shipbuilding" className="uppercase text-2xl py-2 dark:text-gray-300">
                     Experience in Shipbuilding
                 </h3>
                 <p>Everyone would probably agree that great skills are built in time.</p>
                 <p>
                     Here's where I've polished my shipbuilding skills for{' '}
-                    <b className="font-bold text-green-800">
+                    <b className="font-bold text-green-800 dark:text-green-300">
                         an accumulated period of more than {accumulatedExpYears} years
                     </b>
                     :
@@ -121,9 +121,9 @@ const Shipbuilding = () => {
                             </div>
                             <h4 className="text-xl pt-2">{experience.position}</h4>
                             <div className="p-4 inline-flex items-center">
-                                <div className="pr-4">
+                                <div className="mr-4 h-32 w-36 bg-white flex items-center justify-center shadow">
                                     <Img
-                                        className="h-auto w-32"
+                                        className="h-32 w-auto"
                                         fixed={
                                             data.logos.edges.filter(
                                                 (edge) =>
@@ -135,7 +135,7 @@ const Shipbuilding = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg pt-2">{experience.title}</h4>
-                                    <span className="text-sm whitespace-pre text-gray-500">{experience.address}</span>
+                                    <span className="text-sm whitespace-pre text-gray-500 dark:text-gray-400">{experience.address}</span>
                                 </div>
                             </div>
                         </li>
@@ -143,7 +143,7 @@ const Shipbuilding = () => {
                 </ul>
             </section>
             <section>
-                <h3 id="shipbuilding-projects" className="uppercase text-2xl py-2">
+                <h3 id="shipbuilding-projects" className="uppercase text-2xl py-2 dark:text-gray-100">
                     Shipbuilding projects
                 </h3>
                 <p>Below a list of ships I've worked on:</p>
@@ -169,7 +169,7 @@ const Shipbuilding = () => {
                         </div>
                     ))}
                 </div>
-                <p className="py-6 text-gray-700 italic text-sm">
+                <p className="py-6 text-gray-700 dark:text-gray-300 italic text-sm">
                     Credits for the ship images shown here are to be given to the respective owners. No copyright
                     infringement is intended.
                 </p>

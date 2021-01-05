@@ -11,7 +11,7 @@ const Experience = () => {
                 title="Experience"
                 description="Portfolio of web development projects done by Angelin Calu, full stack developer based in Turku, Finland"
             />
-            <h1 className="text-4xl py-4">Experience</h1>
+            <h1 className="text-4xl py-4 dark:text-gray-100">Experience</h1>
             <p>
                 A list of projects I've done (software / web development) will be soon posted here.
                 <br />

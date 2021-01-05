@@ -13,16 +13,16 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Layout>
             <SEO pathname={slug} title={frontmatter.title} description={excerpt} image={ogImagePath} />
 
-            <article className="prose prose-sm sm:prose lg:prose-lg min-w-0 max-w-none">
+            <article className="prose dark:prose-dark prose-sm sm:prose lg:prose-lg min-w-0 max-w-none">
                 <div className="flex flex-col pb-2 text-sm">
-                    <span className="text-gray-500">
+                    <span className="text-gray-500 dark:text-gray-200">
                         Published on <b>{frontmatter.date}</b>
                     </span>
-                    <span className="text-gray-500">
+                    <span className="text-gray-500 dark:text-gray-200">
                         Estimated time to Read: <b>{timeToRead} minute(s)</b>
                     </span>
                 </div>
-                <h1 className="py-1">{frontmatter.title}</h1>
+                <h1 className="py-1 text-gray-800 dark:text-gray-200">{frontmatter.title}</h1>
                 <MDXRenderer>{body}</MDXRenderer>
             </article>
             <div className="flex justify-between border-t mt-5">

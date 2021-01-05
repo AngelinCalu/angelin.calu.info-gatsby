@@ -12,11 +12,11 @@ const CookiePolicy = () => {
                 description="This page describes the cookies used by Angelin Calu on his personal website, what cookies are and what options the users have."
             />
 
-            <div className="prose prose-sm sm:prose lg:prose-lg min-w-0 max-w-none">
+            <div className="prose dark:prose-dark prose-sm sm:prose lg:prose-lg min-w-0 max-w-none">
                 <h1>Cookie Policy</h1>
 
                 <p>
-                    Last updated: <span className="text-sm text-gray-500">04.01.2021</span>
+                    Last updated: <span className="text-sm text-gray-500 dark:text-gray-200">04.01.2021</span>
                 </p>
                 <p>
                     This is the Cookie Policy for the personal website of Angelin Calu, accessible from
@@ -27,9 +27,7 @@ const CookiePolicy = () => {
                     you can understand what type of cookies are used, or the information collected using these cookies
                     and how that information is used.
                 </p>
-                <p>
-                    <strong>What Are Cookies</strong>
-                </p>
+                <h3>What Are Cookies</h3>
                 <p>
                     As is common practice with almost all professional websites this site uses cookies, which are tiny
                     files that are downloaded to your computer, to improve your experience. This page describes what
@@ -48,11 +46,7 @@ const CookiePolicy = () => {
                     </a>
                     .
                 </p>
-
-                <p>
-                    <strong>How are these Cookies used</strong>
-                </p>
-
+                <h3>How are these Cookies used</h3>
                 <p>
                     When you visit our website, information on your computer is stored in the form of cookies. This does
                     not, however, mean that as a result, someone could receive any direct knowledge of your identity.
@@ -62,10 +56,7 @@ const CookiePolicy = () => {
                     provide a service that you use.
                 </p>
 
-                <p>
-                    <strong>Disabling Cookies</strong>
-                </p>
-
+                <h3>Disabling Cookies</h3>
                 <p>
                     You can prevent the setting of cookies by adjusting the settings on your browser (see your browser
                     Help for how to do this). Be aware that disabling cookies will affect the functionality of this and
@@ -74,18 +65,14 @@ const CookiePolicy = () => {
                     cookies.
                 </p>
 
-                <p>
-                    <strong>Third Party Cookies</strong>
-                </p>
-
+                <h3>Third Party Cookies</h3>
                 <p>
                     This website only uses cookies provided by trusted third parties. The following section details
                     which third party cookies you might encounter through this site.
                 </p>
                 <ul>
                     <li>
-                        <p>
-                            This site uses Google Analytics, a web analysis service of{' '}
+                        This site uses Google Analytics, a web analysis service of{' '}
                             <a
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
@@ -97,9 +84,8 @@ const CookiePolicy = () => {
                             to understand how you use the site and ways that could improve your experience. These
                             cookies may track things such as how long you spend on the site and the pages that you visit
                             so I can continue to produce engaging content.
-                        </p>
-                        <p>
-                            For more information on Google Analytics cookies, see the official{' '}
+                    
+                            <br /><br /> For more information on Google Analytics cookies, see the official{' '}
                             <a
                                 target="_blank"
                                 rel="nofollow noopener noreferrer"
@@ -108,14 +94,10 @@ const CookiePolicy = () => {
                                 Google Analytics page
                             </a>
                             .
-                        </p>
                     </li>
                 </ul>
 
-                <p>
-                    <strong>More Information</strong>
-                </p>
-
+                <h3>More Information</h3>
                 <p>
                     Hopefully that has clarified things for you and as was previously mentioned if there is something
                     that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it
