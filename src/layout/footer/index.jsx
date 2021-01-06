@@ -289,9 +289,22 @@ const Footer = () => {
                                 />
                             </svg>
                         </a>
+
+                        <a
+                            className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-200"
+                            target="_blank"
+                            title="Angelin Calu on StackOverflow"
+                            rel="noopener nofollow noreferrer"
+                            href="https://stackoverflow.com/users/2012740/angelin-calu"
+                        >
+                            <span className="sr-only">StackOverflow</span>
+                            <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-6 w-6"><path d="M17.24 19.399v-4.804h1.6V21H4.38v-6.405H5.98v4.804h11.26zM7.582 17.8h8.055v-1.604H7.582V17.8zm.195-3.64l7.859 1.641.34-1.552-7.861-1.642-.338 1.553zm1.018-3.794l7.28 3.398.679-1.463-7.281-3.399-.678 1.454v.01zm2.037-3.589l6.166 5.142 1.018-1.216-6.162-5.14-1.016 1.213-.006.001zm3.982-3.778l-1.311.969 4.803 6.454 1.313-.971-4.807-6.452h.002z" fill="currentColor" /></svg>
+                        </a>
+
+                        
                     </div>
                     <p className="mt-8 text-sm text-gray-500 dark:text-gray-400 md:mt-0 md:order-1 text-center">
-                        &copy; 2020-present Angelin Calu. All rights reserved.
+                        &copy; 2021 Angelin Calu. All rights reserved.
                     </p>
                 </div>
             </div>

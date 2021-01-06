@@ -52,7 +52,7 @@ const TopMenu = () => {
                                         <Menu.Item>
                                             {({ active }) => (
                                                 <Link
-                                                    className={`text-gray-700 dark:text-white flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 ${
+                                                    className={`text-gray-700 dark:text-white flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 dark:hover:bg-gray-600 ${
                                                         active ? 'bg-blue-100 dark:bg-gray-500' : 'bg-white dark:bg-gray-700'
                                                     }`}
                                                     activeClassName="bg-gray-100"
@@ -66,7 +66,7 @@ const TopMenu = () => {
                                         <Menu.Item>
                                             {({ active }) => (
                                                 <Link
-                                                    className={`text-gray-700 dark:text-white flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 ${
+                                                    className={`text-gray-700 dark:text-white flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 dark:hover:bg-gray-600 ${
                                                         active ? 'bg-blue-100 dark:bg-gray-500' : 'bg-white dark:bg-gray-700'
                                                     }`}
                                                     activeClassName="bg-gray-100"
@@ -80,7 +80,7 @@ const TopMenu = () => {
                                         <Menu.Item>
                                             {({ active }) => (
                                                 <Link
-                                                    className={`text-gray-700 dark:text-white flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 ${
+                                                    className={`text-gray-700 dark:text-white flex w-full px-4 py-2 text-sm leading-5 text-left hover:bg-blue-100 dark:hover:bg-gray-600 ${
                                                         active ? 'bg-blue-100 dark:bg-gray-500' : 'bg-white dark:bg-gray-700'
                                                     }`}
                                                     activeClassName="bg-gray-100"

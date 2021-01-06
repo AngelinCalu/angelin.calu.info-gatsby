@@ -25,19 +25,23 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 <h1 className="py-1 text-gray-800 dark:text-gray-200">{frontmatter.title}</h1>
                 <MDXRenderer>{body}</MDXRenderer>
             </article>
-            <div className="flex justify-between border-t mt-5">
+            <div className="border-t dark:border-gray-700 mt-5">
+                <h3 className="text-xl font-bold py-4 inline-flex items-end w-full text-gray-900 dark:text-white ">
+                    <span>Continue reading</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-4 w-5 h-5" viewBox="0 0 24 24"><path d="M10 15l5 5 5-5"/><path d="M4 4h7a4 4 0 014 4v12"/></svg>
+                </h3>
                 {previous === false ? (
                     <div>&nbsp;</div>
                 ) : (
                     <>
                         {previous && (
-                            <div className="mt-6">
-                                <span className="text-lg">Before this I wrote:</span>
+                            <div className="mb-2 inline-flex">
+                                <span className="w-15 text-right">Previous:</span>
                                 <Link
                                     to={previous.fields.slug}
-                                    className="hover:underline hover:text-blue-500 p-4 text-gray-500"
+                                    className="hover:underline hover:text-blue-500 ml-4 text-gray-500"
                                 >
-                                    <p>{previous.frontmatter.title}</p>
+                                    {previous.frontmatter.title}
                                 </Link>
                             </div>
                         )}
@@ -48,11 +52,11 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                 ) : (
                     <>
                         {next && (
-                            <div className="mt-6">
-                                <span className="text-lg">Here's what I wrote after this article:</span>
+                            <div className="inline-flex">
+                                <span className="w-15 text-right">Next:</span>
                                 <Link
                                     to={next.fields.slug}
-                                    className="hover:underline hover:text-blue-500 p-4 text-gray-500"
+                                    className="hover:underline hover:text-blue-500 ml-4 text-gray-500"
                                 >
                                     <p>{next.frontmatter.title}</p>
                                 </Link>

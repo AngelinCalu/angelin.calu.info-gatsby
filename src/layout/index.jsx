@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
                 </h2>
                 <Footer />
                 {cookieBar === 'visible' ? (
-                    <div className="bg-yellow-200 text-sm border-t border-gray-100 z-50 px-4 py-1 fixed bottom-0 w-full inline-flex items-center justify-between">
+                    <div className="bg-yellow-200 text-sm border-t dark:border-gray-700 border-gray-100 dark:text-black z-50 px-4 py-1 fixed bottom-0 w-full inline-flex items-center justify-between">
                         <p>
                             This website uses third-party cookies to analyze the traffic. More information on our{' '}
                             <Link className="text-gray-500 hover:underline" to="/cookie-policy" title="Cookie Policy">

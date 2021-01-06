@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const BlogPosts = ({ posts }) => {
     return (
-        <section className="py-6">
+        <section className="pt-6">
             <h3 className="uppercase text-2xl py-2">Latest Posts</h3>
             {posts.map(({ id, frontmatter, fields, timeToRead }) => (
                 <Link key={id} to={fields.slug}>
