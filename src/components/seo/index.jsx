@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import useSiteMetadata from '../../hooks/useSiteMetadata';
 function SEO({ description, lang, image, title, pathname, isBlogPost }) {
-    const { site } = useSiteMetadata();
+    const { site, ogImageDefault } = useSiteMetadata();
 
     const metaDescription = description || site.siteMetadata.description;
-    const metaImage = `${site.siteMetadata.siteUrl}${image || site.siteMetadata.image}`;
+    const metaImage = `${site.siteMetadata.siteUrl}${image || ogImageDefault.childImageSharp.fixed.src}`;
     const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : site.siteMetadata.siteUrl;
 
     return (
@@ -23,6 +23,8 @@ function SEO({ description, lang, image, title, pathname, isBlogPost }) {
             <meta name="description" content={metaDescription} />
             <meta name="image" content={metaImage} />
             <meta name="keywords" content={site.siteMetadata.keywords.join(', ')} />
+
+            {isBlogPost ? <meta name="author" content={site.siteMetadata.author} /> : null}
 
             {/* Open Graph Meta Tags */}
             <meta property="og:url" content={canonical} />
