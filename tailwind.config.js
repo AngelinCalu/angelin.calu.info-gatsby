@@ -785,6 +785,7 @@ module.exports = {
                             },
                         },
                         code: {
+                            color: theme('colors.white'),
                             backgroundColor: theme('colors.gray.600'),
                             padding: theme('spacing.1'),
                             fontWeight: '500',

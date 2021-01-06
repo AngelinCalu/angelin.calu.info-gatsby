@@ -14,7 +14,7 @@ export default function Home({ data }) {
             <Bio profilePic={data.profilePic} />
             <BlogPosts posts={data.allMdx.nodes} />
             <Link className="hover:text-blue-700 dark:hover:text-blue-200 hover:underline" to="/blog" title="All blog posts">View all articles</Link>
-            <Projects />
+            {/* <Projects /> */}
             <References />
         </Layout>
     );
