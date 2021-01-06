@@ -99,11 +99,12 @@ const Skills = () => {
                                     }`}
                                 >
                                     <img
-                                        className={skill.iconSize || 'h-10 md:h-20 w-auto'}
+                                        className={`md:p-3 bg-white md:rounded-lg ${skill.iconSize || 'h-10 md:h-20 w-auto'}`}
                                         src={`../images/tech-svg/${skill.icon}`}
                                         alt={skill.name}
                                         title={skill.name}
                                     />
+                                    <span className={techList ? 'p-2' : 'hidden'}>{skill.description}</span>
                                 </div>
                             ))}
                         </div>
