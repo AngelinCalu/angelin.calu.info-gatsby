@@ -140,10 +140,12 @@ module.exports = {
                                     url: site.siteMetadata.siteUrl + node.fields.slug,
                                     guid: site.siteMetadata.siteUrl + node.fields.slug,
                                     // author: site.siteMetadata.author,
-                                    custom_elements: [{
-                                        'content:encoded': node.html,
-                                        'dc:creator': site.siteMetadata.author,
-                                    }],
+                                    custom_elements: [
+                                        {
+                                            'content:encoded': node.html,
+                                            'dc:creator': site.siteMetadata.author,
+                                        },
+                                    ],
                                 });
                             });
                         },

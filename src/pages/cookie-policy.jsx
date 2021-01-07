@@ -73,27 +73,23 @@ const CookiePolicy = () => {
                 <ul>
                     <li>
                         This site uses Google Analytics, a web analysis service of{' '}
-                            <a
-                                target="_blank"
-                                rel="nofollow noopener noreferrer"
-                                href="https://about.google/intl/about/"
-                            >
-                                Google Inc
-                            </a>
-                            , which is one of the most widespread and trusted analytics solution on the web for helping
-                            to understand how you use the site and ways that could improve your experience. These
-                            cookies may track things such as how long you spend on the site and the pages that you visit
-                            so I can continue to produce engaging content.
-                    
-                            <br /><br /> For more information on Google Analytics cookies, see the official{' '}
-                            <a
-                                target="_blank"
-                                rel="nofollow noopener noreferrer"
-                                href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage"
-                            >
-                                Google Analytics page
-                            </a>
-                            .
+                        <a target="_blank" rel="nofollow noopener noreferrer" href="https://about.google/intl/about/">
+                            Google Inc
+                        </a>
+                        , which is one of the most widespread and trusted analytics solution on the web for helping to
+                        understand how you use the site and ways that could improve your experience. These cookies may
+                        track things such as how long you spend on the site and the pages that you visit so I can
+                        continue to produce engaging content.
+                        <br />
+                        <br /> For more information on Google Analytics cookies, see the official{' '}
+                        <a
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage"
+                        >
+                            Google Analytics page
+                        </a>
+                        .
                     </li>
                 </ul>
 

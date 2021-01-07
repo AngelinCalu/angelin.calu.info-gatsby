@@ -2,7 +2,6 @@ import React from 'react';
 import Scrollspy from 'react-scrollspy';
 
 const TableOfContents = ({ items }) => {
-
     const headingsList = (items, level) => {
         let headings = [];
         items.forEach((item) => {
@@ -21,7 +20,7 @@ const TableOfContents = ({ items }) => {
                     In this article
                 </h3>
                 <Scrollspy
-                    items={allHeadings.map(heading => heading.url.substring(1))}
+                    items={allHeadings.map((heading) => heading.url.substring(1))}
                     currentClassName="text-blue-500"
                     className="space-y-3 border-l border-blue-300 pl-3 text-sm"
                 >

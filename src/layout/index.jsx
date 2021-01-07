@@ -4,7 +4,7 @@ import Header from './header';
 import Footer from './footer';
 
 if (typeof window !== 'undefined') {
-    require('smooth-scroll')('a[href*="#"]')
+    require('smooth-scroll')('a[href*="#"]');
 }
 
 const Layout = ({ children }) => {

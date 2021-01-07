@@ -716,7 +716,7 @@ module.exports = {
             typography: (theme) => ({
                 DEFAULT: {
                     css: {
-                        color: theme("colors.gray.900"),
+                        color: theme('colors.gray.900'),
                         a: {
                             color: theme('colors.gray.800'),
                             '&:hover': {
@@ -777,7 +777,7 @@ module.exports = {
                 },
                 dark: {
                     css: {
-                        color: theme("colors.gray.300"),
+                        color: theme('colors.gray.300'),
                         a: {
                             color: theme('colors.white'),
                             '&:hover': {
@@ -792,23 +792,23 @@ module.exports = {
                             borderRadius: theme('borderRadius.DEFAULT'),
                         },
                         h1: {
-                            color: theme("colors.gray.100"),
+                            color: theme('colors.gray.100'),
                         },
                         h2: {
-                            color: theme("colors.gray.100"),
+                            color: theme('colors.gray.100'),
                         },
                         h3: {
-                            color: theme("colors.gray.100"),
+                            color: theme('colors.gray.100'),
                         },
                         h4: {
-                            color: theme("colors.gray.100"),
+                            color: theme('colors.gray.100'),
                         },
                         strong: {
-                            color: theme("colors.white"),
+                            color: theme('colors.white'),
                         },
-                        "::selection": {
-                            color: theme("colors.white"),
-                            backgroundColor: theme("colors.blue.500"),
+                        '::selection': {
+                            color: theme('colors.white'),
+                            backgroundColor: theme('colors.blue.500'),
                         },
                     },
                 },

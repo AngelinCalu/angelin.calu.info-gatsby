@@ -135,7 +135,9 @@ const Shipbuilding = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-lg pt-2">{experience.title}</h4>
-                                    <span className="text-sm whitespace-pre text-gray-500 dark:text-gray-400">{experience.address}</span>
+                                    <span className="text-sm whitespace-pre text-gray-500 dark:text-gray-400">
+                                        {experience.address}
+                                    </span>
                                 </div>
                             </div>
                         </li>

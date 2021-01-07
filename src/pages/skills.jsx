@@ -19,10 +19,10 @@ const Skills = () => {
                 <h3 id="soft-skills" className="uppercase text-2xl py-2 dark:text-gray-100">
                     Soft skills
                 </h3>
-                <ul className="space-y-4 list-disc">
+                <ul className="space-y-4 list-disc dark:text-white">
                     <li>
                         <div>Creativity</div>
-                        <span className="text-gray-500 text-sm">
+                        <span className="text-gray-500 dark:text-gray-300 text-sm">
                             I'm deliberately putting this at the top of the list as I think this might be one of my most
                             important assets. And, just to be perfectly clear I'm not referring to the artistic side but
                             the ability to think, design and implement (sometimes innovative) solutions to a wide
@@ -31,21 +31,21 @@ const Skills = () => {
                     </li>
                     <li>
                         <div>Achiever</div>
-                        <span className="text-gray-500 text-sm">
+                        <span className="text-gray-500 dark:text-gray-300 text-sm">
                             I like to be productive and stay busy. Because of this I am always focused, consistent about
                             getting things done in a timely manner and look to take on additional responsibilities.
                         </span>
                     </li>
                     <li>
                         <div>Adaptability</div>
-                        <span className="text-gray-500 text-sm">
+                        <span className="text-gray-500 dark:text-gray-300 text-sm">
                             I'm very confortable working in the most diverse environments, and I'm adapting very easy
                             when a change occurs.
                         </span>
                     </li>
                     <li>
                         <div>Communication</div>
-                        <span className="text-gray-500 text-sm">
+                        <span className="text-gray-500 dark:text-gray-300 text-sm">
                             Good communication skills and very confortable communicating in general. I've been using
                             English language as the main way of communicating on the workplace and outside of working
                             hours for more than 6 years.
@@ -53,14 +53,14 @@ const Skills = () => {
                     </li>
                     <li>
                         <div>Organization</div>
-                        <span className="text-gray-500 text-sm">
+                        <span className="text-gray-500 dark:text-gray-300 text-sm">
                             Good skills in planning and effectively implementing projects and general work tasks for
                             myself and others.
                         </span>
                     </li>
                     <li>
                         <div>Critical Thinking</div>
-                        <span className="text-gray-500 text-sm">
+                        <span className="text-gray-500 dark:text-gray-300 text-sm">
                             Maybe this is a trait commonly found in programmers in general, or perhaps it's just how
                             coding for over 20 years changed the way I think about things.
                         </span>
@@ -94,12 +94,14 @@ const Skills = () => {
                             {row.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className={`px-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex flex-col md:flex-row items-center justify-center focus:outline-none ${
+                                    className={`px-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex flex-col md:flex-row items-center focus:outline-none ${
                                         techList ? 'my-2 border-b dark:border-gray-700' : null
                                     }`}
                                 >
                                     <img
-                                        className={`my-1 mx-auto md:mx-0 md:p-3 dark:bg-white md:rounded-lg ${skill.iconSize || 'h-10 md:h-20 w-auto'}`}
+                                        className={`my-1 mx-auto md:mx-0 md:p-3 dark:bg-white md:rounded-lg ${
+                                            skill.iconSize || 'h-10 md:h-20 w-auto'
+                                        }`}
                                         src={`../images/tech-svg/${skill.icon}`}
                                         alt={skill.name}
                                         title={skill.name}
