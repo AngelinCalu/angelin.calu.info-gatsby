@@ -10,7 +10,7 @@ const Education = () => {
                 title="Education"
                 description="Education information for Angelin Calu, Marine Engineer, Naval Architect, Hull Design specialist, and full stack developer, based in Turku, Finland."
             />
-            <h1 className="text-4xl py-4">Education</h1>
+            <h1 className="text-4xl py-4 dark:text-gray-100">Education</h1>
             <h2 className="text-lg font-bold pt-4 pb-2">2001 - 2005</h2>
             <p>
                 My Passion for the IT world started in the late 90's, and that's why I've chosen to continue my High

@@ -10,11 +10,17 @@ const useSiteMetadata = () => {
                         description
                         keywords
                         author
-                        image
                         siteUrl
                         siteLanguage
                         siteLocale
                         twitterUsername
+                    }
+                }
+                ogImageDefault: file(relativePath: { eq: "default.png" }) {
+                    childImageSharp {
+                        fixed(height: 630, width: 1200) {
+                            src
+                        }
                     }
                 }
             }

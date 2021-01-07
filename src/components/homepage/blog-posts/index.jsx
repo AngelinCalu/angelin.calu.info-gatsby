@@ -3,18 +3,22 @@ import { Link } from 'gatsby';
 
 const BlogPosts = ({ posts }) => {
     return (
-        <section className="py-6">
+        <section className="pt-6">
             <h3 className="uppercase text-2xl py-2">Latest Posts</h3>
             {posts.map(({ id, frontmatter, fields, timeToRead }) => (
                 <Link key={id} to={fields.slug}>
-                    <article className="w-full p-4 flex flex-col md:flex-row justify-between rounded-md group hover:bg-gray-100">
+                    <article className="w-full p-4 flex flex-col md:flex-row justify-between rounded-md group bg-gray-50 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 mb-4">
                         <div>
-                            <h4 className="text-lg group-hover:text-blue-700">{frontmatter.title}</h4>
-                            <p className="text-sm text-gray-700">{frontmatter.description}</p>
+                            <h4 className="text-lg text-gray-900 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-200">
+                                {frontmatter.title}
+                            </h4>
+                            <p className="text-sm text-gray-700 dark:text-gray-300">{frontmatter.description}</p>
                         </div>
-                        <div className="flex justify-between md:flex-col md:items-end group-hover:text-gray-500">
-                            <p className="py-2 md:py-0">{frontmatter.date}</p>
-                            <p className="text-sm whitespace-nowrap inline-flex items-center text-gray-500 p-2">
+                        <div className="flex justify-between md:flex-col md:items-end">
+                            <p className="py-2 md:py-0 text-gray-500 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-white">
+                                {frontmatter.date}
+                            </p>
+                            <p className="text-sm whitespace-nowrap inline-flex items-center text-gray-500 dark:text-gray-200 p-2">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"

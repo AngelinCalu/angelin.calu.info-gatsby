@@ -2,7 +2,7 @@ module.exports = [
     {
         employer: 'Allstars',
         yardNo: '1400',
-        name: 'Unnamed',
+        name: 'ICON 1',
         owner: 'Royal Caribbean International',
         type: 'Cruise ship',
         image: 'ship.png',
@@ -13,7 +13,7 @@ module.exports = [
         name: 'Costa Toscana',
         owner: 'Costa Crociere',
         type: 'Cruise ship',
-        image: 'ship.png',
+        image: 'costa-toscana.jpg',
     },
     {
         employer: 'Allstars',
@@ -218,7 +218,7 @@ module.exports = [
     {
         employer: 'Vard',
         yardNo: '1048',
-        name: 'Internal Project',
+        name: 'PSV 09 CD',
         owner: 'Vard',
         type: 'Platform Supply Vessel',
         image: 'ship.png',
@@ -226,7 +226,7 @@ module.exports = [
     {
         employer: 'Vard',
         yardNo: '931',
-        name: 'Internal Project',
+        name: 'PSV 08 CD',
         owner: 'Vard',
         type: 'Platform Supply Vessel',
         image: 'ship.png',

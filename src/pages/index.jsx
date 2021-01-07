@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../layout';
 import BlogPosts from '../components/homepage/blog-posts';
 import Bio from '../components/homepage/bio';
@@ -13,7 +13,14 @@ export default function Home({ data }) {
             <SEO title="Homepage" />
             <Bio profilePic={data.profilePic} />
             <BlogPosts posts={data.allMdx.nodes} />
-            <Projects />
+            <Link
+                className="text-blue-500 hover:text-blue-700 dark:hover:text-blue-200 transition ease-in-out duration-150 mb-4"
+                to="/blog"
+                title="All blog posts"
+            >
+                View all articles <span aria-hidden="true">&rarr;</span>
+            </Link>
+            {/* <Projects /> */}
             <References />
         </Layout>
     );

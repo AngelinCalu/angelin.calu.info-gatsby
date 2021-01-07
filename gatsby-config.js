@@ -1,6 +1,10 @@
+require('dotenv').config({
+    path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
     siteMetadata: {
-        title: `Angelin Calu | Full-Stack Developer`,
+        title: `Angelin Calu | Shipbuilding Engineer and Full-Stack Developer`,
         description: `Angelin Calu is a Full-Stack Developer and Shipbuilding Design Engineer based in Turku, Finland. Sometimes he also writes about stuff.`,
         keywords: ['Angelin Calu', 'Full-Stack developer Turku', 'Shipbuilding Engineer Turku'],
         author: `Angelin Calu`,
@@ -26,7 +30,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-env-variables`,
             options: {
-                allowList: ['GA_TRACKING_ID'],
+                allowList: ['GA_TRACKING_ID', 'MAILCHIMP_ENDPOINT'],
             },
         },
         {
@@ -102,6 +106,73 @@ module.exports = {
                 host: 'https://angelin.calu.info',
                 sitemap: 'https://angelin.calu.info/sitemap.xml',
                 policy: [{ userAgent: '*', allow: '/' }],
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-mailchimp',
+            options: {
+                endpoint: process.env.MAILCHIMP_ENDPOINT,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-feed`,
+            options: {
+                query: `
+                {
+                    site {
+                        siteMetadata {
+                            title
+                            description
+                            siteUrl
+                            author
+                            site_url: siteUrl
+                        }
+                    }
+                }
+                `,
+                feeds: [
+                    {
+                        serialize: ({ query: { site, allMdx } }) => {
+                            return allMdx.nodes.map((node) => {
+                                return Object.assign({}, node.frontmatter, {
+                                    description: node.excerpt,
+                                    date: node.frontmatter.date,
+                                    url: site.siteMetadata.siteUrl + node.fields.slug,
+                                    guid: site.siteMetadata.siteUrl + node.fields.slug,
+                                    // author: site.siteMetadata.author,
+                                    custom_elements: [
+                                        {
+                                            'content:encoded': node.html,
+                                            'dc:creator': site.siteMetadata.author,
+                                        },
+                                    ],
+                                });
+                            });
+                        },
+                        query: `
+                        {
+                            allMdx(
+                                limit: 100,
+                                sort: { order: DESC, fields: [frontmatter___date] },
+                            ) {
+                                nodes {
+                                    excerpt
+                                    html
+                                    fields { 
+                                        slug 
+                                    }
+                                    frontmatter {
+                                        title
+                                        date
+                                    }
+                                }
+                            }
+                        }
+                        `,
+                        output: `/rss.xml`,
+                        title: `Angelin Calu's blog`,
+                    },
+                ],
             },
         },
     ],
