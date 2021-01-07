@@ -94,12 +94,12 @@ const Skills = () => {
                             {row.map((skill) => (
                                 <div
                                     key={skill.name}
-                                    className={`h-14 md:h-24 px-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex items-center focus:outline-none ${
+                                    className={`px-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg flex flex-col md:flex-row items-center justify-center focus:outline-none ${
                                         techList ? 'my-2 border-b dark:border-gray-700' : null
                                     }`}
                                 >
                                     <img
-                                        className={`md:p-3 bg-white md:rounded-lg ${skill.iconSize || 'h-10 md:h-20 w-auto'}`}
+                                        className={`my-1 mx-auto md:mx-0 md:p-3 dark:bg-white md:rounded-lg ${skill.iconSize || 'h-10 md:h-20 w-auto'}`}
                                         src={`../images/tech-svg/${skill.icon}`}
                                         alt={skill.name}
                                         title={skill.name}

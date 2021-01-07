@@ -34,10 +34,10 @@ const Footer = () => {
     };
 
     return (
-        <div className="w-full max-w-6xl mx-auto px-10 md:px-4 xl:px-0">
+        <div className="w-full max-w-screen-xl mx-auto px-10 md:px-4 xl:px-0">
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                 <div className="xl:grid xl:grid-cols-2 xl:gap-8">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
                         <div>
                             <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-200 tracking-wider uppercase">
                                 About

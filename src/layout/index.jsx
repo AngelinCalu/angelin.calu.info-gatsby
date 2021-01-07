@@ -3,6 +3,10 @@ import { Link } from 'gatsby';
 import Header from './header';
 import Footer from './footer';
 
+if (typeof window !== 'undefined') {
+    require('smooth-scroll')('a[href*="#"]')
+}
+
 const Layout = ({ children }) => {
     const windowGlobal = typeof window !== 'undefined' && window;
 
@@ -34,7 +38,7 @@ const Layout = ({ children }) => {
                 </svg>
                 <Header />
             </header>
-            <main className="relative max-w-6xl z-10 2xl:mt-32 3xl:mt-48 my-12 lg:my-24 mx-auto px-10 lg:px-8 2xl:px-0">
+            <main className="relative max-w-screen-xl z-10 2xl:mt-32 3xl:mt-48 my-12 lg:my-24 mx-auto px-10 lg:px-8 2xl:px-0">
                 {children}
             </main>
             <footer className="bg-blue-100 dark:bg-gray-800" aria-labelledby="footerHeading">

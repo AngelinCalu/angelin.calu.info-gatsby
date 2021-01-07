@@ -3,9 +3,10 @@ import { graphql, Link } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../layout';
 import SEO from '../components/seo';
+import TableOfContents from '../components/blog/table-of-contents';
 
 const BlogPostTemplate = ({ data, pageContext }) => {
-    const { frontmatter, body, excerpt, timeToRead } = data.mdx;
+    const { frontmatter, body, excerpt, tableOfContents, timeToRead } = data.mdx;
     const { slug, previous, next } = pageContext;
     const ogImagePath = frontmatter.ogimage && frontmatter.ogimage.childImageSharp.fixed.src;
 
@@ -13,7 +14,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         <Layout>
             <SEO pathname={slug} title={frontmatter.title} description={excerpt} image={ogImagePath} />
 
-            <article className="prose dark:prose-dark prose-sm sm:prose lg:prose-lg min-w-0 max-w-none">
+            <article>
                 <div className="flex flex-col pb-2 text-sm">
                     <span className="text-gray-500 dark:text-gray-200">
                         Published on <b>{frontmatter.date}</b>
@@ -22,8 +23,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                         Estimated time to Read: <b>{timeToRead} minute(s)</b>
                     </span>
                 </div>
-                <h1 className="py-1 text-gray-800 dark:text-gray-200">{frontmatter.title}</h1>
-                <MDXRenderer>{body}</MDXRenderer>
+                <div className="relative flex">
+                    <div className="prose dark:prose-dark prose-sm sm:prose lg:prose-lg min-w-0 max-w-none px-4 flex-1">
+                        <h1 className="py-1 pt-6 text-gray-800 dark:text-gray-200">{frontmatter.title}</h1>
+                        <MDXRenderer>{body}</MDXRenderer>
+                    </div>
+                    {!! tableOfContents.items && <TableOfContents items={tableOfContents.items} />}
+                </div>
             </article>
             <div className="border-t dark:border-gray-700 mt-5">
                 <h3 className="text-xl font-bold py-4 inline-flex items-end w-full text-gray-900 dark:text-white ">
@@ -39,7 +45,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                 <span className="w-15 text-right">Previous:</span>
                                 <Link
                                     to={previous.fields.slug}
-                                    className="hover:underline hover:text-blue-500 ml-4 text-gray-500"
+                                    className="hover:underline hover:text-blue-500 ml-4 text-gray-500 dark:text-gray-400"
                                 >
                                     {previous.frontmatter.title}
                                 </Link>
@@ -56,7 +62,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                 <span className="w-15 text-right">Next:</span>
                                 <Link
                                     to={next.fields.slug}
-                                    className="hover:underline hover:text-blue-500 ml-4 text-gray-500"
+                                    className="hover:underline hover:text-blue-500 ml-4 text-gray-500 dark:text-gray-400"
                                 >
                                     <p>{next.frontmatter.title}</p>
                                 </Link>
@@ -85,6 +91,7 @@ export const query = graphql`
                 }
             }
             excerpt(pruneLength: 150)
+            tableOfContents(maxDepth: 3)
             timeToRead
         }
     }
