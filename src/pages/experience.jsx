@@ -2,6 +2,8 @@ import React from 'react';
 import Layout from '../layout';
 import SEO from '../components/seo';
 import { Link } from 'gatsby';
+import { ExternalLink } from '../components/ui';
+
 
 import projects from '../../content/data/projects';
 
@@ -41,7 +43,10 @@ const Experience = () => {
                             <div className="text-gray-600 dark:text-gray-300">
                                 <div className="my-2 grid grid-cols-1 md:grid-cols-2">
                                     <span className="text-sm font-bold p-1 md:text-right mr-2">Link:</span>
-                                    <span><a target="_blank" className="hover:underline hover:text-blue-500 text-sm" href={project.link} rel="nofollow noopener noreferrer">{project.link}</a></span>
+                                    <span>
+                                        <ExternalLink to={project.link} className="text-sm" title={project.title} icon>{ project.link}</ExternalLink>
+                                        {/* <a target="_blank" className="hover:underline hover:text-blue-500 text-sm" href={project.link} rel="nofollow noopener noreferrer">{project.link}</a>*/}
+                                    </span> 
                                 </div>
                                 <div className="my-2 grid grid-cols-1 md:grid-cols-2">
                                     <span className="text-sm font-bold p-1 md:text-right mr-2">Description:</span>
