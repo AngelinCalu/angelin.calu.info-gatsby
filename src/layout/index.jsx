@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
-                    className="absolute overflow-hidden hidden md:block md:top-0 2xl:-top-48 text-blue-300 dark:text-gray-800"
+                    className="absolute overflow-hidden hidden md:block md:top-0 xl:-top-16 2xl:-top-32 text-blue-300 dark:text-gray-800"
                 >
                     <path
                         fill="currentColor"
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
                 </svg>
                 <Header />
             </header>
-            <main className="relative max-w-screen-xl z-10 2xl:mt-32 3xl:mt-48 my-12 lg:my-24 mx-auto px-10 lg:px-8 2xl:px-0">
+            <main className="relative max-w-screen-xl z-10 xl:mt-24 2xl:mt-32 my-12 md:my-2 lg:my-6 mx-auto px-10 lg:px-8 2xl:px-0">
                 {children}
             </main>
             <footer className="bg-blue-100 dark:bg-gray-800" aria-labelledby="footerHeading">
@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
                 {cookieBar === 'visible' ? (
                     <div className="bg-yellow-200 text-sm border-t dark:border-gray-700 border-gray-100 dark:text-black z-50 px-4 py-1 fixed bottom-0 w-full inline-flex items-center justify-between">
                         <p>
-                            This website uses third-party cookies to analyze the traffic. More information on our{' '}
+                            This website uses third-party cookies to analyze the traffic. More information on the{' '}
                             <Link className="text-gray-500 hover:underline" to="/cookie-policy" title="Cookie Policy">
                                 Cookie Policy
                             </Link>{' '}

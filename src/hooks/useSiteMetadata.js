@@ -16,9 +16,9 @@ const useSiteMetadata = () => {
                         twitterUsername
                     }
                 }
-                ogImageDefault: file(relativePath: { eq: "default.png" }) {
+                ogImageDefault: file(relativePath: { eq: "page-cover.jpg" }) {
                     childImageSharp {
-                        fixed(height: 630, width: 1200) {
+                        fixed(height: 628, width: 1200) {
                             src
                         }
                     }
