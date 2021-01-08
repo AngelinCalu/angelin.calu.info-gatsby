@@ -2,7 +2,7 @@
   "name": "gatsby-plugin-social-sharing-cards",
   "private": true,
   "version": "1.0.0",
-  "author": "Perttu Lähteenlahti",
+  "author": "Ryan Yurkanin",
   "dependencies": {
     "jimp": "^0.8.5"
   }

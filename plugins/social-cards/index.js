@@ -1,4 +1,3 @@
-const path = require('path');
 const jimp = require('jimp');
 
 module.exports = async ({ markdownNode }) => {
