@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import referencesData from '../../../../content/data/references';
 import Dots from './dots';
@@ -6,22 +6,29 @@ import Dots from './dots';
 const References = () => {
 
     const refIds = referencesData.map(ref => ref.id);
-
+    
+    const wrapperRef = useRef(null);
+    const getWidth = () => wrapperRef.current.clientWidth;
+    
     const [activeRef, setActiveRef] = useState(refIds[0]);
-
+    const [translate, setTranslate] = useState(0);
+    
     const moveBackwards = () => {
+        console.log(getWidth());
         setActiveRef(refIds.indexOf(activeRef) === 0 ? refIds[refIds.length - 1] : refIds[refIds.indexOf(activeRef) - 1]);
+        setTranslate(getWidth() * refIds.indexOf(activeRef) + 1);
     }
-
+    
     const moveForward = () => {
         setActiveRef(refIds.indexOf(activeRef) === refIds.length - 1 ? refIds[0] : refIds[refIds.indexOf(activeRef) + 1]);
+        setTranslate(getWidth() * refIds.indexOf(activeRef) -1);
     }
 
     return (
         <section className="py-6">
             <h3 className="uppercase text-2xl py-2">References</h3>
             <h4 className="text-md py-2">Here's some words from a few of the colleagues or collaborators:</h4>
-            <div className="w-full p-4 justify-between flex rounded-md group bg-gray-100 dark:bg-gray-800 overflow-hidden relative hover:shadow-md">
+            <div ref={wrapperRef} className="w-full p-4 justify-between flex rounded-md group bg-gray-100 dark:bg-gray-800 overflow-hidden relative hover:shadow-md">
                 <div className="absolute z-10 w-full h-full -m-4">
                     <button
                         type="button"
@@ -68,6 +75,7 @@ const References = () => {
                     <blockquote
                         key={reference.id}
                         className="min-w-full relative z-0 m-2 flex flex-col items-end transform transition ease-out duration-700"
+                        style={{ transform: `translateX(-${translate - 16}px)` }}
                     >
                         <svg
                             className="absolute top-0 left-2 transform -translate-x-3 -translate-y-2 h-8 w-8 text-blue-300 opacity-50"
