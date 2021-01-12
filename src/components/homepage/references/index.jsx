@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import referencesData from '../../../../content/data/references';
+import Dots from './dots';
 
 const References = () => {
+
+    const refIds = referencesData.map(ref => ref.id);
+
+    const [activeRef, setActiveRef] = useState(refIds[0]);
+
+    const moveBackwards = () => {
+        setActiveRef(refIds.indexOf(activeRef) === 0 ? refIds[refIds.length - 1] : refIds[refIds.indexOf(activeRef) - 1]);
+    }
+
+    const moveForward = () => {
+        setActiveRef(refIds.indexOf(activeRef) === refIds.length - 1 ? refIds[0] : refIds[refIds.indexOf(activeRef) + 1]);
+    }
+
     return (
         <section className="py-6">
             <h3 className="uppercase text-2xl py-2">References</h3>
             <h4 className="text-md py-2">Here's some words from a few of the colleagues or collaborators:</h4>
-            <div className="w-full p-4 justify-between flex rounded-md group bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 overflow-hidden relative hover:shadow-md">
+            <div className="w-full p-4 justify-between flex rounded-md group bg-gray-100 dark:bg-gray-800 overflow-hidden relative hover:shadow-md">
                 <div className="absolute z-10 w-full h-full -m-4">
                     <button
                         type="button"
                         className="w-1/2 min-h-full bg-gradient-to-r from-gray-100 bg-opacity-50 opacity-0 hover:opacity-75 focus:outline-none text-left"
+                        onClick={ moveBackwards }
                     >
+                        <span className="sr-only">Previous Reference</span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -22,6 +38,7 @@ const References = () => {
                             strokeLinejoin="round"
                             className="w-16 h-auto text-blue-300"
                             viewBox="0 0 24 24"
+                            aria-hidden="true"
                         >
                             <path d="M15 18l-6-6 6-6" />
                         </svg>
@@ -29,7 +46,9 @@ const References = () => {
                     <button
                         type="button"
                         className="w-1/2 min-h-full bg-gradient-to-l from-gray-100 opacity-0 hover:opacity-75 focus:outline-none text-right"
+                        onClick={moveForward}
                     >
+                        <span className="sr-only">Next Reference</span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -39,6 +58,7 @@ const References = () => {
                             strokeLinejoin="round"
                             className="w-16 h-auto text-blue-300 ml-auto"
                             viewBox="0 0 24 24"
+                            aria-hidden="true"
                         >
                             <path d="M9 18l6-6-6-6" />
                         </svg>
@@ -47,7 +67,7 @@ const References = () => {
                 {referencesData.map((reference) => (
                     <blockquote
                         key={reference.id}
-                        className="min-w-full relative z-0 m-2 flex flex-col items-end transform"
+                        className="min-w-full relative z-0 m-2 flex flex-col items-end transform transition ease-out duration-700"
                     >
                         <svg
                             className="absolute top-0 left-2 transform -translate-x-3 -translate-y-2 h-8 w-8 text-blue-300 opacity-50"
@@ -59,12 +79,13 @@ const References = () => {
                         <h2 className="relative text-lg p-2 grouregp-hover:text-blue-700 dark:group-hover:text-blue-300 text-center text-gray-500 dark:text-gray-300 italic">
                             &quot;{reference.quote}&quot;
                         </h2>
-                        <p className="text-sm text-gray-700 dark:text-gray-200 w-full text-right mr-4 flex flex-col mt-4">
+                        <p className="text-sm text-gray-700 dark:text-gray-200 w-full text-right mr-4 flex flex-col mt-4 py-2">
                             <span className="font-bold">{reference.name}</span>
                             <span>{reference.position}</span>
                         </p>
                     </blockquote>
                 ))}
+                <Dots references={refIds} active={activeRef}/>
             </div>
         </section>
     );
