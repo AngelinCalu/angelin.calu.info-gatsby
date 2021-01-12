@@ -31,7 +31,8 @@ const Layout = ({ children }) => {
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
-                     className="absolute overflow-hidden hidden md:block md:top-0 xl:-top-16 2xl:-top-32 text-blue-300 dark:text-gray-800"
+                    preserveAspectRatio="none"
+                    className="absolute overflow-hidden hidden md:block md:top-0 xl:-top-16 2xl:-top-32 text-blue-300 dark:text-gray-800"
                 >
                     <path
                         fill="currentColor"
