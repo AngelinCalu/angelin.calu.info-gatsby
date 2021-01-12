@@ -16,7 +16,7 @@ const References = () => {
         let nextId =
             refIds.indexOf(activeRef) === 0 ? refIds[refIds.length - 1] : refIds[refIds.indexOf(activeRef) - 1];
 
-        setTranslate(-1 * getWidth() * refIds.indexOf(nextId) + 1 + 8 * refIds.indexOf(nextId));
+        setTranslate(-1 * getWidth() * refIds.indexOf(nextId) + 1);
         setActiveRef(nextId);
     };
 
@@ -24,8 +24,14 @@ const References = () => {
         let nextId =
             refIds.indexOf(activeRef) === refIds.length - 1 ? refIds[0] : refIds[refIds.indexOf(activeRef) + 1];
 
-        setTranslate(-1 * getWidth() * refIds.indexOf(nextId) - 1 + 8 * refIds.indexOf(nextId));
+        setTranslate(-1 * getWidth() * refIds.indexOf(nextId) - 1);
         setActiveRef(nextId);
+    };
+
+
+    const selectReference = (referenceId) => {
+        setTranslate(-1 * getWidth() * refIds.indexOf(referenceId) - 1);
+        setActiveRef(referenceId);
     };
 
     return (
@@ -35,9 +41,9 @@ const References = () => {
             <div
                 width={getWidth() + referencesData.length}
                 ref={wrapperRef}
-                className="w-full p-4 justify-between flex rounded-md group bg-gray-100 dark:bg-gray-800 overflow-hidden relative hover:shadow-md"
+                className="w-full justify-between flex rounded-md group bg-gray-100 dark:bg-gray-800 overflow-hidden relative hover:shadow-md"
             >
-                <div className="absolute z-10 w-full h-full -m-4 inline-flex">
+                <div className="absolute z-10 w-full h-full inline-flex">
                     <button
                         type="button"
                         className="w-1/3 min-h-full bg-gradient-to-r from-gray-100 bg-opacity-50 opacity-0 hover:opacity-75 focus:outline-none text-left"
@@ -58,7 +64,7 @@ const References = () => {
                             <path d="M15 18l-6-6 6-6" />
                         </svg>
                     </button>
-                    <Dots references={refIds} active={activeRef} />
+                    <Dots references={refIds} active={activeRef} selectReference={ selectReference }/>
                     <button
                         type="button"
                         className="w-1/3 min-h-full bg-gradient-to-l from-gray-100 opacity-0 hover:opacity-75 focus:outline-none text-right"
@@ -83,11 +89,11 @@ const References = () => {
                 {referencesData.map((reference) => (
                     <blockquote
                         key={reference.id}
-                        className="min-w-full relative z-0 m-2 flex flex-col items-end transform transition ease-out duration-700"
-                        style={{ transform: `translateX(${translate ? translate + 20 : 0}px)` }}
+                        className="min-w-full relative z-0 p-4 flex flex-col justify-between transform transition ease-out duration-500"
+                        style={{ transform: `translateX(${translate || 0}px)` }}
                     >
                         <svg
-                            className="absolute top-0 left-2 transform -translate-x-3 -translate-y-2 h-8 w-8 text-blue-300 opacity-50"
+                            className="absolute top-4 left-4 h-8 w-8 text-blue-300 opacity-50"
                             fill="currentColor"
                             viewBox="0 0 32 32"
                         >
