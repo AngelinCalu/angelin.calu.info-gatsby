@@ -7,6 +7,7 @@ const References = () => {
     const refIds = referencesData.map((ref) => ref.id);
 
     const wrapperRef = useRef(null);
+    // const width = useElementWidth(wrapperRef);
     const getWidth = () => (wrapperRef.current ? wrapperRef.current.clientWidth : 0);
 
     const [activeRef, setActiveRef] = useState(refIds[0]);
