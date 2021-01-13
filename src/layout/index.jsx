@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
     };
 
     return (
-        <div className="bg-white dark:bg-gray-900 text-black dark:text-gray-300">
+        <div className="subpixel-antialiased bg-white dark:bg-gray-900 text-black dark:text-gray-300">
             <header className="w-full bg-blue-100 dark:bg-gray-900 md:bg-white md:dark:bg-gray-900 md:h-56">
                 <Link to="#page-content" className="sr-only">Skip to content</Link>
                 <svg
