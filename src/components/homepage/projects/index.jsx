@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { SectionHeader } from '../../ui';
 
 const Projects = () => {
     return (
         <section className="py-6">
-            <h3 className="uppercase text-2xl py-2">Projects</h3>
+            <SectionHeader>Projects</SectionHeader>
             <article className="w-full p-4">
                 <h2 className="text-lg">
                     I will soon add here a list of side projects I’ve been working on during the years. For a list of

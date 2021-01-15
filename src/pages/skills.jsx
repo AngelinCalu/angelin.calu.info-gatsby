@@ -78,7 +78,7 @@ const Skills = () => {
                 <p className="py-2">Below some of those:</p>
                 <button
                     type="button"
-                    className="p-2 hover:underline hover:text-blue-500"
+                    className="p-2 hover:underline text-blue-400 hover:text-blue-500"
                     onClick={() => setTechList(!techList)}
                 >
                     {techList ? 'View as Group' : 'View as List'}

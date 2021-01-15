@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { SectionHeader } from '../../ui';
 
 import referencesData from '../../../../content/data/references';
 import Dots from './dots';
@@ -29,7 +30,6 @@ const References = () => {
         setActiveRef(nextId);
     };
 
-
     const selectReference = (referenceId) => {
         setTranslate(-1 * getWidth() * refIds.indexOf(referenceId) - 1);
         setActiveRef(referenceId);
@@ -37,7 +37,7 @@ const References = () => {
 
     return (
         <section className="py-6">
-            <h3 className="uppercase text-2xl py-2">References</h3>
+            <SectionHeader>References</SectionHeader>
             <h4 className="text-md py-2">Here's some words from a few of the colleagues or collaborators:</h4>
             <div
                 width={getWidth() + referencesData.length}
@@ -65,7 +65,7 @@ const References = () => {
                             <path d="M15 18l-6-6 6-6" />
                         </svg>
                     </button>
-                    <Dots references={refIds} active={activeRef} selectReference={ selectReference }/>
+                    <Dots references={refIds} active={activeRef} selectReference={selectReference} />
                     <button
                         type="button"
                         className="w-1/3 min-h-full bg-gradient-to-l from-gray-100 dark:from-gray-900 opacity-0 hover:opacity-75 focus:outline-none text-right"

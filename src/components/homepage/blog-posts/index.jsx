@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { SectionHeader } from '../../ui';
 
 const BlogPosts = ({ posts }) => {
     return (
         <section className="pt-6">
-            <h3 className="uppercase text-2xl py-2">Latest Posts</h3>
+            <SectionHeader>Latest Posts</SectionHeader>
             {posts.map(({ id, frontmatter, fields, timeToRead }) => (
                 <Link key={id} to={fields.slug}>
                     <article className="w-full p-4 flex flex-col md:flex-row justify-between rounded-md group bg-gray-50 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 mb-4">

@@ -1,8 +1,13 @@
 import React from 'react';
 
 export const ExternalLink = ({ to, title, children, icon = false }) => (
-    <a className="inline-flex items-center  hover:text-blue-500" target="_blank" href={to} title={title} rel="noopener nofollow noreferrer">
-        
+    <a
+        className="inline-flex items-center  hover:text-blue-500"
+        target="_blank"
+        href={to}
+        title={title}
+        rel="noopener nofollow noreferrer"
+    >
         {icon ? (
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -19,4 +24,8 @@ export const ExternalLink = ({ to, title, children, icon = false }) => (
         ) : null}
         {children}
     </a>
+);
+
+export const SectionHeader = ({ children }) => (
+    <h3 className="uppercase text-xl py-2 tracking-wide font-bold">{children}</h3>
 );
