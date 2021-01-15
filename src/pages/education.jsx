@@ -89,7 +89,7 @@ const Education = () => {
                         key={education.title}
                         className="flex flex-col md:flex-row py-4 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
                     >
-                        <div className="block px-6">
+                        <div className="block px-6 flex items-center">
                             <Img
                                 className="h-auto w-32 mb-2 md:mb-0 mx-auto md:mx-0"
                                 fluid={
