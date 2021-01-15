@@ -17,6 +17,15 @@ function SEO({ description, lang, image, title, pathname, isBlogPost }) {
             titleTemplate={`%s ${site.siteMetadata.title}`}
         >
             <title>{title === 'Homepage' ? ' ' : `${title} |`}</title>
+
+            {/* part of the dark theme, added here to avoid FOUC */}
+            <script>
+                (typeof window !== 'undefined' && window.localStorage.getItem('theme') === '"dark"' ||
+                (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+                ) ? document.querySelector('html').classList.add('dark')
+                : document.querySelector('html').classList.remove('dark');
+            </script>
+            
             <link rel="canonical" href={canonical} />
 
             {/* Basic Meta Tags */}

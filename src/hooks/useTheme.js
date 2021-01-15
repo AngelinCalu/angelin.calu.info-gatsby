@@ -9,7 +9,7 @@ const getStoredTheme = () => {
     return JSON.parse(storedTheme);
 };
 
-const useColors = () => {
+const useTheme = () => {
     const [theme, setTheme] = useState(getStoredTheme());
 
     const toggleTheme = () => {
@@ -28,4 +28,4 @@ const useColors = () => {
     };
 };
 
-export default useColors;
+export default useTheme;
