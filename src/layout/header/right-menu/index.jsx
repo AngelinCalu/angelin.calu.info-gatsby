@@ -16,7 +16,7 @@ const RightMenu = () => {
                 onClick={toggleTheme}
                 type="button"
                 className={`w-9 h-9 rounded-full p-2 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-gray-500 ${
-                    theme === 'light' ? 'bg-blue-200 text-gray-700' : 'bg-gray-700 text-white'
+                    theme === 'light' ? 'bg-blue-200 hover:bg-blue-100 text-gray-700' : 'bg-gray-700 hover:bg-gray-600 text-white'
                 }`}
             >
                 {theme === 'light' ? (
