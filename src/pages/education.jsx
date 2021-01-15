@@ -1,6 +1,9 @@
 import React from 'react';
 import Layout from '../layout';
 import SEO from '../components/seo';
+import { ExternalLink } from '../components/ui';
+
+import educationData from '../../content/data/education';
 
 const Education = () => {
     return (
@@ -61,135 +64,27 @@ const Education = () => {
             </p>
 
             <ul className="py-3 list-disc space-y-2">
-                <li>
-                    <b>Laracasts.com</b>
-                    <p>
-                        <span className="text-gray-500">Period: </span>
-                        <span className="text-sm">25.08.2016 - Present time</span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Topics: </span>
-                        <span className="text-sm">
-                            A wide variety of topics like PHP, Laravel, Vue, MySQL, JavaScript, Clean Code, etc.
-                        </span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Organizer: </span>
-                        <span className="text-sm">
-                            <a
-                                title="Laracasts.com"
-                                className="font-bold hover:underline hover:text-red-700"
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://laracasts.com/browse/all"
-                            >
-                                Laracasts.com
-                            </a>
-                        </span>
-                    </p>
-                </li>
-                <li>
-                    <b>Buutcamp Sprint: TypeScript</b>
-                    <p>
-                        <span className="text-gray-500">Period: </span>
-                        <span className="text-sm">27.08.2020 - 17.12.2020</span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Topics: </span>
-                        <span className="text-sm">
-                            TypeScript, React, ExpressJs, MongoDB, PostgreSQL, Agile / SCRUM methodology.
-                        </span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Organizer: </span>
-                        <span className="text-sm">
-                            <a
-                                title="Buutti Oy"
-                                className="font-bold hover:underline hover:text-red-700"
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://www.buutti.com"
-                            >
-                                Buutti Oy, Finland
-                            </a>
-                        </span>
-                    </p>
-                </li>
-                <li>
-                    <b>Modern JavaScript for React JS - ES6.</b>
-                    <p>
-                        <span className="text-gray-500">Period: </span>
-                        <span className="text-sm">August 2020</span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Topics: </span>
-                        <span className="text-sm">JavaScript.</span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Organizer: </span>
-                        <span className="text-sm">
-                            <a
-                                title="Udemy"
-                                className="font-bold hover:underline hover:text-red-700"
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://www.udemy.com/certificate/UC-ae82c1a4-57e9-4a69-9286-2ecacf61a671/"
-                            >
-                                Udemy
-                            </a>
-                        </span>
-                    </p>
-                </li>
-                <li>
-                    <b>JavaScript ES6 Course: ECMA Script 6 (Step by Step)</b>
-                    <p>
-                        <span className="text-gray-500">Period: </span>
-                        <span className="text-sm">August 2020</span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Topics: </span>
-                        <span className="text-sm">JavaScript.</span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Organizer: </span>
-                        <span className="text-sm">
-                            <a
-                                title="Udemy"
-                                className="font-bold hover:underline hover:text-red-700"
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://www.udemy.com/certificate/UC-09c07f07-3b9f-4917-a25f-52041cc5e0fd/"
-                            >
-                                Udemy
-                            </a>
-                        </span>
-                    </p>
-                </li>
-                <li>
-                    <b>Interactive Web Animation 2020 [JavaScript, SVG, CSS & HTML]</b>
-                    <p>
-                        <span className="text-gray-500">Period: </span>
-                        <span className="text-sm">December 2020</span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Topics: </span>
-                        <span className="text-sm">CSS, SVG and JavaScript animations.</span>
-                    </p>
-                    <p>
-                        <span className="text-gray-500">Organizer: </span>
-                        <span className="text-sm">
-                            <a
-                                title="Udemy"
-                                className="font-bold hover:underline hover:text-red-700"
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://www.udemy.com/certificate/UC-6cec81c3-a7d0-400a-9bd0-cf3c04cf5815/"
-                            >
-                                Udemy
-                            </a>
-                        </span>
-                    </p>
-                </li>
+                {educationData.map((education) => (
+                    <li key={education.title} className="flex flex-col">
+                        <b>
+                            <ExternalLink to={education.url} title={education.title} icon>
+                                {education.title}
+                            </ExternalLink>
+                        </b>
+                        <div className="inline-flex items-center space-x-4">
+                            <span className="text-gray-500">Period: </span>
+                            <span className="text-sm">{education.period}</span>
+                        </div>
+                        <div className="inline-flex items-center space-x-4">
+                            <span className="text-gray-500">Topics: </span>
+                            <span className="text-sm">{education.topics.join(', ')}</span>
+                        </div>
+                        <div className="inline-flex items-center space-x-4">
+                            <span className="text-gray-500">Organizer: </span>
+                            <span className="text-sm">{education.organizer}</span>
+                        </div>
+                    </li>
+                ))}
             </ul>
         </Layout>
     );

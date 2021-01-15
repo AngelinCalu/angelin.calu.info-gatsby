@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../layout';
 import BlogPosts from '../components/homepage/blog-posts';
 import Bio from '../components/homepage/bio';
-import Projects from '../components/homepage/projects';
+// import Projects from '../components/homepage/projects';
 import References from '../components/homepage/references';
 import SEO from '../components/seo';
 
@@ -14,7 +14,7 @@ export default function Home({ data }) {
             <Bio profilePic={data.profilePic} />
             <BlogPosts posts={data.allMdx.nodes} />
             <Link
-                className="text-blue-500 hover:text-blue-700 dark:hover:text-blue-200 transition ease-in-out duration-150 mb-4"
+                className="text-blue-500 hover:text-blue-700 dark:hover:text-blue-200 transition ease-in-out duration-150 pb-6"
                 to="/blog"
                 title="All blog posts"
             >

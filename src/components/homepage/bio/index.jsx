@@ -5,8 +5,12 @@ const Bio = ({ profilePic }) => {
     return (
         <section className="space-y-2 flex flex-col-reverse md:flex-row">
             <div className="px-6 space-y-3">
-                <h1 className="text-3xl mt-10 md:mt-0 mb-2 indent">
-                    Hi! I am <em className="font-bold">Angelin Calu</em>.
+                <h1 className="text-4xl mt-10 md:mt-0 mb-2 indent">
+                    Hi! I am{' '}
+                    <strong className="font-dark font-heading bg-clip-text text-transparent bg-gradient-to-r from-red-300 to-blue-400 pr-2">
+                        Angelin Calu
+                    </strong>
+                    <span className="opacity-75 hover:opacity-100 cursor-default">👋</span>
                 </h1>
                 <p className="indent">
                     Born in Braila, Romania, currently living in Turku, Finland, father of two, engineer, entreprenour,
