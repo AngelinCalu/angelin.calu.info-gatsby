@@ -3,7 +3,7 @@ import useTheme from '../hooks/useTheme';
 
 const initialState = {
     theme: (((typeof window !== 'undefined' && window.localStorage.getItem('theme') === '"dark"') ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) ? 'dark' : 'light'),
+        (typeof window !== 'undefined' && !('theme' in window.localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) ? 'dark' : 'light'),
     toggleTheme: () => undefined,
 };
 
