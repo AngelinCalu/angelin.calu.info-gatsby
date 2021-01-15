@@ -1,16 +1,21 @@
 import { useState } from 'react';
 
-const getStoredTheme = () => {
+const getDefaultTheme = () => {
     if (typeof window === 'undefined') return 'light';
 
     const storedTheme = window.localStorage.getItem('theme');
-    if (!storedTheme) return 'light';
+
+    if (
+        window.localStorage.getItem('theme') === '"dark"' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    )
+        return 'dark';
 
     return JSON.parse(storedTheme);
 };
 
 const useTheme = () => {
-    const [theme, setTheme] = useState(getStoredTheme());
+    const [theme, setTheme] = useState(getDefaultTheme());
 
     const toggleTheme = () => {
         const updatedTheme = theme === 'light' ? 'dark' : 'light';
