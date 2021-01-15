@@ -2,10 +2,30 @@ import React from 'react';
 import Layout from '../layout';
 import SEO from '../components/seo';
 import { ExternalLink } from '../components/ui';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import educationData from '../../content/data/education';
 
 const Education = () => {
+    const data = useStaticQuery(graphql`
+        query EDU_IMAGES {
+            edu: allFile(filter: { relativeDirectory: { eq: "edu" } }) {
+                edges {
+                    node {
+                        id
+                        childImageSharp {
+                            fluid(maxWidth: 480) {
+                                ...GatsbyImageSharpFluid_withWebp
+                                originalName
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    `);
+
     return (
         <Layout>
             <SEO
@@ -60,28 +80,44 @@ const Education = () => {
             <p className="py-2">
                 Because people are saying that having these on your profile is important, some of those trainings (the
                 ones that would provide some certificate of completion 😊 and Laracasts, the one I consider the most
-                relevant, below):
+                relevant) below:
             </p>
 
-            <ul className="py-3 list-disc space-y-2">
+            <ul className="py-3 space-y-2">
                 {educationData.map((education) => (
-                    <li key={education.title} className="flex flex-col">
-                        <b>
-                            <ExternalLink to={education.url} title={education.title} icon>
-                                {education.title}
-                            </ExternalLink>
-                        </b>
-                        <div className="inline-flex items-center space-x-4">
-                            <span className="text-gray-500">Period: </span>
-                            <span className="text-sm">{education.period}</span>
+                    <li
+                        key={education.title}
+                        className="flex flex-col md:flex-row py-4 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
+                    >
+                        <div className="block px-6">
+                            <Img
+                                className="h-auto w-32 mb-2 md:mb-0 mx-auto md:mx-0"
+                                fluid={
+                                    data.edu.edges.filter(
+                                        (edge) => edge.node.childImageSharp.fluid.originalName === education.image,
+                                    )[0].node.childImageSharp.fluid
+                                }
+                                src={education.image}
+                            />
                         </div>
-                        <div className="inline-flex items-center space-x-4">
-                            <span className="text-gray-500">Topics: </span>
-                            <span className="text-sm">{education.topics.join(', ')}</span>
-                        </div>
-                        <div className="inline-flex items-center space-x-4">
-                            <span className="text-gray-500">Organizer: </span>
-                            <span className="text-sm">{education.organizer}</span>
+                        <div className="flex flex-col ml-4">
+                            <b>
+                                <ExternalLink to={education.url} title={education.title} icon>
+                                    {education.title}
+                                </ExternalLink>
+                            </b>
+                            <div className="inline-flex items-center space-x-4">
+                                <span className="text-gray-500">Period: </span>
+                                <span className="text-sm">{education.period}</span>
+                            </div>
+                            <div className="inline-flex items-center space-x-4">
+                                <span className="text-gray-500">Topics: </span>
+                                <span className="text-sm">{education.topics.join(', ')}</span>
+                            </div>
+                            <div className="inline-flex items-center space-x-4">
+                                <span className="text-gray-500">Organizer: </span>
+                                <span className="text-sm">{education.organizer}</span>
+                            </div>
                         </div>
                     </li>
                 ))}

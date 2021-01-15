@@ -2,6 +2,7 @@ module.exports = [
     {
         title: 'Laracasts.com',
         organizer: 'Laracasts.com',
+        image: 'laracasts.jpg',
         period: '25.08.2016 - Present time',
         topics: ['PHP', 'Laravel', 'PHPUnit', 'Vue', 'MySQL', 'JavaScript', 'Clean Code'],
         url: 'https://laracasts.com/@AngelinCalu',
@@ -9,6 +10,7 @@ module.exports = [
     {
         title: 'Buutcamp Sprint: TypeScript',
         organizer: 'Buutti Oy, Finland',
+        image: 'buutti.png',
         period: '27.08.2020 - 17.12.2020',
         topics: [
             'JavaScript',
@@ -24,6 +26,7 @@ module.exports = [
     {
         title: 'Modern JavaScript for React JS - ES6',
         organizer: 'Udemy',
+        image: 'udemy.png',
         period: 'August 2020',
         topics: ['JavaScript'],
         url: 'https://www.udemy.com/certificate/UC-ae82c1a4-57e9-4a69-9286-2ecacf61a671/',
@@ -31,6 +34,7 @@ module.exports = [
     {
         title: 'JavaScript ES6 Course: ECMA Script 6 (Step by Step)',
         organizer: 'Udemy',
+        image: 'udemy.png',
         period: 'August 2020',
         topics: ['JavaScript'],
         url: 'https://www.udemy.com/certificate/UC-09c07f07-3b9f-4917-a25f-52041cc5e0fd/',
@@ -38,6 +42,7 @@ module.exports = [
     {
         title: 'Interactive Web Animation 2020 [JavaScript, SVG, CSS & HTML]',
         organizer: 'Udemy',
+        image: 'udemy.png',
         period: 'December 2020',
         topics: ['CSS animations', 'SVG animations', 'JavaScript animations'],
         url: 'https://www.udemy.com/certificate/UC-6cec81c3-a7d0-400a-9bd0-cf3c04cf5815/',
