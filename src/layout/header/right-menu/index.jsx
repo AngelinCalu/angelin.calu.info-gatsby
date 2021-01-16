@@ -16,7 +16,7 @@ const RightMenu = () => {
                 onClick={toggleTheme}
                 type="button"
                 className={`w-9 h-9 rounded-full p-2 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-gray-500 ${
-                    theme === 'light' ? 'bg-blue-200 text-gray-700' : 'bg-gray-700 text-white'
+                    theme === 'light' ? 'bg-blue-200 hover:bg-blue-100 text-gray-700' : 'bg-gray-700 hover:bg-gray-600 text-white'
                 }`}
             >
                 {theme === 'light' ? (
@@ -37,8 +37,8 @@ const RightMenu = () => {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
                     >
                         <circle cx="12" cy="12" r="5" />
                         <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
