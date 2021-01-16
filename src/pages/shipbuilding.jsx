@@ -120,7 +120,7 @@ const Shipbuilding = () => {
                                 </span>
                             </div>
                             <h4 className="text-xl pt-2">{experience.position}</h4>
-                            <div className="p-4 inline-flex items-center">
+                            <div className="p-4 flex flex-col sm:flex-row items-center">
                                 <div className="mr-4 h-32 w-36 bg-white flex items-center justify-center shadow">
                                     <Img
                                         className="h-32 w-auto"
