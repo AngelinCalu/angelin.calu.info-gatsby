@@ -17,10 +17,11 @@
     letter-spacing: 0.025rem;
     padding: 0.1rem 0.5rem;
     position: absolute;
-    right: 1rem;
+    right: 5rem;
     text-align: right;
     text-transform: uppercase;
     top: 0;
+    height: 24px;
 }
 
 .gatsby-highlight pre[class~="language-jsx"]::before {
