@@ -31,7 +31,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                     {!!tableOfContents.items && <TableOfContents items={tableOfContents.items} />}
                 </div>
             </article>
-            <div className="border-t dark:border-gray-700 mt-5">
+            <div className="border-t dark:border-gray-700 mt-5 flex flex-col">
                 <h3 className="text-xl font-bold py-4 inline-flex items-end w-full text-gray-900 dark:text-white ">
                     <span>Continue reading</span>
                     <svg

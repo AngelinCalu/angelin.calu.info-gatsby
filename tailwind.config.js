@@ -21,7 +21,7 @@ module.exports = {
             red: colors.red,
             green: colors.emerald,
             blue: colors.blue,
-            yellow: colors.yellow,
+            amber: colors.amber,
         },
         spacing: {
             px: '1px',
@@ -804,6 +804,9 @@ module.exports = {
                             color: theme('colors.gray.100'),
                         },
                         strong: {
+                            color: theme('colors.white'),
+                        },
+                        blockquote: {
                             color: theme('colors.white'),
                         },
                         '::selection': {
