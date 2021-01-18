@@ -15,7 +15,7 @@ const getDefaultTheme = () => {
 };
 
 const useTheme = () => {
-    const [theme, setTheme] = useState(getDefaultTheme());
+    const [theme, setTheme] = useState(getDefaultTheme() || 'light');
 
     const toggleTheme = () => {
         const updatedTheme = theme === 'light' ? 'dark' : 'light';
