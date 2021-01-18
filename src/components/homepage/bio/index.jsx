@@ -29,7 +29,9 @@ const Bio = ({ profilePic }) => {
                     including basic server management tasks.
                 </p>
                 <p className="indent">
-                    Always curious and always eager to learn, <strong>I’m seeking a full-time role where I can help a company achieve their goals.</strong> Please feel free to browse around, and don't hesitate to reach out, for whatever reason.
+                    Always curious and always eager to learn,{' '}
+                    <strong>I’m seeking a full-time role where I can help a company achieve their goals.</strong> Please
+                    feel free to browse around, and don't hesitate to reach out, for whatever reason.
                 </p>
             </div>
             <div className="w-full max-w-sm">

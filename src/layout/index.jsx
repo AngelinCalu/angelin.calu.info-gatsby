@@ -18,7 +18,6 @@ const Layout = ({ children }) => {
     };
     const [cookieBar, setCookieBar] = useState(getStoredState());
 
-
     const hideCookieBar = () => {
         setCookieBar('hidden');
         if (windowGlobal) windowGlobal.localStorage.setItem('cookieBar', 'hidden');
@@ -27,7 +26,9 @@ const Layout = ({ children }) => {
     return (
         <div className="subpixel-antialiased bg-white dark:bg-gray-900 text-black dark:text-gray-300">
             <header className="w-full bg-blue-100 dark:bg-gray-900 md:bg-white md:dark:bg-gray-900 md:h-56">
-                <Link to="#page-content" className="sr-only">Skip to content</Link>
+                <Link to="#page-content" className="sr-only">
+                    Skip to content
+                </Link>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1440 320"
@@ -41,7 +42,10 @@ const Layout = ({ children }) => {
                 </svg>
                 <Header />
             </header>
-            <main id="page-content" className="relative max-w-screen-xl z-10 xl:mt-24 2xl:mt-32 my-12 md:my-2 lg:my-6 mx-auto px-10 lg:px-8 2xl:px-0">
+            <main
+                id="page-content"
+                className="relative max-w-screen-xl z-10 xl:mt-24 2xl:mt-32 my-12 md:my-2 lg:my-6 mx-auto px-10 lg:px-8 2xl:px-0"
+            >
                 {children}
             </main>
             <footer className="bg-blue-100 dark:bg-gray-800" aria-labelledby="footerHeading">

@@ -10,7 +10,7 @@ const Dots = ({ references, active, selectReference }) => {
                             <span className="absolute block opacity-75 w-full h-full bg-blue-500 animate-ping rounded-full" />
                         ) : null}
                         <span
-                            onClick = {() => selectReference(reference)}
+                            onClick={() => selectReference(reference)}
                             className={`relative block w-3 h-3 rounded-full cursor-pointer ${
                                 reference === active ? 'bg-blue-300' : 'bg-gray-400'
                             }`}

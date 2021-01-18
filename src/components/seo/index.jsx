@@ -20,12 +20,12 @@ function SEO({ description, lang, image, title, pathname, isBlogPost }) {
 
             {/* part of the dark theme, added here to avoid FOUC */}
             <script>
-                ((typeof window !== 'undefined' && window.localStorage.getItem('theme') === '"dark"') ||
-                (typeof window !== 'undefined' && !('theme' in window.localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-                ) ? document.querySelector('html').classList.add('dark')
-                : document.querySelector('html').classList.remove('dark');
+                ((typeof window !== 'undefined' && window.localStorage.getItem('theme') === '"dark"') || (typeof window
+                !== 'undefined' && !('theme' in window.localStorage) && window.matchMedia('(prefers-color-scheme:
+                dark)').matches) ) ? document.querySelector('html').classList.add('dark') :
+                document.querySelector('html').classList.remove('dark');
             </script>
-            
+
             <link rel="canonical" href={canonical} />
 
             {/* Basic Meta Tags */}

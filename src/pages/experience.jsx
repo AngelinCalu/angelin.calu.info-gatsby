@@ -28,8 +28,9 @@ const Experience = () => {
             </p>
 
             <p>
-                I like to stay busy and up to date with the latest trends, always having a project in the works; however, although I have successfully completed several big projects (ERP / CRM systems, e-commerce shops, etc.),
-                they have sensitive data which should probably not be made public.
+                I like to stay busy and up to date with the latest trends, always having a project in the works;
+                however, although I have successfully completed several big projects (ERP / CRM systems, e-commerce
+                shops, etc.), they have sensitive data which should probably not be made public.
             </p>
 
             <p>Below some projects I can show (more to be added soon): </p>

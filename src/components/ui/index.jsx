@@ -132,8 +132,8 @@ export const Callout = ({ type, children }) => {
     }
 
     return (
-        <div className={`relative border-l-2 pl-5 pr-3 py-2 my-2 rounded-r ${colors}`}>
-            <div className="absolute right-2 top-2">{icon}</div>
+        <div className={`relative border-l-2 pl-10 pr-3 py-2 my-2 rounded-r ${colors}`}>
+            <div className="absolute left-2 top-2">{icon}</div>
             {children}
         </div>
     );

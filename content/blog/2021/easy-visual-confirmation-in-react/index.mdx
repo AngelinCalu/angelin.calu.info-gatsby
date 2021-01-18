@@ -1,0 +1,17 @@
+---
+title: Easy visual confirmation in React
+description: Looking for an easy way to display a visual confirmation on a specific user event? Here's how I've done it for this blog.
+date: 2021-01-18
+---
+
+## Intro
+
+During the past weekend I've been spending some time on setting up the code blocks visuals on this blog. After styling things a bit, I wanted to offer my readers a chance to grab the code with a _"Copy to Clipboard"_ button.
+
+<Callout>
+
+**Note!** This article describes how I implemented this functionality in my personal blog, which is made with [Gatsby](https://gatsbyjs.com) and TailwindCSS but same principles would apply with any React project with or without a CSS framework.
+
+</Callout>
+
+So, I've added the functionality in a `copyToClipboard()` function placed inside a new utils folder: `src/utils/copy-to-clipboard.js`, and made sure that the function would return `true` when the copy operation completes successfully and `false` otherwise.
