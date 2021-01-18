@@ -57,7 +57,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                 <span className="w-15 text-right">Previous:</span>
                                 <Link
                                     to={previous.fields.slug}
-                                    className="hover:underline hover:text-blue-500 ml-4 text-gray-500 dark:text-gray-400"
+                                    className="hover:underline hover:text-blue-700 ml-4 text-blue-400"
                                 >
                                     {previous.frontmatter.title}
                                 </Link>
@@ -74,7 +74,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
                                 <span className="w-15 text-right">Next:</span>
                                 <Link
                                     to={next.fields.slug}
-                                    className="hover:underline hover:text-blue-500 ml-4 text-gray-500 dark:text-gray-400"
+                                    className="hover:underline hover:text-blue-700 ml-4 text-blue-400"
                                 >
                                     <p>{next.frontmatter.title}</p>
                                 </Link>

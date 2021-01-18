@@ -17,7 +17,7 @@
     letter-spacing: 0.025rem;
     padding: 0.1rem 0.5rem;
     position: absolute;
-    right: 5rem;
+    right: 5.25rem;
     text-align: right;
     text-transform: uppercase;
     top: 0;
@@ -64,7 +64,7 @@
 
 .gatsby-highlight pre[class~="language-php"]::before {
     content: "css";
-    background: #777BB3; 
+    background: #777BB3;
     color: black;
     /* #777BB3 from wikipedia, #4F5D95 is what Github uses */
 }
