@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/nightOwl';
+
+import darktheme from 'prism-react-renderer/themes/nightOwl';
+import lightTheme from 'prism-react-renderer/themes/nightOwlLight';
+
+import { ThemeContext } from '../../context/theme';
+
 import { copyToClipboard } from '../../utils/copy-to-clipboard';
 import TopBar from './top-bar';
 
 const Code = ({ codeString, language, ...props }) => {
     const [confirmation, setConfirmation] = useState(false);
+    const [activeTheme, setActiveTheme] = useState(darktheme);
+
+    const { theme } = useContext(ThemeContext);
 
     const copyCode = async () => {
         const copied = await copyToClipboard(codeString);
@@ -15,10 +23,14 @@ const Code = ({ codeString, language, ...props }) => {
         }
     };
 
+    useEffect(() => {
+        theme === 'light' ? setActiveTheme(lightTheme) : setActiveTheme(darktheme);
+    }, [theme]);
+
     if (props['react-live']) {
         return (
-            <LiveProvider code={codeString} noInline theme={theme}>
-                <div className="font-mono live-editor-wrapper relative rounded border bg-black border-gray-600">
+            <LiveProvider code={codeString} noInline theme={activeTheme}>
+                <div className="font-mono live-editor-wrapper relative rounded border bg-gray-300 dark:bg-black border-gray-400 dark:border-gray-600">
                     <TopBar />
                     <LiveEditor
                         style={{ fontSize: '12px', fontFamily: 'inherit', margin: '0 5px', borderRadius: '5px' }}
@@ -30,12 +42,15 @@ const Code = ({ codeString, language, ...props }) => {
         );
     }
     return (
-        <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
+        <Highlight {...defaultProps} code={codeString} language={language} theme={activeTheme}>
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <div className="gatsby-highlight" data-language={language}>
-                    <pre className={`rounded text-sm border border-gray-600 ${className}`} style={style}>
+                <div className="gatsby-highlight bg-gray-300 rounded" data-language={language}>
+                    <pre
+                        className={`text-sm border border-gray-400 dark:border-gray-600 ${className}`}
+                        style={theme === 'dark' ? style : { ...style, backgroundColor: 'inherit' }}
+                    >
                         <TopBar />
-                        <div className="absolute h-6 right-0 top-0 px-2 bg-gray-600 rounded-tr rounded-bl cursor-pointer hover:text-white">
+                        <div className="absolute h-6 right-0 top-0 px-2 bg-gray-600 rounded-tr rounded-bl cursor-pointer text-gray-200 hover:text-white">
                             <button
                                 className="flex items-center focus:outline-none"
                                 type="button"
@@ -83,10 +98,10 @@ const Code = ({ codeString, language, ...props }) => {
                                 )}
                             </button>
                         </div>
-                        <div className="py-2 overflow-auto">
+                        <div className={`py-2 overflow-auto rounded ${theme === 'light' ? 'bg-gray-50' : null}`}>
                             {tokens.map((line, i) => (
                                 <div {...getLineProps({ line, key: i })}>
-                                    <span className="hidden md:inline-block text-white text-opacity-50 hover:text-opacity-100 flex-none w-10 px-2 mr-2 text-right select-none bg-gray-800 bg-opacity-25">
+                                    <span className="hidden md:inline-block text-black dark:text-gray-500 dark:hover:text-white text-opacity-50 hover:text-opacity-100 flex-none w-10 px-2 mr-2 text-right select-none bg-gray-400 dark:bg-gray-800 bg-opacity-25">
                                         {i + 1}
                                     </span>
                                     {line.map((token, key) => (

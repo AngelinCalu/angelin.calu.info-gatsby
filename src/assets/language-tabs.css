@@ -92,3 +92,7 @@
     color: white;
     z-index: 10;
 }
+
+.live-editor-wrapper textarea::selection {
+    background-color: #ddd;
+}
