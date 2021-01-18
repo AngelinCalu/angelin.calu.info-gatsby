@@ -50,9 +50,9 @@ const Code = ({ codeString, language, ...props }) => {
                         style={theme === 'dark' ? style : { ...style, backgroundColor: 'inherit' }}
                     >
                         <TopBar />
-                        <div className="absolute h-6 right-0 top-0 px-2 bg-gray-600 rounded-tr rounded-bl cursor-pointer text-gray-200 hover:text-white">
+                        <div className="absolute h-6 right-0 top-0 px-2 bg-gray-600 rounded-tr rounded-bl text-gray-200 hover:text-white">
                             <button
-                                className="flex items-center focus:outline-none"
+                                className="flex items-center focus:outline-none cursor-pointer"
                                 type="button"
                                 title="Copy to Clipboard"
                                 onClick={copyCode}

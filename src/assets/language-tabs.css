@@ -3,13 +3,13 @@
     -webkit-overflow-scrolling: touch;
 }
 
-.gatsby-highlight pre[class*="language-"] {
+.gatsby-highlight pre[class*='language-'] {
     -webkit-overflow-scrolling: touch;
     padding: 1rem 0.75rem;
     border-radius: 0.25rem;
 }
 
-.gatsby-highlight pre[class*="language-"]::before {
+.gatsby-highlight pre[class*='language-']::before {
     background: black;
     border-radius: 0 0 0.25rem 0.25rem;
     color: white;
@@ -17,56 +17,62 @@
     letter-spacing: 0.025rem;
     padding: 0.1rem 0.5rem;
     position: absolute;
-    right: 5.25rem;
+    right: 5.5rem;
     text-align: right;
     text-transform: uppercase;
     top: 0;
     height: 24px;
 }
 
-.gatsby-highlight pre[class~="language-jsx"]::before {
-    content: "jsx";
-    background: #8B53A6;
+.gatsby-highlight pre[class~='language-jsx']::before {
+    content: 'jsx';
+    background: #8b53a6;
     color: white;
 }
 
-.gatsby-highlight pre[class~="language-tsx"]::before {
-    content: "tsx";
-    background: #3278C6;
+.gatsby-highlight pre[class~='language-tsx']::before {
+    content: 'tsx';
+    background: #3278c6;
     color: white;
 }
 
-.gatsby-highlight pre[class~="language-javascript"]::before,
-.gatsby-highlight pre[class~="language-js"]::before {
-    content: "js";
+.gatsby-highlight pre[class~='language-javascript']::before,
+.gatsby-highlight pre[class~='language-js']::before {
+    content: 'js';
     background: #f7df1e;
     color: black;
 }
 
-.gatsby-highlight pre[class~="language-typescript"]::before,
-.gatsby-highlight pre[class~="language-ts"]::before {
-    content: "ts";
-    background: #3278C6;
+.gatsby-highlight pre[class~='language-typescript']::before,
+.gatsby-highlight pre[class~='language-ts']::before {
+    content: 'ts';
+    background: #3278c6;
     color: white;
 }
 
-.gatsby-highlight pre[class~="language-html"]::before {
-    content: "html";
+.gatsby-highlight pre[class~='language-html']::before {
+    content: 'html';
     background: #005a9c;
     color: white;
 }
 
-.gatsby-highlight pre[class~="language-css"]::before {
-    content: "css";
+.gatsby-highlight pre[class~='language-css']::before {
+    content: 'css';
     background: #ff9800;
     color: white;
 }
 
-.gatsby-highlight pre[class~="language-php"]::before {
-    content: "css";
-    background: #777BB3;
+.gatsby-highlight pre[class~='language-php']::before {
+    content: 'css';
+    background: #777bb3;
     color: black;
     /* #777BB3 from wikipedia, #4F5D95 is what Github uses */
+}
+
+.gatsby-highlight pre[class~='language-vue']::before {
+    content: 'Vue';
+    background: #3fb27f;
+    color: white;
 }
 
 .live-editor-wrapper {
@@ -74,7 +80,6 @@
     padding: 1rem 0;
     border-radius: 0.25rem;
 }
-
 
 .live-editor-wrapper::before {
     -webkit-overflow-scrolling: touch;
@@ -87,7 +92,7 @@
     text-align: right;
     text-transform: uppercase;
     top: 0;
-    content: "LIVE EDIT";
+    content: 'LIVE EDIT';
     background: #cc0000;
     color: white;
     z-index: 10;
@@ -95,4 +100,9 @@
 
 .live-editor-wrapper textarea::selection {
     background-color: #ddd;
+}
+
+a.anchor {
+    fill: #3b82f6;
+    top: 0.4rem !important;
 }
