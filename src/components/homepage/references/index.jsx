@@ -38,7 +38,7 @@ const References = () => {
     return (
         <section className="py-6">
             <SectionHeader>References</SectionHeader>
-            <h4 className="text-md py-2">Here's some words from a few of the colleagues or collaborators:</h4>
+            <h4 className="text-md py-2">Here are some words from a few of the colleagues or collaborators:</h4>
             <div
                 width={getWidth() + referencesData.length}
                 ref={wrapperRef}

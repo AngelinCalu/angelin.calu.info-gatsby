@@ -39,14 +39,14 @@ const Skills = () => {
                     <li>
                         <div>Adaptability</div>
                         <span className="text-gray-500 dark:text-gray-300 text-sm">
-                            I'm very confortable working in the most diverse environments, and I'm adapting very easy
+                            I'm very comfortable working in the most diverse environments, and I'm adapting very easy
                             when a change occurs.
                         </span>
                     </li>
                     <li>
                         <div>Communication</div>
                         <span className="text-gray-500 dark:text-gray-300 text-sm">
-                            Good communication skills and very confortable communicating in general. I've been using
+                            Good communication skills and very comfortable communicating in general. I've been using
                             English language as the main way of communicating on the workplace and outside of working
                             hours for more than 6 years.
                         </span>
@@ -72,7 +72,7 @@ const Skills = () => {
                     Tech skills
                 </h3>
                 <p>
-                    My passion for writing beautiful code, or sometimes the constraints of the tasks, made me aquire
+                    My passion for writing beautiful code, or sometimes the constraints of the tasks, made me acquire
                     skills in a wide range of programming languages as well as various development tools.
                 </p>
                 <p className="py-2">Below some of those:</p>

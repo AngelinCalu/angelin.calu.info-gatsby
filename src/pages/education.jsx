@@ -66,14 +66,14 @@ const Education = () => {
                 studies).
             </p>
             <p>
-                In the summer of 2012 I've passed all the exams but unfortunately didn't managed to finish my Master's
+                In the summer of 2012 I've passed all the exams but unfortunately didn't manage to finish my Master's
                 thesis in time.
             </p>
 
             <h2 className="text-lg font-bold py-4">&nbsp;</h2>
             <p>
                 The study period has definitely continued even after the institutionalized education. I've always been
-                able to find good resources to learn on my own, expecially in the field of software and web development.
+                able to find good resources to learn on my own, especially in the field of software and web development.
                 And, to be perfectly honest, keeping up with the latest technologies and practices became a part of who
                 I am.
             </p>

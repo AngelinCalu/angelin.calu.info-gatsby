@@ -13,7 +13,7 @@ const Bio = ({ profilePic }) => {
                     <span className="opacity-75 hover:opacity-100 cursor-default">👋</span>
                 </h1>
                 <p className="indent">
-                    Born in Braila, Romania, currently living in Turku, Finland, father of two, engineer, entreprenour,
+                    Born in Braila, Romania, currently living in Turku, Finland, father of two, engineer, entrepreneur,
                     passionate about technology in general, started coding years before Stackoverflow launched (
                     <i>
                         I'm referring to a certain period when developers used <span>&lt;table&gt;</span> elements to
