@@ -1,9 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
+import { PopoutInfo } from '../../../../../src/components/ui';
 import Toggle from './components/Toggle';
 
+import './styles.css';
+
 const Minifier = () => {
-    const initialState = [
+    const providers = [
         {
             key: 'whiteSpaceRemoval',
             description: 'Remove white spaces where possible',
@@ -59,24 +62,21 @@ const Minifier = () => {
         },
     ];
 
-    const [options, setOptions] = useState(initialState);
+    const [options, setOptions] = useState(providers);
     const [solution, setSolution] = useState('');
     const [minified, setMinified] = useState('');
 
-    const listRef = useRef(null);
-
     useEffect(() => {
-        // do the actual minification based on the chosen options here 
+        // do the actual minification based on the chosen options here
         setMinified(solution);
     }, [solution]);
-    
 
     return (
-        <div className="w-full flex-col space-y-10">
+        <div className="w-full flex-col space-y-10 border border-blue-300 p-3">
             <div className="flex flex-col lg:flex-row space-y-6">
                 <div className="lg:flex-grow">
-                    <label htmlFor="solution" className="block text-sm font-medium text-gray-700">
-                        Solution
+                    <label htmlFor="solution" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                        {`Solution : ${solution.length} characters`}
                     </label>
                     <div className="mt-1 lg:h-full">
                         <textarea
@@ -84,37 +84,27 @@ const Minifier = () => {
                             name="solution"
                             onChange={(e) => setSolution(e.target.value)}
                             value={solution}
+                            placeholder="Paste your solution here!"
                             rows="4"
-                            className="py-3 px-4 block w-full lg:h-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border border-gray-300 rounded-md"
+                            className="py-3 px-4 block w-full lg:h-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border border-gray-300 rounded-md dark:bg-gray-700"
                         ></textarea>
                     </div>
                 </div>
                 <div className="pl-4">
-                    <span className="block text-sm font-medium text-gray-700">Options</span>
+                    <span className="block text-sm font-medium text-gray-700 dark:text-gray-200">Options</span>
                     <div>
-                        <ul
-                            className="flex flex-col"
-                            ref={(listRef) => {
-                                if (listRef) {
-                                    listRef.style.setProperty('list-style-type', 'none', 'important');
-                                }
-                            }}
-                        >
+                        <ul className="flex flex-col">
                             {options.map((option) => (
-                                <li
-                                    key={option.key}
-                                    className="inline-flex space-x-4"
-                                    style={{ listStyleType: 'inherit' }}
-                                >
+                                <li key={option.key} className="inline-flex space-x-4">
                                     <Toggle
                                         disabled={
-                                            !initialState.filter((initialOption) => initialOption.key === option.key)[0]
-                                                .active
+                                            !providers.filter((provider) => provider.key === option.key)[0].active
                                         }
                                         option={option}
                                         setOptions={setOptions}
                                     />{' '}
-                                    <span>{option.key}</span>
+                                    <span>{option.key}</span>{' '}
+                                    <PopoutInfo info={option.description} />
                                 </li>
                             ))}
                         </ul>
@@ -122,16 +112,17 @@ const Minifier = () => {
                 </div>
             </div>
             <div>
-                <label htmlFor="minified" className="block text-sm font-medium text-gray-700">
-                    Minified Version
+                <label htmlFor="minified" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+                    {`Minified Version : ${minified.length} characters`}
                 </label>
                 <div className="mt-1">
                     <textarea
                         id="minified"
                         name="minified"
-                        value={minified}
+                        defaultValue={minified}
+                        readOnly={true}
                         rows="4"
-                        className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border border-gray-300 rounded-md"
+                        className="py-3 px-4 block w-full shadow-sm rounded-md focus:outline-none bg-gray-200 dark:bg-gray-800"
                     ></textarea>
                 </div>
             </div>

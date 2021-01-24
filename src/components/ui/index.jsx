@@ -1,4 +1,7 @@
 import React from 'react';
+import Tippy from '@tippyjs/react';
+
+import 'tippy.js/dist/tippy.css';
 
 const infoIcon = (
     <svg
@@ -136,5 +139,28 @@ export const Callout = ({ type, children }) => {
             <div className="absolute left-2 top-2">{icon}</div>
             {children}
         </div>
+    );
+};
+
+export const PopoutInfo = ({ info }) => {
+    return (
+        <Tippy content={info}>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                width={20}
+                height={20}
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-blue-400 transform rotate-180"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+            >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4M12 16h.01" />
+            </svg>
+        </Tippy>
     );
 };
