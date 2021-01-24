@@ -16,7 +16,6 @@ export default class CSSBattleMinifier {
         const styleContentRegex = /(?<=<style>)(.|\s)*(?=<\/style>| )/gim;
         const htmlTagsRegex = /(?<=<).+?(?=>| )/gim;
 
-
         this.htmlStr = String(this.input.match(htmlContentRegex) || '');
         this.styleStr = String(this.input.match(styleContentRegex) || '');
 
@@ -36,12 +35,12 @@ export default class CSSBattleMinifier {
 
         stripStyles = stripStyles.replace(/\s\s+/g, ' '); // get rid of tabs and consecutive spaces
         stripStyles = stripStyles.replace(/(\r\n|\n|\r)/gm, ''); // get rid of new lines
-        stripStyles = stripStyles.replace(/:\s+/gis, ':'); // remove space(s) afer css properties
-        stripStyles = stripStyles.replace(/\s+\{/gis, '{'); // remove space(s) before {
-        stripStyles = stripStyles.replace(/\{\s+/gis, '{'); // remove space(s) afer {
-        stripStyles = stripStyles.replace(/\s+\}/gis, '}'); // remove space(s) before }
-        stripStyles = stripStyles.replace(/\}\s+/gis, '}'); // remove space(s) afer }
-        stripStyles = stripStyles.replace(/;\s+/gis, ';'); // remove space(s) afer ;
+        stripStyles = stripStyles.replace(/:\s+/gs, ':'); // remove space(s) afer css properties
+        stripStyles = stripStyles.replace(/\s+\{/gs, '{'); // remove space(s) before {
+        stripStyles = stripStyles.replace(/\{\s+/gs, '{'); // remove space(s) afer {
+        stripStyles = stripStyles.replace(/\s+\}/gs, '}'); // remove space(s) before }
+        stripStyles = stripStyles.replace(/\}\s+/gs, '}'); // remove space(s) afer }
+        stripStyles = stripStyles.replace(/;\s+/gs, ';'); // remove space(s) afer ;
 
         this.styleStr = stripStyles.trim();
 
@@ -52,7 +51,7 @@ export default class CSSBattleMinifier {
 
     // Semi-colon for the last CSS declaration in a declaration block can be omitted.
     omitLastSemicolon() {
-        this.styleStr = this.styleStr.replace(/;}/gis, '}'); // remove semicolon if it's on the last property
+        this.styleStr = this.styleStr.replace(/;}/gis, '}');
     }
 
     // In some cases you can omit the closing tag of an element as the browser will close them automatically. However, some other times that would result in having nested elements.
@@ -94,7 +93,12 @@ export default class CSSBattleMinifier {
     // For many properties, you can omit the px unit and just write the numeric value.
     // can strip 'px' from: width, height, margin*, padding*, border-width, top, right, bottom, left
     stripPx() {
-        console.log('-> stripPx');
+        this.styleStr = this.styleStr.replace(
+            /(?:\{|;)(?:\s+|\s?)(?:width|height|margin|padding|padding-[a-z]*|margin-[a-z]*|border|border-[a-z]*|top|left|right|bottom):((?:(?:\s+|\s?)\d+px(?:\s+|\s?))+)/gis,
+            function (size) {
+                return size.replaceAll('px', '');
+            }
+        );
         this.output = this.input;
     }
 
