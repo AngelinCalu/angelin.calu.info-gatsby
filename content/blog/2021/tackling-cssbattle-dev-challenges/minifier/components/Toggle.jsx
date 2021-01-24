@@ -14,7 +14,7 @@ const Toggle = ({ option, setOptions, disabled }) => {
                     ])
                 }
                 className={`${option.active ? 'bg-blue-500' : 'bg-gray-200'} ${
-                    disabled ? 'cursor-not-allowed' : null
+                    disabled ? 'cursor-not-allowed' : ''
                 } relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
             >
                 <span

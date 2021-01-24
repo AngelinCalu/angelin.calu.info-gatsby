@@ -74,7 +74,7 @@ const Minifier = () => {
     }, [solution, options]);
 
     return (
-        <div className="w-full flex-col space-y-10 border border-blue-300 p-3 rounded-md">
+        <div className="w-full flex-col space-y-10 border border-blue-300 p-4 rounded-md">
             <div className="flex flex-col lg:flex-row space-y-6">
                 <div className="lg:flex-grow">
                     <label htmlFor="solution" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
