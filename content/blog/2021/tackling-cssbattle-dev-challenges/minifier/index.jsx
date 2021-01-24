@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { PopoutInfo } from '../../../../../src/components/ui';
 import Toggle from './components/Toggle';
 
+import CSSBattleMinifier from './CSSBattleMinifier';
+
 import './styles.css';
 
 const Minifier = () => {
@@ -31,7 +33,7 @@ const Minifier = () => {
         },
         {
             key: 'shortenSelectorsWithMadeUpAttributes',
-            description: 'You can assign made-up attribute to any element to target it specifically in your selectors',
+            description: 'You can assign made-up attribute to any element to target it specifically in your selectors.',
             active: false,
         },
         {
@@ -67,12 +69,12 @@ const Minifier = () => {
     const [minified, setMinified] = useState('');
 
     useEffect(() => {
-        // do the actual minification based on the chosen options here
-        setMinified(solution);
-    }, [solution]);
+        const parsed = new CSSBattleMinifier(solution, options).parse();
+        setMinified(parsed);
+    }, [solution, options]);
 
     return (
-        <div className="w-full flex-col space-y-10 border border-blue-300 p-3">
+        <div className="w-full flex-col space-y-10 border border-blue-300 p-3 rounded-md">
             <div className="flex flex-col lg:flex-row space-y-6">
                 <div className="lg:flex-grow">
                     <label htmlFor="solution" className="block text-sm font-medium text-gray-700 dark:text-gray-200">
@@ -103,7 +105,15 @@ const Minifier = () => {
                                         option={option}
                                         setOptions={setOptions}
                                     />{' '}
-                                    <span>{option.key}</span>{' '}
+                                    <span
+                                        className={`${
+                                            !providers.filter((provider) => provider.key === option.key)[0].active
+                                                ? 'text-gray-400'
+                                                : null
+                                        }`}
+                                    >
+                                        {option.key}
+                                    </span>{' '}
                                     <PopoutInfo info={option.description} />
                                 </li>
                             ))}
