@@ -1,8 +1,8 @@
 export default class CSSBattleMinifier {
+    htmlStr = '';
+    styleStr = '';
     htmlTags = [];
     css = [];
-    styleStr = '';
-    output = '';
 
     constructor(input, options) {
         this.input = input;
@@ -12,33 +12,47 @@ export default class CSSBattleMinifier {
     parse() {
         const parsers = this.options.reduce((acc, option) => (option.active ? [...acc, option.key] : acc), []);
 
-        const htmlTagsRegex = /(?<=<).+?(?=>| )/gmi;
-        const styleContentRegex = /(?<=<style>)(.|\s)*(?=<\/style>|)/gmi;
+        const htmlContentRegex = /^(.*?)(?=<style>)/gis;
+        const styleContentRegex = /(?<=<style>)(.|\s)*(?=<\/style>| )/gim;
+        const htmlTagsRegex = /(?<=<).+?(?=>| )/gim;
+
+
+        this.htmlStr = String(this.input.match(htmlContentRegex) || '');
+        this.styleStr = String(this.input.match(styleContentRegex) || '');
 
         this.htmlTags = [...this.input.matchAll(htmlTagsRegex)];
-        let strip = this.input.replace(/\s\s+/g, ' '); // get rid of tabs and consecutive spaces
-        strip = strip.replace(/(\r\n|\n|\r)/gm, ''); // get rid of new lines
-
-        this.styleStr = strip.match(styleContentRegex);
-        console.log(this.htmlTags, this.styleStr);
 
         parsers.forEach((parser) => {
             this[parser]();
         });
 
-        return this.output;
+        return this.htmlStr + (this.styleStr ? `<style>${this.styleStr}` : '');
     }
 
     // Remove white spaces where possible
     whiteSpaceRemoval() {
-        console.log('-> whiteSpaceRemoval');
-        this.output = this.input;
+        // Clean Styles
+        let stripStyles = this.styleStr;
+
+        stripStyles = stripStyles.replace(/\s\s+/g, ' '); // get rid of tabs and consecutive spaces
+        stripStyles = stripStyles.replace(/(\r\n|\n|\r)/gm, ''); // get rid of new lines
+        stripStyles = stripStyles.replace(/:\s+/gis, ':'); // remove space(s) afer css properties
+        stripStyles = stripStyles.replace(/\s+\{/gis, '{'); // remove space(s) before {
+        stripStyles = stripStyles.replace(/\{\s+/gis, '{'); // remove space(s) afer {
+        stripStyles = stripStyles.replace(/\s+\}/gis, '}'); // remove space(s) before }
+        stripStyles = stripStyles.replace(/\}\s+/gis, '}'); // remove space(s) afer }
+        stripStyles = stripStyles.replace(/;\s+/gis, ';'); // remove space(s) afer ;
+
+        this.styleStr = stripStyles.trim();
+
+        // Clean HTML
+        let stripHtml = this.htmlStr.replace(/>\s+</gis, '><'); //take the html and strip space between tags
+        this.htmlStr = stripHtml.trim();
     }
 
     // Semi-colon for the last CSS declaration in a declaration block can be omitted.
     omitLastSemicolon() {
-        console.log('-> omitLastSemicolon');
-        this.output = this.input;
+        this.styleStr = this.styleStr.replace(/;}/gis, '}'); // remove semicolon if it's on the last property
     }
 
     // In some cases you can omit the closing tag of an element as the browser will close them automatically. However, some other times that would result in having nested elements.
