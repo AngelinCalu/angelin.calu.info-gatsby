@@ -95,7 +95,7 @@ const Minifier = () => {
                 <div className="pl-4">
                     <span className="block text-sm font-medium text-gray-700 dark:text-gray-200">Options</span>
                     <div>
-                        <ul className="flex flex-col">
+                        <ul className="flex flex-col optionsList">
                             {options.map((option) => (
                                 <li key={option.key} className="inline-flex space-x-4">
                                     <Toggle

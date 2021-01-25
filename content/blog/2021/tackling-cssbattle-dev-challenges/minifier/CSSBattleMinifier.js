@@ -94,7 +94,7 @@ export default class CSSBattleMinifier {
     // can strip 'px' from: width, height, margin*, padding*, border-width, top, right, bottom, left
     stripPx() {
         this.styleStr = this.styleStr.replace(
-            /(?:\{|;)(?:\s+|\s?)(?:width|height|margin|padding|padding-[a-z]*|margin-[a-z]*|border|border-[a-z]*|top|left|right|bottom):((?:(?:\s+|\s?)\d+px(?:\s+|\s?))+)/gis,
+            /(?:\{|;)(?:\s+|\s?)(?:width|height|margin|padding|padding-[a-z]*|margin-[a-z]*|border|top|left|right|bottom):((?:(?:\s+|\s?)\d+px(?:\s+|\s?))+)/gis,
             function (size) {
                 return size.replaceAll('px', '');
             }
