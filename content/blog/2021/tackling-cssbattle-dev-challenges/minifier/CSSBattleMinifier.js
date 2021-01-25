@@ -41,6 +41,7 @@ export default class CSSBattleMinifier {
         stripStyles = stripStyles.replace(/\s+\}/gs, '}'); // remove space(s) before }
         stripStyles = stripStyles.replace(/\}\s+/gs, '}'); // remove space(s) afer }
         stripStyles = stripStyles.replace(/;\s+/gs, ';'); // remove space(s) afer ;
+        stripStyles = stripStyles.replace(/,\s+/gs, ','); // remove space(s) afer ,
 
         this.styleStr = stripStyles.trim();
 
