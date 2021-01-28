@@ -8,6 +8,14 @@ module.exports = [
         url: 'https://laracasts.com/@AngelinCalu',
     },
     {
+        title: 'Laravel API Development & Vue JS SPA from Scratch',
+        organizer: 'Udemy',
+        image: 'udemy.png',
+        period: 'January 2021',
+        topics: ['JavaScript', 'Vue', 'Laravel', 'PHP', 'TDD'],
+        url: 'https://www.udemy.com/certificate/UC-0fdd2d4f-634c-46b7-a26a-b46069e7a031/',
+    },
+    {
         title: 'Buutcamp Sprint: TypeScript',
         organizer: 'Buutti Oy, Finland',
         image: 'buutti.png',
