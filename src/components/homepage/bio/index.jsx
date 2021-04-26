@@ -18,8 +18,8 @@ const Bio = ({ profilePic }) => {
                     <i>
                         I'm referring to a certain period when developers used <span>&lt;table&gt;</span> elements to
                         define the layout for a web page and combining <abbr title="Hypertext Preprocessor">PHP</abbr>{' '}
-                        and <abbr title="HyperText Markup Language">HTML</abbr> in same file was the standard. Grose, I
-                        know!
+                        and <abbr title="HyperText Markup Language">HTML</abbr> in same file was the standard.
+                        Grose, I know, but guess what, the popular CMS wordpress still does it that way.
                     </i>
                     ).
                 </p>
@@ -30,7 +30,7 @@ const Bio = ({ profilePic }) => {
                 </p>
                 <p className="indent">
                     Always curious and always eager to learn,{' '}
-                    <strong>I’m seeking a full-time role where I can help a company achieve their goals.</strong> Please
+                    <strong>found my place among some amazing people at Identio.</strong> Please
                     feel free to browse around, and don't hesitate to reach out, for whatever reason.
                 </p>
             </div>

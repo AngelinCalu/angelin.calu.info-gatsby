@@ -13,8 +13,9 @@ export default class CSSBattleMinifier {
         const parsers = this.options.reduce((acc, option) => (option.active ? [...acc, option.key] : acc), []);
 
         const htmlContentRegex = /^(.*?)(?=<style>)/gis;
-        const styleContentRegex = /(?<=<style>)(.|\s)*(?=<\/style>| )/gim;
-        const htmlTagsRegex = /(?<=<).+?(?=>| )/gim;
+        const styleContentRegex = /(?:<style>)(.|\s)*(?=<\/style>| )/gim;
+
+        const htmlTagsRegex = /(?:<).+?(?=>| )/gim;
 
         this.htmlStr = String(this.input.match(htmlContentRegex) || '');
         this.styleStr = String(this.input.match(styleContentRegex) || '');
