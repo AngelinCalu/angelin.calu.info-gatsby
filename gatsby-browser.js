@@ -9,4 +9,7 @@ import 'tailwindcss/utilities.css';
 import './src/assets/tailwind.css';
 import './src/assets/language-tabs.css';
 
+// trigger an immediate page refresh when an update is found
+export const onServiceWorkerUpdateReady = () => window.location.reload();
+
 export const wrapRootElement = wrap;
